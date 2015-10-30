@@ -1,6 +1,7 @@
 h1 3DIET
 
 xml3d xmlns="http://www.xml3d.org/2009/xml3d"
-  view style="transform: translate3d(0px,0px, 100px)"
+  transform#camera translation="0 0 100" rotation="1 1 0 0"
+  view transform="#camera"
   group  style="transform: translate3d(0px,-20px, 0px)"
     mesh src="assets/teapot.json"
