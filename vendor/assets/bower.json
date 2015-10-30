@@ -1,6 +1,8 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "xml3d": "xml3d/xml3d.js"
+    "xml3d": "http://www.xml3d.org/xml3d/script/*"
+  },
+  "resolutions": {
   }
 }
