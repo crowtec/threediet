@@ -17,7 +17,6 @@ gem 'mongoid'
 gem 'cancancan'
 gem 'slim-rails'
 gem 'font-awesome-rails'
-gem 'bower-rails'
 
 group :test do
   gem 'factory_girl'
