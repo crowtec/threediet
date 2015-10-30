@@ -44,6 +44,7 @@ GEM
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
+    bower-rails (0.10.0)
     bson (3.2.6)
     builder (3.2.2)
     cancancan (1.13.1)
@@ -253,6 +254,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bower-rails
   cancancan
   capybara
   coffee-rails
@@ -275,6 +277,3 @@ DEPENDENCIES
   spring
   turbolinks
   uglifier
-
-BUNDLED WITH
-   1.10.6
