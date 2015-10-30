@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require xml3d/src/xml3d.js
 //= require_tree .
