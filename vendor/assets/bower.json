@@ -1,6 +1,6 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "xml3d": "rharriso/bower-rails"
+    "xml3d": "xml3d/xml3d.js"
   }
 }
