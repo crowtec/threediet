@@ -1,6 +1,6 @@
 h1 3DIET
 
-xml3d xmlns="http://www.xml3d.org/2009/xml3d"
+xml3d
   material#orange model="urn:xml3d:material:phong"
     float3 name="diffuseColor" 1 0.5 0
     float name="ambientIntensity" 0.5
@@ -8,8 +8,7 @@ xml3d xmlns="http://www.xml3d.org/2009/xml3d"
   light#light1 model="urn:xml3d:light:directional"
     float3 name="intensity" 1 1 1
 
-  transform#camera translation="0 0 100" rotation="1 1 0 0"
-  view transform="#camera"
-  group material="#orange" style="transform: translate3d(0px,-20px, 0px)"
+  transform#cameraTransform translation="0 0 100" rotation="1 1 0 0"
+  view transform="#cameraTransform"
+  group material="#orange" style="transform: translate3d(0px,-20px, 0px) rotate3d(0, 1, 0, 0deg);"
     mesh src="/stl/exclamation"
-
