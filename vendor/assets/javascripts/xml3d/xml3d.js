@@ -27997,10 +27997,10 @@ module.exports = css;
  *
  *  The [[FirminCSSMatrix]] class is a concrete implementation of the
  *  `CSSMatrix` interface defined in the [CSS 2D Transforms][2d] and
- *  [CSS 3D Transforms][3d] Module specifications.
+ *  [CSS 3D Transforms][stl] Module specifications.
  *
  *  [2d]: http://www.w3.org/TR/css3-2d-transforms/
- *  [3d]: http://www.w3.org/TR/css3-3d-transforms/
+ *  [stl]: http://www.w3.org/TR/css3-3d-transforms/
  *
  *  The implementation was largely copied from the `WebKitCSSMatrix` class, and
  *  the supparting maths libraries in the [WebKit][webkit] project. This is one
