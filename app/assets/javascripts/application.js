@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require xml3d/xml3d
+//= require xml3d/camera
+//= require xml3d/xml3d-stl-plugin
