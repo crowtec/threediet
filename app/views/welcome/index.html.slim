@@ -1,3 +1,12 @@
+javascript:
+  window.addEventListener("load", function () {
+    var init = function () {
+      var view = document.querySelector("view");
+      XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, {rotateSpeed: 10});
+    };
+    document.querySelector("xml3d").addEventListener("load", init);
+  });
+
 h1 3DIET
 
 xml3d
@@ -8,7 +17,8 @@ xml3d
   light#light1 model="urn:xml3d:light:directional"
     float3 name="intensity" 1 1 1
 
-  transform#cameraTransform translation="20 10 1000" rotation="0 0 0 0"
+  transform#cameraTransform translation="0 0 200"
   view transform="#cameraTransform"
-  group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(0, 1, 0, 0deg) scale(10, 10, 10); "
-    mesh src="/stl/bol_nb_blender"
+
+  group material="#orange" light="#light1" style="transform: translate3d(0px,0px, 0px) rotate3d(0, 1, 0, 0deg) scale(10, 10, 10); "
+    mesh src="/stl/bol_nb_blender" navigation="#nav"

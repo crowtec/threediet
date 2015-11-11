@@ -700,6 +700,7 @@
 })();
 
 // Automatically creates a camera instance using the first view element on the page
+/**
 window.addEventListener("load", function() {
     var xml3d = document.querySelector("xml3d");
     var init = function() {
@@ -714,3 +715,4 @@ window.addEventListener("load", function() {
             xml3d.addEventListener("load", init);
     }
 });
+*/
