@@ -15,5 +15,6 @@
 //= require xml3d/xml3d-stl-plugin
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .

@@ -1,0 +1,25 @@
+nav.navbar.navbar-default.navbar-fixed-top.text-uppercase
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="#"
+        = image_tag 'logo.png', class: 'logo'
+    #navbar.navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li
+          a href="#"  Quiero mi kit!
+        li
+          a href="#about"  ¿Cómo funciona?
+        li
+          a href="#contact"  Comunidad
+        li
+          a href="#blgo"  El Blog de Bea
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.fa.fa-shopping-cart.fa-2x href="./"
+            span.sr-only (current)
+              /! /.nav-collapse

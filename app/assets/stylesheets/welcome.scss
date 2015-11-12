@@ -1,3 +1,61 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background: image-url('background.jpg') repeat;
+  background-size: 100% auto;
+  background-position: left top;
+  .body-overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $three_gray;
+  }
+}
+
+.container-fluid{
+  margin-top: 50px;
+  padding: 0 !important;
+  .left-bar {
+    .video {
+      margin-top: -20%;
+      width: 100%;
+    }
+
+    #slider {
+      margin-top: -1%;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+
+    .community {
+      img {
+        width: 100%;
+      }
+    }
+
+    .last-instagram {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .right-bar{
+    .title {
+      font-family: 'Arsenale';
+      margin: 0;
+    }
+    .row{
+      background: image-url('sheet.png') no-repeat;
+      background-size: 100% auto;
+      background-position: left top;
+
+      .recipe, .day-picture, .day-tweet{
+        height: 300px;
+        padding: 10%;
+      }
+    }
+
+  }
+}
