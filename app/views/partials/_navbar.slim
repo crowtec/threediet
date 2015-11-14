@@ -6,12 +6,13 @@ nav.navbar.navbar-default.navbar-fixed-top.text-uppercase
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="#"
+      a.navbar-brand href="./"
         = image_tag 'logo.png', class: 'logo'
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
         li
-          a href="#"  Quiero mi kit!
+          = link_to "Quiero mi kit!", kit_path, :"data-no-turbolink" => true
+          //a href="kit"  Quiero mi kit!
         li
           a href="#about"  ¿Cómo funciona?
         li
