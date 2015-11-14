@@ -1,0 +1,36 @@
+/*
+ *= require_self
+ */
+
+@import 'color';
+@import 'compass';
+@import 'font';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'welcome';
+
+body{
+  font-family: 'Gotham';
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: $three_pink;
+  border: none;
+
+  a{
+    color: black !important;
+  }
+
+  .fa-shopping-cart{
+    color: white !important;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    .logo {
+      height: 100%;
+    }
+  }
+}
