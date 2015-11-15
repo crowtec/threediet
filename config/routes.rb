@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   get 'stl/:filename' => 'kit#stl_file'
   get 'kit' => 'kit#show'
+  get 'kit-form' => 'kit#form'
 end

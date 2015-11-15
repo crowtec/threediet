@@ -1,0 +1,29 @@
+.title {
+  font-family: 'Arsenale';
+  margin: 0;
+}
+
+.sheet {
+  background: image-url('sheet.png') no-repeat;
+  background-size: 100% auto;
+  background-position: left top;
+}
+
+.form-kit {
+  height: 600px;
+
+  .title {
+    font-family: 'Arsenale';
+    margin: 0;
+  }
+}
+
+.top-buffer { margin-top:20px; }
+
+.btn-pink { background-color: $three_pink; } //button
+
+.btn-pink:hover { background-color: $three_pink_hover; }
+
+.btn.sharp {
+  border-radius:0;
+}
