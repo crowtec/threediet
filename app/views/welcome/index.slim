@@ -3,6 +3,10 @@
   .left-bar.col-md-10
     .row
       .video-container
+        .caption
+          .caption-inner
+            .caption-content
+              = image_tag '3diet_title.png'
         = video_tag 'cooking.mp4', class: 'video', autoplay: true, loop: true, muted: true
     .row
       #slider.carousel.slide data-ride="carousel"
@@ -33,12 +37,16 @@
       .last-instagram
         = image_tag 'last_instagram.jpg'
   .right-bar.col-md-2
-    .row
+    .row.sheet
       .recipe
         h1.title receta del día
-    .row
+        = image_tag 'day_recipe.jpg'
+        h4 Pastel de calabaza
+    .row.sheet
       .day-picture
         h1.title foto del día
-    .row
-      .day-tweet
+        = image_tag 'day_picture.png'
+    .row.sheet
+      .day-tweet.long
         h1.title tweet del día
+        = image_tag 'day_tweet.jpg'
