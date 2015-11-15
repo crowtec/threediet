@@ -1,3 +1,7 @@
 .row
   .col-md-8.col-md-offset-2.sheet.form-kit
     = f.text_field :name
+.col-md-2.col-md-offset-10
+  == yield(:next_button)
+  == yield(:back_button)
+
