@@ -1,0 +1,35 @@
+// Place all the styles related to the order controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.tv{
+  background: image-url('tv.png') no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+  padding-bottom: 2%;
+  position: relative;
+  .collection{
+    font-family: "Education";
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    font-size: 3em;
+    pointer-events: none;
+  }
+  .selectors{
+    font-family: "Education";
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    font-size: 4em;
+    pointer-events: none;
+  }
+  .screen{
+    margin-top: -7%;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,9 @@
+.container-fluid
+  = bootstrap_form_for(@order, url: order_new_kit_path(phase: @phase), html: {method: 'post'})  do |f|
+    - content_for(:back_button) do
+      .top-buffer
+        button.btn.sharp.btn-pink.form-control type="button" Atrás
+    - content_for(:next_button) do
+      .top-buffer
+        = f.submit 'Siguiente', class: "btn sharp btn-pink form-control"
+    = render 'order/phase_' + @phase.to_s, f: f

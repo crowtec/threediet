@@ -10,6 +10,8 @@
 @import 'font-awesome';
 @import 'welcome';
 @import 'kit';
+@import 'order';
+@import 'rails_bootstrap_forms';
 
 body{
   font-family: 'Gotham';
@@ -48,4 +50,10 @@ button:hover
 {
   outline:0px !important;
   -webkit-appearance:none;
+}
+
+.sheet {
+  background: image-url('sheet.png') no-repeat;
+  background-size: 100% 100%;
+  background-position: left top;
 }

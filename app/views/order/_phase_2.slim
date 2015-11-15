@@ -1,0 +1,44 @@
+javascript:
+  window.addEventListener("load", function () {
+    var init = function () {
+      var view = document.querySelector("view");
+      if (view && XML3D.StandardCamera.Instance !== false)
+        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, { rotateSpeed: 10 });
+    };
+
+    var xml3d = document.querySelector("xml3d");
+    if (xml3d) {
+      if (xml3d.complete)
+        init();
+      else
+        xml3d.addEventListener("load", init);
+    }
+  });
+
+.body-overlay
+.container-fluid
+  .left-bar.col-md-10
+    .tv.col-md-12
+      .collection.text-center collection eat mix
+      xml3d.screen
+        material#orange model="urn:xml3d:material:phong"
+          float3 name="diffuseColor" 1 0.5 0
+          float name="ambientIntensity" 0.9
+
+        light#light1 model="urn:xml3d:light:directional"
+          float3 name="intensity" 1 1 1
+
+        transform#cameraTransform translation="0 0 200"
+        view transform="#cameraTransform"
+
+        group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(8, 8, 8); "
+          mesh src="/stl/bol_nb_blender" navigation="#nav"
+      .selectors.text-center
+        .left.col-sm-6
+          .col-sm-offset-2 <
+        .right.col-sm-6
+          .col-sm-8 >
+  .right-bar.col-md-2
+    .sheet.order = @order.name
+    == yield(:next_button)
+    == yield(:back_button)
