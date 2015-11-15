@@ -10,12 +10,16 @@
 }
 
 .form-kit {
-  height: 600px;
+  box-sizing: border-box;
+  padding-top: 5%;
+  padding-left: 5%;
 
-  .title {
+  .span {
+    font-size: 30px;
     font-family: 'Arsenale';
     margin: 0;
   }
+
 }
 
 .top-buffer { margin-top:20px; }
@@ -26,4 +30,15 @@
 
 .btn.sharp {
   border-radius:0;
+}
+
+.no-border {
+  background-color:transparent;
+  border-style:none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  outline: 0px;
 }
