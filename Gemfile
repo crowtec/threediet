@@ -14,9 +14,9 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'mongoid'
-gem 'cancancan'
 gem 'slim-rails'
 gem 'font-awesome-rails'
+gem 'bootstrap_form'
 
 group :test do
   gem 'factory_girl'

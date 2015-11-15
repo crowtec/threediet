@@ -1,3 +1,6 @@
-Prefix Verb URI Pattern              Controller#Action
-  root GET  /                        welcome#index
-       GET  /stl/:filename(.:format) welcome#stl_file
+       Prefix Verb URI Pattern              Controller#Action
+         root GET  /                        welcome#index
+              GET  /stl/:filename(.:format) kit#stl_file
+  order_index POST /order(.:format)         order#create
+    new_order GET  /order/new(.:format)     order#new
+order_new_kit GET  /order/new/kit(.:format) order#new_kit
