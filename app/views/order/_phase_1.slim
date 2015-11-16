@@ -1,9 +1,9 @@
-.row
+.row.new-order
   .col-md-offset-2.col-md-8.sheet.form-kit
     = f.text_field :name, label: "nombre:"
-    = f.text_field :age, label: "edad:"
+    = f.number_field :age, label: "edad:", min: 18, max: 65, value: 18
     = f.text_field :target, label: "objetivo:"
-    = f.text_field :daily_cals, label: "calorías diarias:"
+    = f.number_field :daily_cals, label: "calorías diarias:", append: "kcal"
     = f.text_field :daily_activity, label: "actividad diaria:"
     = f.text_field :diet, label: "tipo de dieta:"
     .col-md-offset-2.col-md-10

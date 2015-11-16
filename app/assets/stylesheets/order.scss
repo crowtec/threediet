@@ -1,17 +1,12 @@
-// Place all the styles related to the order controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .tv{
   background: image-url('tv.png') no-repeat;
   background-size: auto 100%;
   background-position: center center;
   padding-bottom: 2%;
   position: relative;
+  font-family: "Education";
+  color: white;
   .collection{
-    font-family: "Education";
-    color: white;
     position: absolute;
     width: 100%;
     top: 15%;
@@ -19,8 +14,6 @@
     pointer-events: none;
   }
   .selectors{
-    font-family: "Education";
-    color: white;
     position: absolute;
     width: 100%;
     top: 35%;
@@ -33,3 +26,42 @@
     height: auto;
   }
 }
+
+.new-order{
+  font-family: "Arsenale";
+  width: 100%;
+  .form-kit {
+    box-sizing: border-box;
+    padding: 5%;
+
+    label{
+      font-size: 2em;
+      padding: 6px 12px;
+    }
+    input{
+      font-size: 2em;
+      border: none;
+      background: none;
+      box-shadow: none;
+      height: 100%;
+      &[type='checkbox']{
+        height: auto;
+      }
+    }
+    span{
+      font-size: 2em;
+    }
+
+  }
+
+}
+
+.btn-pink { background-color: $three_pink; } //button
+
+.btn-pink:hover { background-color: $three_pink_hover; }
+
+.btn.sharp {
+  border-radius:0;
+}
+
+.top-buffer { margin-top:20px; }
