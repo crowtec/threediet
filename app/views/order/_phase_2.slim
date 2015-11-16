@@ -13,26 +13,41 @@ javascript:
       else
         xml3d.addEventListener("load", init);
     }
+
+
   });
+
+  function mouseOverTeapot(event) {
+    event.target.setAttribute("material", "#greenPhong");
+  }
+
+  function mouseOut(event) {
+    event.target.setAttribute("material", "");
+  }
 
 .body-overlay
 .container-fluid
   .left-bar.col-md-10
     .tv.col-md-12
       .collection.text-center collection eat mix
-      xml3d.screen
-        material#orange model="urn:xml3d:material:phong"
-          float3 name="diffuseColor" 1 0.5 0
-          float name="ambientIntensity" 0.9
+      .col-md-offset-4.col-md-4
+        xml3d.screen
+          material#greenPhong model="urn:xml3d:material:phong"
+            float3 name="diffuseColor" 0.1 0.8 0.1
+            float name="ambientIntensity" 0.5
 
-        light#light1 model="urn:xml3d:light:directional"
-          float3 name="intensity" 1 1 1
+          material#orangePhong model="urn:xml3d:material:phong"
+            float3 name="diffuseColor" 1 0.5 0
+            float name="ambientIntensity" 0.9
 
-        transform#cameraTransform translation="0 0 200"
-        view transform="#cameraTransform"
+          light#light1 model="urn:xml3d:light:directional"
+            float3 name="intensity" 1 1 1
 
-        group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(8, 8, 8); "
-          mesh src="/stl/bol_nb_blender" navigation="#nav"
+          transform#cameraTransform translation="0 0 200"
+          view transform="#cameraTransform"
+
+          group material="#orangePhong" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+            mesh src="/stl/bol_nb_blender" onmouseover="mouseOverTeapot(event)" onmouseout="mouseOut(event)"
       .selectors.text-center
         .left.col-sm-6
           .col-sm-offset-2 <
