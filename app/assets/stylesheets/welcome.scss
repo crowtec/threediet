@@ -73,13 +73,9 @@ body{
     }
     .row{
       .recipe, .day-picture, .day-tweet{
-        height: 250px;
         padding: 10%;
         img{
           width: 100%;
-        }
-        &.long{
-          height: 350px;
         }
       }
     }
