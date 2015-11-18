@@ -1,6 +1,23 @@
-       Prefix Verb URI Pattern              Controller#Action
-         root GET  /                        welcome#index
-              GET  /stl/:filename(.:format) kit#stl_file
-  order_index POST /order(.:format)         order#create
-    new_order GET  /order/new(.:format)     order#new
-order_new_kit GET  /order/new/kit(.:format) order#new_kit
+            Prefix Verb   URI Pattern                      Controller#Action
+              root GET    /                                welcome#index
+                   GET    /stl/:filename(.:format)         kit#stl_file
+       order_index POST   /order(.:format)                 order#create
+         new_order GET    /order/new(.:format)             order#new
+     order_new_kit POST   /order/new/kit(.:format)         order#new_kit
+       admin_index GET    /admin(.:format)                 admin#index
+admin_tupper_index GET    /admin/tupper(.:format)          tupper#index
+                   POST   /admin/tupper(.:format)          tupper#create
+  new_admin_tupper GET    /admin/tupper/new(.:format)      tupper#new
+ edit_admin_tupper GET    /admin/tupper/:id/edit(.:format) tupper#edit
+      admin_tupper GET    /admin/tupper/:id(.:format)      tupper#show
+                   PATCH  /admin/tupper/:id(.:format)      tupper#update
+                   PUT    /admin/tupper/:id(.:format)      tupper#update
+                   DELETE /admin/tupper/:id(.:format)      tupper#destroy
+   admin_kit_index GET    /admin/kit(.:format)             kit#index
+                   POST   /admin/kit(.:format)             kit#create
+     new_admin_kit GET    /admin/kit/new(.:format)         kit#new
+    edit_admin_kit GET    /admin/kit/:id/edit(.:format)    kit#edit
+         admin_kit GET    /admin/kit/:id(.:format)         kit#show
+                   PATCH  /admin/kit/:id(.:format)         kit#update
+                   PUT    /admin/kit/:id(.:format)         kit#update
+                   DELETE /admin/kit/:id(.:format)         kit#destroy
