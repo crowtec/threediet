@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  scope :stl, as :stl do
+  scope :stl, as: :stl do
     get ':filename' => 'stl#file', as: :file
   end
 
