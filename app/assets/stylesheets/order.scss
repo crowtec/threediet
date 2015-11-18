@@ -54,6 +54,31 @@
 
   }
 
+  &.review{
+    font-size: 3em;
+    .title{
+      font-size: 1.2em;
+    }
+
+    .bullet{
+      margin: 20px;
+      .item{
+        font-size: 0.8em;
+      }
+    }
+  }
+
+}
+
+.sheet.order{
+  .title{
+    font-family: "Arsenale";
+    padding: 10% 0 0 10%;
+  }
+  .bullet{
+    padding: 20px;
+    text-transform: uppercase;
+  }
 }
 
 .btn-pink { background-color: $three_pink; } //button
