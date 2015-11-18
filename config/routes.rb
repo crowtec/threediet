@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   scope :admin, as: :admin do
     get '' => 'admin#index', as: :index
+  end
+
+  namespace :admin do
     resources :tupper
     resources :kit
   end

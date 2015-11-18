@@ -1,3 +1,3 @@
-class KitController < AdminController
-  
+class Admin::KitController < AdminController
+
 end
