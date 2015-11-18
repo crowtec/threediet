@@ -63,6 +63,34 @@ javascript:
         .right.col-sm-6
           .col-sm-8 >
   .right-bar.col-md-2
-    .sheet.order = @order.name
+    .sheet.order
+      h1.title lista de la compra
+      .bullet
+        | producto:
+        .description 1 kit 3diet
+      .bullet
+        |modelo:
+        .description fit eat
+      .bullet
+        | color:
+        .description rojo
+      .bullet
+        | resumen kit:
+        .description
+          |desayuno:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+        .description
+          |comida:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+        .description
+          |cena:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+
     == yield(:next_button)
     == yield(:back_button)
