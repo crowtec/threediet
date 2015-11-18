@@ -10,10 +10,13 @@ Rails.application.routes.draw do
   scope :order, as: :order do
     post 'new/kit' => 'order#new_kit', as: :new_kit
   end
-
   scope :admin, as: :admin do
     get '' => 'admin#index', as: :index
+  end
+
+  namespace :admin, as: :admin do
     resources :tupper
     resources :kit
+    resources :order
   end
 end

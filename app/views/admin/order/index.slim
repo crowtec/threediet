@@ -1,0 +1,27 @@
+
+.col-md-12
+  h2 Orders
+  table.table.table-bordered.table-hover
+    thead
+      th
+      th User
+      th Order Number
+      th Kit
+      th Date
+      th Status
+      th STL File
+    tbody
+      - @orders.each do |order|
+        tr
+          th
+            i.fa.fa-list-alt
+          td = order.name
+          td = link_to order.id, admin_order_path(order.id)
+          td = order.name
+          td = order.created_at.strftime("%d/%m/%Y %H:%M")
+          td = order.status
+          td.text-center
+            i.fa.fa-download
+
+
+

@@ -11,7 +11,7 @@ class OrderController < ApplicationController
 
   def create
     @order = Order.create(order_params)
-    redirect_to welcome_index_path
+    redirect_to root_path
   end
 
   private
