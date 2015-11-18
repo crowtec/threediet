@@ -19,9 +19,6 @@
 //= require turbolinks
 
 //= require admin/metisMenu.min
-//= require admin/morris.min
-//= require admin/morris-data
-//= require admin/raphael-min
 //= require admin/sb-admin-2
 
 
