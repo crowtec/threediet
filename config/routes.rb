@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  get 'stl/:filename' => 'kit#stl_file'
+  scope :stl, as :stl do
+    get ':filename' => 'stl#file', as: :file
+  end
 
   resources :order, only: [:new, :create]
   scope :order, as: :order do
