@@ -1,3 +1,49 @@
-.row
-  .col-md-8.col-md-offset-2.sheet.form-kit
-  | RESUMEN
+/Previous phases params
+= f.hidden_field :name
+= f.hidden_field :age
+= f.hidden_field :target
+= f.hidden_field :daily_cals
+= f.hidden_field :daily_activity
+= f.hidden_field :diet
+= f.hidden_field :chef
+= f.hidden_field :supervised
+
+.body-overlay
+.row.new-order.review
+  .col-md-1
+  .col-md-offset-1.col-md-8.sheet.form-kit
+    .title pedido
+    .col-md-6
+      .bullet
+        | producto:
+        .description 1 kit 3diet
+
+      .bullet
+        |modelo:
+        .description fit eat
+
+      .bullet
+        | color:
+        .description rojo
+    .col-md-6
+      .bullet
+        | resumen kit:
+        .description
+          |desayuno:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+        .description
+          |comida:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+        .description
+          |cena:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+.col-md-1
+  == yield(:back_button)
+.col-md-1.col-md-offset-10
+  == yield(:next_button)

@@ -53,6 +53,19 @@
     }
 
   }
+  &.review{
+    font-size: 3em;
+    .title{
+      font-size: 1.2em;
+    }
+
+    .bullet{
+      margin: 20px;
+      .item{
+        font-size: 0.8em;
+      }
+    }
+  }
 
 }
 
