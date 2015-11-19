@@ -47,5 +47,5 @@ class Admin::KitController < AdminController
   def load_resource
     @kit = Kit.find(params[:id])
   end
-  
+
 end
