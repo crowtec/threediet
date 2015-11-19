@@ -1,0 +1,18 @@
+.row
+  .col-lg-12
+    h1.page-header
+      | Edit Kit
+.row.container-fluid
+  = bootstrap_form_for(@kit, url: admin_kit_path, html: {method: 'patch'})  do |f|
+    .row.new-tupper
+      .col-md-12
+        = f.text_field :name
+        = f.text_field :description
+        = f.text_field :model
+        = f.collection_select :breakfasts_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.breakfasts.map{|t| t.id}}, {multiple: true}
+        = f.collection_select :lunchs_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.lunchs.map{|t| t.id}}, {multiple: true}
+        = f.collection_select :dinners_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.dinners.map{|t| t.id}}, {multiple: true}
+        = f.submit
+
+javascript:
+  initMultipleFields(['#kit_breakfasts_ids', '#kit_lunchs_ids', '#kit_dinners_ids']);
