@@ -23,22 +23,30 @@ javascript:
 
 
   function changeColor() {
+    color_element++;
     if (color_element < colors_number) {
-      color_element++;
       $(".kit_piece")[0].material = colors[color_element];
     }
-    else
+    else {
       color_element = 0;
+      $(".kit_piece")[0].material = colors[color_element];
+    }
     //event.target.setAttribute("material", "#greenPhong");
-  }
-
-  function mouseOut(event) {
-    event.target.setAttribute("material", "");
   }
 
   function loadListeners() {
     document.getElementById("change-color").addEventListener("click", changeColor);
   }
+
+  //Phase 1 params
+= f.hidden_field :name
+= f.hidden_field :age
+= f.hidden_field :target
+= f.hidden_field :daily_cals
+= f.hidden_field :daily_activity
+= f.hidden_field :diet
+= f.hidden_field :chef
+= f.hidden_field :supervised
 
 .body-overlay
 .container-fluid
@@ -69,7 +77,7 @@ javascript:
           transform#cameraTransform translation="0 0 200"
           view transform="#cameraTransform"
 
-          group material="#blue" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+          group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
             mesh.kit_piece src="/stl/bol_nb_blender"
       .selectors.text-center
         .left.col-sm-6
@@ -77,7 +85,35 @@ javascript:
         .right.col-sm-6
           .col-sm-8 >
   .right-bar.col-md-2
-    .sheet.order = @order.name
+    .sheet.order
+      h1.title lista de la compra
+      .bullet
+        | producto:
+        .description 1 kit 3diet
+      .bullet
+        |modelo:
+        .description fit eat
+      .bullet
+        | color:
+        .description rojo
+      .bullet
+        | resumen kit:
+        .description
+          |desayuno:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+        .description
+          |comida:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+        .description
+          |cena:
+          .item - 1 bol
+          .item - 2 tazas
+          .item - 1 cuchara
+
     == yield(:next_button)
     == yield(:back_button)
     .top-buffer

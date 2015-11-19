@@ -17,6 +17,7 @@ gem 'mongoid'
 gem 'slim-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap_form'
+gem 'chosen-rails'
 
 group :test do
   gem 'factory_girl'

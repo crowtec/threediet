@@ -1,0 +1,12 @@
+.row
+  .col-lg-12
+    h1.page-header
+      | Edit Tupper
+.row.container-fluid
+  = bootstrap_form_for(@tupper, url: admin_tupper_path, html: {method: 'patch'})  do |f|
+    .row.new-tupper
+      .col-md-12
+        = f.text_field :name
+        = f.text_field :type
+        = f.text_field :stl
+        = f.submit

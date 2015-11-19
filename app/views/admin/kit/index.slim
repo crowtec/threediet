@@ -1,0 +1,29 @@
+.row
+  .col-md-12
+    h1.page-header
+      | Kits
+      = link_to new_admin_kit_path, class:'btn btn-primary pull-right'
+        i.fa.fa-plus
+.row.container-fluid
+  .col-md-12
+    table.table.table-bordered.table-hover
+      thead
+        th Name
+        th Type
+        th Created at
+        th Updated at
+        th Actions
+      tbody
+        - @kits.each do |kit|
+          tr
+            td = link_to kit.name, admin_tupper_path(kit)
+            td = kit.model
+            td = kit.created_at.strftime("%d/%m/%Y %H:%M")
+            td = kit.updated_at.strftime("%d/%m/%Y %H:%M")
+            td.text-center
+              = link_to edit_admin_kit_path(kit), class: 'action edit'
+                i.fa.fa-pencil
+              = link_to admin_kit_path(kit), method: :delete, class: 'action destroy'
+                i.fa.fa-trash-o
+
+

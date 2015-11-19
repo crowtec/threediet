@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Threediet - Admin
+    = stylesheet_link_tag    'admin', media: 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+    = csrf_meta_tags
+  body
+    #wrapper
+      /! Navigation
+      nav.navbar.navbar-default.navbar-static-top role="navigation" style=("margin-bottom: 0")
+        .navbar-header
+          button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          = render 'partials/admin/header'
+        ul.nav.navbar-top-links.navbar-right
+          = render 'partials/admin/dropdown'
+        .navbar-default.sidebar role="navigation"
+          .sidebar-nav.navbar-collapse
+            = render 'partials/admin/sidebar'
+      #page-wrapper
+        = yield
+
+

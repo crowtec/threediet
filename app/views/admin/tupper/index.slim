@@ -1,0 +1,33 @@
+.row
+  .col-md-12
+    h1.page-header
+      | Tuppers
+      = link_to new_admin_tupper_path, class:'btn btn-primary pull-right'
+        i.fa.fa-plus
+.row.container-fluid
+  .col-md-12
+    table.table.table-bordered.table-hover
+      thead
+        th Name
+        th Type
+        th STL File
+        th Created at
+        th Updated at
+        th Actions
+      tbody
+        - @tuppers.each do |tupper|
+          tr
+            td = link_to tupper.name, admin_tupper_path(tupper)
+            td = tupper.type
+            td.text-center
+              = link_to tupper.stl
+                i.fa.fa-download
+            td = tupper.created_at.strftime("%d/%m/%Y %H:%M")
+            td = tupper.updated_at.strftime("%d/%m/%Y %H:%M")
+            td.text-center
+              = link_to edit_admin_tupper_path(tupper), class: 'action edit'
+                i.fa.fa-pencil
+              = link_to admin_tupper_path(tupper), method: :delete, class: 'action destroy'
+                i.fa.fa-trash-o
+
+
