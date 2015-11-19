@@ -14,15 +14,30 @@ javascript:
         xml3d.addEventListener("load", init);
     }
 
-
+    loadListeners();
   });
 
-  function mouseOverTeapot(event) {
-    event.target.setAttribute("material", "#greenPhong");
+  var colors_number = 4;
+  var color_element = 0;
+  var colors = ["#orange", "#green", "#blue", "#red"]
+
+
+  function changeColor() {
+    if (color_element < colors_number) {
+      color_element++;
+      $(".kit_piece")[0].material = colors[color_element];
+    }
+    else
+      color_element = 0;
+    //event.target.setAttribute("material", "#greenPhong");
   }
 
   function mouseOut(event) {
     event.target.setAttribute("material", "");
+  }
+
+  function loadListeners() {
+    document.getElementById("change-color").addEventListener("click", changeColor);
   }
 
 .body-overlay
@@ -32,13 +47,21 @@ javascript:
       .collection.text-center collection eat mix
       .col-md-offset-4.col-md-4
         xml3d.screen
-          material#greenPhong model="urn:xml3d:material:phong"
+          material#green model="urn:xml3d:material:phong"
             float3 name="diffuseColor" 0.1 0.8 0.1
             float name="ambientIntensity" 0.5
 
-          material#orangePhong model="urn:xml3d:material:phong"
+          material#orange model="urn:xml3d:material:phong"
             float3 name="diffuseColor" 1 0.5 0
             float name="ambientIntensity" 0.9
+
+          material#blue model="urn:xml3d:material:phong"
+            float3 name="diffuseColor" 0.1 0 1
+            float name="ambientIntensity" 0.2
+
+          material#red model="urn:xml3d:material:phong"
+            float3 name="diffuseColor" 1 0.3 0
+            float name="ambientIntensity" 0.2
 
           light#light1 model="urn:xml3d:light:directional"
             float3 name="intensity" 1 1 1
@@ -46,8 +69,8 @@ javascript:
           transform#cameraTransform translation="0 0 200"
           view transform="#cameraTransform"
 
-          group material="#orangePhong" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
-            mesh src="/stl/bol_nb_blender" onmouseover="mouseOverTeapot(event)" onmouseout="mouseOut(event)"
+          group material="#blue" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+            mesh.kit_piece src="/stl/bol_nb_blender"
       .selectors.text-center
         .left.col-sm-6
           .col-sm-offset-2 <
@@ -57,3 +80,7 @@ javascript:
     .sheet.order = @order.name
     == yield(:next_button)
     == yield(:back_button)
+    .top-buffer
+      button#change-color.btn.sharp.btn-pink.form-control type="button" Cambiar color
+    .top-buffer
+      button#change-colection.btn.sharp.btn-pink.form-control type="button" Colección
