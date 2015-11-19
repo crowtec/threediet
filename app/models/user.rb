@@ -35,4 +35,8 @@ class User
   def is_admin?
     role == 'admin'
   end
+
+  def self.password_params
+    [:password, :password_confirmation]
+  end
 end

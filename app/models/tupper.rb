@@ -7,4 +7,8 @@ class Tupper
   field :type, type: String
 
   belongs_to :kit
+
+  def self.tupper_params
+    [:name, :stl, :type]
+  end
 end

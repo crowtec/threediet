@@ -12,3 +12,21 @@
 @import 'admin/metisMenu.min';
 @import 'admin/sb-admin-2';
 @import 'admin/timeline';
+
+.action{
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border-width: 1px;
+  border-style: double;
+  border-radius: 4px;
+  &.destroy{
+    color: white;
+    border-color: red;
+    background: red;
+  }
+  &.edit {
+    color: white;
+    border-color: orange;
+    background: orange;
+  }
+}
