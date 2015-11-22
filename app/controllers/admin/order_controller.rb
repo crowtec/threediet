@@ -1,6 +1,6 @@
 class Admin::OrderController < AdminController
 
-  before_action :load_resource, only: [:edit, :update, :show, :destroy]
+  before_action :load_resource, only: [:edit, :update, :show, :destroy, :download_zip]
 
   def index
     @orders = Order.all
@@ -15,15 +15,8 @@ class Admin::OrderController < AdminController
   def update
     @order.add_kit(params[:order])
     @order.update(order_params)
-    p "www" * 10
-    p @order
-    p "www" * 10
     redirect_to admin_order_index_path, :notice => 'Order was successfully updated.'
   rescue => e
-
-    p "www" * 10
-    p e
-    p "www" * 10
     render :edit
   end
 
@@ -33,9 +26,7 @@ class Admin::OrderController < AdminController
   end
 
   def download_zip
-    Kit.first.pack_stl_files_to_zip
-
-    redirect_to admin_order_index_path
+    send_file @order.kit.pack_stl_files_to_zip
   end
 
   private
@@ -45,7 +36,7 @@ class Admin::OrderController < AdminController
   end
 
   def load_resource
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id] || params[:order_id])
   end
 
 

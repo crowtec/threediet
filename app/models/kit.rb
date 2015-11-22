@@ -23,6 +23,10 @@ class Kit
     [:name, :description, :model]
   end
 
+  def tuppers
+    self.breakfasts + self.lunches + self.dinners
+  end
+
   def add_tuppers kit
     self.breakfasts = Tupper.in(id: kit[:breakfasts_ids])
     self.lunches = Tupper.in(id: kit[:lunches_ids])
@@ -36,11 +40,16 @@ class Kit
 
     Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
       self.breakfasts.each do |tupper|
-        # Two arguments:
-        # - The name of the file as it will appear in the archive
-        # - The original file, including the path to find it
-        zipfile.add(tupper.stl_file_name, tupper.stl.path)
+        zipfile.add('breakfast_' + tupper.stl_file_name, tupper.stl.path)
+      end
+      self.lunches.each do |tupper|
+        zipfile.add('lunch_' + tupper.stl_file_name, tupper.stl.path)
+      end
+      self.dinners.each do |tupper|
+        zipfile.add('dinner_' + tupper.stl_file_name, tupper.stl.path)
       end
     end
+
+     zipfile_name
   end
 end

@@ -21,7 +21,7 @@
             td = order.name
             td = order.status
             td.text-center
-              = link_to '', admin_order_download_zip_path, class: 'fa fa-download', method: :post
+              = link_to '', admin_order_download_zip_path(order), class: 'fa fa-download', method: :post
             td = order.created_at.strftime("%d/%m/%Y %H:%M")
             td.text-center
               = link_to edit_admin_order_path(order), class: 'action edit'
