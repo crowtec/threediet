@@ -20,7 +20,7 @@
             td = link_to tupper.name, admin_tupper_path(tupper)
             td = tupper.type
             td.text-center
-              = link_to tupper.stl
+              = link_to tupper.stl.url
                 i.fa.fa-download
             td = tupper.created_at.strftime("%d/%m/%Y %H:%M")
             td = tupper.updated_at.strftime("%d/%m/%Y %H:%M")
