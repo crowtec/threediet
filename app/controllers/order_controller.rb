@@ -2,7 +2,6 @@ class OrderController < ApplicationController
   def new
     @phase = params[:phase] || 1
     @order = params.has_key?(:order) ? Order.new(order_params) : Order.new
-    puts @order.to_yaml
   end
 
   def new_kit
@@ -17,7 +16,7 @@ class OrderController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(Order.order_params)
+    params.require(:order).permit(Order.permitted_params)
   end
 
 end

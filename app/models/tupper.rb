@@ -16,7 +16,7 @@ class Tupper
   has_and_belongs_to_many :lunch_kits, class_name: 'Kit', inverse_of: :lunchs
   has_and_belongs_to_many :dinner_kits, class_name: 'Kit', inverse_of: :dinners
 
-  def self.tupper_params
+  def self.permitted_params
     [:name, :stl, :type]
   end
 end
