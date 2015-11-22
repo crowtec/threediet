@@ -16,7 +16,7 @@ class Order
 
   has_one :kit, dependent: :nullify
 
-  def self.order_params
+  def self.permitted_params
     [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status, :kit]
   end
 

@@ -41,7 +41,7 @@ class Admin::KitController < AdminController
   private
 
   def kit_params
-    params.require(:kit).permit(Kit.kit_params)
+    params.require(:kit).permit(Kit.permitted_params)
   end
 
   def load_resource

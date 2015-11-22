@@ -16,7 +16,7 @@ class Kit
 
   belongs_to :order
 
-  def self.kit_params
+  def self.permitted_params
     [:name, :description, :model]
   end
 
