@@ -7,7 +7,7 @@ class Tupper
   field :name, type: String
   field :type, type: String
 
-  has_mongoid_attached_file :stl
+  has_mongoid_attached_file :stl, validate_media_type: false
   do_not_validate_attachment_file_type :stl
 
 
