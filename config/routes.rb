@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :order, only: [:new, :create]
   scope :order, as: :order do
     post 'new/kit' => 'order#new_kit', as: :new_kit
+    post 'new/piece' => 'order#new_piece', as: :new_piece
   end
   scope :admin, as: :admin do
     get '' => 'admin#index', as: :index

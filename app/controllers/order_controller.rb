@@ -9,6 +9,9 @@ class OrderController < ApplicationController
     redirect_to new_order_path(phase: params[:phase].to_i + 1, order: order_params)
   end
 
+  def new_piece
+  end
+
   def create
     @order = Order.create(order_params)
     redirect_to root_path
