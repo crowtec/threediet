@@ -14,6 +14,8 @@ class Kit
   has_and_belongs_to_many :lunchs, class_name: 'Tupper', dependent: :nullify, inverse_of: :lunch_kits
   has_and_belongs_to_many :dinners, class_name: 'Tupper', dependent: :nullify, inverse_of: :dinner_kits
 
+  belongs_to :order
+
   def self.kit_params
     [:name, :description, :model]
   end

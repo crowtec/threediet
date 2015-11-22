@@ -1,27 +1,33 @@
-
-.col-md-12
-  h2 Orders
-  table.table.table-bordered.table-hover
-    thead
-      th
-      th User
-      th Order Number
-      th Kit
-      th Date
-      th Status
-      th STL File
-    tbody
-      - @orders.each do |order|
-        tr
-          th
-            i.fa.fa-list-alt
-          td = order.name
-          td = link_to order.id, admin_order_path(order.id)
-          td = order.name
-          td = order.created_at.strftime("%d/%m/%Y %H:%M")
-          td = order.status
-          td.text-center
-            i.fa.fa-download
+.row
+  .col-md-12
+    h1.page-header
+      | Orders
+.row.container-fluid
+  .col-md-12
+    table.table.table-bordered.table-hover
+      thead
+        th User
+        th Order Number
+        th Kit
+        th Status
+        th STL File
+        th Date
+        th Actions
+      tbody
+        - @orders.each do |order|
+          tr
+            td = order.name
+            td = link_to order.id, admin_order_path(order.id)
+            td = order.name
+            td = order.status
+            td.text-center
+              i.fa.fa-download
+            td = order.created_at.strftime("%d/%m/%Y %H:%M")
+            td.text-center
+              = link_to edit_admin_order_path(order), class: 'action edit'
+                i.fa.fa-pencil
+              = link_to admin_order_path(order), method: :delete, class: 'action destroy'
+                i.fa.fa-trash-o
 
 
 
