@@ -14,6 +14,12 @@
 @import 'admin/timeline';
 @import 'chosen';
 
+.logo{
+  padding: 7px;
+  margin: 0;
+  filter: invert(100%);
+}
+
 .action{
   margin: 5px 5px;
   padding: 5px 10px;
