@@ -14,10 +14,10 @@ class Order
 
   field :status, type: String, default: 'Pending'
 
-  has_one :kit, dependent: :nullify
+  belongs_to :kit
 
   def self.permitted_params
-    [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status, :kit]
+    [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status]
   end
 
   def self.statuses
@@ -28,5 +28,9 @@ class Order
     Shipped
     Returned
     Canceled)
+  end
+
+  def add_kit order
+    self.kit = Kit.find(order[:kit])
   end
 end

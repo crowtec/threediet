@@ -1,2 +1,39 @@
-.col-md-12
-  h3 = @kit.id
+.row
+  .col-md-12
+    h1.page-header
+      | Kit
+.row.container-fluid
+  .col-md-12
+    .row
+      |Name:
+      =< @kit.name
+    .row
+      |Description:
+      =< @kit.description
+    .row
+      |Model:
+      =< @kit.model
+    .row
+      |Created At:
+      =< @kit.created_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Updated At:
+      =< @kit.updated_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Breakfast Tuppers:
+      - @kit.breakfasts.each_with_index do |tupper, index|
+        =< link_to tupper.name, admin_tupper_path(tupper)
+        - if index < @kit.breakfasts.length - 1
+          |,
+    .row
+      |Lunch Tuppers:
+      - @kit.lunches.each_with_index do |tupper, index|
+        =< link_to tupper.name, admin_tupper_path(tupper)
+        - if index < @kit.lunches.length - 1
+          |,
+    .row
+      |Dinner Tuppers:
+      - @kit.dinners.each_with_index do |tupper, index|
+        =< link_to tupper.name, admin_tupper_path(tupper)
+        - if index < @kit.dinners.length - 1
+          |,

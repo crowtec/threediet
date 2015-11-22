@@ -13,9 +13,17 @@ class Admin::OrderController < AdminController
   end
 
   def update
+    @order.add_kit(params[:order])
     @order.update(order_params)
+    p "www" * 10
+    p @order
+    p "www" * 10
     redirect_to admin_order_index_path, :notice => 'Order was successfully updated.'
-  rescue
+  rescue => e
+
+    p "www" * 10
+    p e
+    p "www" * 10
     render :edit
   end
 

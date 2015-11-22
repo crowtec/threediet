@@ -18,6 +18,3 @@
         = f.select :status, Order.statuses
         = f.collection_select :kit, Kit.all, :id, :name, {include_hidden: false}, {}
         = f.submit
-
-javascript:
-  initMultipleFields(['#order_kit_ids']);

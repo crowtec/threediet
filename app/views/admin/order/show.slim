@@ -1,2 +1,45 @@
-.col-md-12
-  h3 = @order.id
+.row
+  .col-md-12
+    h1.page-header
+      | Order
+.row.container-fluid
+  .col-md-12
+    .row
+      |Order Number:
+      =< @order.id
+    .row
+      |Name:
+      =< @order.name
+    .row
+      |Age:
+      =< @order.age
+    .row
+      |Gender:
+      =< @order.gender
+    .row
+      |Target:
+      =< @order.target
+    .row
+      |Daily Calories:
+      =< @order.daily_cals
+    .row
+      |Daily Activity:
+      =< @order.daily_activity
+    .row
+      |Diet:
+      =< @order.diet
+    .row
+      |Chef:
+      =< @order.chef
+    .row
+      |Supervised:
+      =< @order.supervised
+    .row
+      |Created At:
+      =< @order.created_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Updated At:
+      =< @order.updated_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Kit:
+      =< @order.kit ? link_to(@order.kit.name, admin_kit_path(@order.kit)) : 'None'
