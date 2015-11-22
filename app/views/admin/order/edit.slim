@@ -1,0 +1,20 @@
+.row
+  .col-lg-12
+    h1.page-header
+      | Edit Order
+.row.container-fluid
+  = bootstrap_form_for(@order, url: admin_order_path, html: {method: 'patch'})  do |f|
+    .row.new-tupper
+      .col-md-12
+        = f.text_field :name
+        = f.number_field :age
+        = f.text_field :gender
+        = f.text_field :target
+        = f.number_field :daily_cals
+        = f.text_field :daily_activity
+        = f.text_field :diet
+        = f.check_box :chef
+        = f.check_box :supervised
+        = f.select :status, Order.statuses
+        = f.collection_select :kit, Kit.all, :id, :name, {include_hidden: false}, {}
+        = f.submit

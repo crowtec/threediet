@@ -18,6 +18,8 @@ gem 'slim-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap_form'
 gem 'chosen-rails'
+gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+gem 'rubyzip'
 
 group :test do
   gem 'factory_girl'

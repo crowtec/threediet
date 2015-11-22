@@ -1,2 +1,39 @@
-.col-md-12
-  h3 = @tupper.id
+.row
+  .col-md-12
+    h1.page-header
+      | Tupper
+.row.container-fluid
+  .col-md-12
+    .row
+      |Name:
+      =< @tupper.name
+    .row
+      |Type:
+      =< @tupper.type
+    .row
+      |STL File:
+      | MIAU
+    .row
+      |Created At:
+      =< @tupper.created_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Updated At:
+      =< @tupper.updated_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Breakfast Kits:
+      - @tupper.breakfast_kits.each_with_index do |kit, index|
+        =< link_to kit.name, admin_kit_path(kit)
+        - if index < @tupper.breakfast_kits.length - 1
+          |,
+    .row
+      |Lunch Kits:
+      - @tupper.lunch_kits.each_with_index do |kit, index|
+        =< link_to kit.name, admin_kit_path(kit)
+        - if index < @tupper.lunch_kits.length - 1
+          |,
+    .row
+      |Dinner Kits:
+      - @tupper.dinner_kits.each_with_index do |kit, index|
+        =< link_to kit.name, admin_kit_path(kit)
+        - if index < @tupper.dinner_kits.length - 1
+          |,

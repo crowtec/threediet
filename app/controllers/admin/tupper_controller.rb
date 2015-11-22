@@ -1,10 +1,18 @@
 class Admin::TupperController < AdminController
 
+
+  before_action :load_resource, only: [:edit, :update, :show, :destroy]
+
   def new
     @tupper = Tupper.new
+
+
   end
 
   def create
+    p "wwww" * 5
+    p tupper_params
+    p "wwww" * 5
     @tupper = Tupper.new(tupper_params)
     @tupper.save!
     redirect_to admin_tupper_index_path, :notice => 'Tupper was successfully created.'
@@ -17,22 +25,19 @@ class Admin::TupperController < AdminController
   end
 
   def edit
-    @tupper = Tupper.find(params[:id])
   end
 
   def update
-    @tupper = Tupper.update(tupper_params)
+    @tupper.update(tupper_params)
     redirect_to admin_tupper_index_path, :notice => 'Tupper was successfully updated.'
   rescue
     render :edit
   end
 
   def show
-    @tupper = Tupper.find(params[:id])
   end
 
   def destroy
-    @tupper = Tupper.find(params[:id])
     @tupper.destroy
     redirect_to admin_tupper_index_path, :notice => 'Tupper was successfully destroyed.'
   end
@@ -40,6 +45,10 @@ class Admin::TupperController < AdminController
   private
 
   def tupper_params
-    params.require(:tupper).permit(Tupper.tupper_params)
+    params.require(:tupper).permit(Tupper.permitted_params)
+  end
+
+  def load_resource
+    @tupper = Tupper.find(params[:id])
   end
 end

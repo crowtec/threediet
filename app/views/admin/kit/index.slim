@@ -16,7 +16,7 @@
       tbody
         - @kits.each do |kit|
           tr
-            td = link_to kit.name, admin_tupper_path(kit)
+            td = link_to kit.name, admin_kit_path(kit)
             td = kit.model
             td = kit.created_at.strftime("%d/%m/%Y %H:%M")
             td = kit.updated_at.strftime("%d/%m/%Y %H:%M")

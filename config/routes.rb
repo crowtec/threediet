@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :tupper
     resources :kit
     resources :order
+    post 'download/zip' => 'order#download_zip', :as => 'order_download_zip'
     as :user do
       get 'users/password/edit' => 'user#password_edit', :as => 'edit_user_password'
       patch 'users/password/:id' => 'user#password_update', :as => 'user_password'
