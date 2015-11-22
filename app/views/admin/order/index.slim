@@ -21,7 +21,7 @@
           td = order.created_at.strftime("%d/%m/%Y %H:%M")
           td = order.status
           td.text-center
-            i.fa.fa-download
+            = link_to "", admin_order_download_zip_path, class: 'fa fa-download', method: :post
 
 
 
