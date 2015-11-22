@@ -13,7 +13,7 @@ class OrderController < ApplicationController
   end
 
   def new_piece
-    redirect_to new_order_path(phase: params[:phase].to_i, order: order_params, operation: params[:operation], tupper: params[:tupper])
+    redirect_to new_order_path(phase: params[:phase].to_i, order: @order, operation: params[:operation], tupper: params[:tupper])
   end
 
   def create

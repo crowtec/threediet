@@ -7,10 +7,11 @@ Rails.application.routes.draw do
     get ':filename' => 'stl#file', as: :file
   end
 
-  resources :order, only: [:new, :create]
+  resources :order, only: [:new, :create] do
+    post 'new/piece' => 'order#new_piece', as: :new_piece
+  end
   scope :order, as: :order do
     post 'new/kit' => 'order#new_kit', as: :new_kit
-    post 'new/piece' => 'order#new_piece', as: :new_piece
   end
   scope :admin, as: :admin do
     get '' => 'admin#index', as: :index
