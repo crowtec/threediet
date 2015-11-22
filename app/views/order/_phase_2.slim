@@ -38,7 +38,7 @@ javascript:
     document.getElementById("change-color").addEventListener("click", changeColor);
   }
 
-  //Phase 1 params
+//Phase 1 params
 = f.hidden_field :name
 = f.hidden_field :age
 = f.hidden_field :target
@@ -79,13 +79,16 @@ javascript:
           view transform="#cameraTransform"
 
           group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
-            mesh.kit_piece src="/stl/bol_nb_blender"
+            mesh.kit_piece src="/stl/#{ @tupper.name }"
       .selectors.text-center
         .left.col-sm-6
           .col-sm-offset-2 <
         .right.col-sm-6
           .col-sm-8 >
   .right-bar.col-md-2
+    = link_to "Siguiente tupper", order_new_piece_path(order: { name: @order.name, age: @order.age, target: @order.target, gender: @order.gender, daily_cals: @order.daily_cals, daily_activity: @order.daily_activity, diet: @order.diet, chef: @order.chef, supervised: @order.supervised, status: @order.status }, phase: @phase, operation: "next", tupper: @tupper.id), method: :post, class: "btn sharp btn-pink"
+    .top-buffer
+      = link_to "Anterior tupper", order_new_piece_path(order: { name: @order.name, age: @order.age, target: @order.target, gender: @order.gender, daily_cals: @order.daily_cals, daily_activity: @order.daily_activity, diet: @order.diet, chef: @order.chef, supervised: @order.supervised, status: @order.status }, phase: @phase, operation: "prev", tupper: @tupper.id), method: :post, class: "btn sharp btn-pink"
     .sheet.order
       h1.title lista de la compra
       .bullet
