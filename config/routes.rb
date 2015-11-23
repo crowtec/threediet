@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     get ':filename' => 'stl#file', as: :file
   end
 
-
   resources :order, only: [:new, :create]
   scope :order do
     post 'new' => 'order#new', as: :new_order_post

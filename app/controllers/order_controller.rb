@@ -9,6 +9,7 @@ class OrderController < ApplicationController
     @kit = Kit.offset(@kit_index).first
     @tupper_index = (params[:t_index] || 0).to_i % @kit.tuppers.count
     @tupper = @kit.tuppers.at(@tupper_index)
+
   end
 
   def create
@@ -18,8 +19,7 @@ class OrderController < ApplicationController
 
   private
 
-  def order_params
-    params.require(:order).permit(Order.permitted_params)
-  end
-
+    def order_params
+      params.require(:order).permit(Order.permitted_params)
+    end
 end
