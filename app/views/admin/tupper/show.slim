@@ -12,7 +12,7 @@
       =< @tupper.type
     .row
       |STL File:
-      | MIAU
+      =< link_to '', @tupper.stl.url, class: 'fa fa-download'
     .row
       |Created At:
       =< @tupper.created_at.strftime("%d/%m/%Y %H:%M")

@@ -10,7 +10,7 @@
         = f.text_field :description
         = f.text_field :model
         = f.collection_select :breakfasts_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.breakfasts.map{|t| t.id}}, {multiple: true}
-        = f.collection_select :lunches_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.lunchs.map{|t| t.id}}, {multiple: true}
+        = f.collection_select :lunches_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.lunches.map{|t| t.id}}, {multiple: true}
         = f.collection_select :dinners_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.dinners.map{|t| t.id}}, {multiple: true}
         = f.submit
 
