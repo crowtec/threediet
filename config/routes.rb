@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   end
 
   resources :order, only: [:new, :create] do
-    post 'new/piece' => 'order#new_piece', as: :new_piece
+    post 'new/tupper' => 'order#new_tupper', as: :new_tupper
+    post 'new/collect' => 'order#new_collect', as: :new_collect
   end
   scope :order, as: :order do
     post 'new/kit' => 'order#new_kit', as: :new_kit
