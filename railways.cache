@@ -1,41 +1,44 @@
-                  Prefix Verb   URI Pattern                          Controller#Action
-        new_user_session GET    /users/sign_in(.:format)             devise/sessions#new
-            user_session POST   /users/sign_in(.:format)             devise/sessions#create
-    destroy_user_session DELETE /users/sign_out(.:format)            devise/sessions#destroy
-           user_password POST   /users/password(.:format)            devise/passwords#create
-       new_user_password GET    /users/password/new(.:format)        devise/passwords#new
-      edit_user_password GET    /users/password/edit(.:format)       devise/passwords#edit
-                         PATCH  /users/password(.:format)            devise/passwords#update
-                         PUT    /users/password(.:format)            devise/passwords#update
-                    root GET    /                                    welcome#index
-                stl_file GET    /stl/:filename(.:format)             stl#file
-             order_index POST   /order(.:format)                     order#create
-               new_order GET    /order/new(.:format)                 order#new
-           order_new_kit POST   /order/new/kit(.:format)             order#new_kit
-             admin_index GET    /admin(.:format)                     admin#index
-      admin_tupper_index GET    /admin/tupper(.:format)              admin/tupper#index
-                         POST   /admin/tupper(.:format)              admin/tupper#create
-        new_admin_tupper GET    /admin/tupper/new(.:format)          admin/tupper#new
-       edit_admin_tupper GET    /admin/tupper/:id/edit(.:format)     admin/tupper#edit
-            admin_tupper GET    /admin/tupper/:id(.:format)          admin/tupper#show
-                         PATCH  /admin/tupper/:id(.:format)          admin/tupper#update
-                         PUT    /admin/tupper/:id(.:format)          admin/tupper#update
-                         DELETE /admin/tupper/:id(.:format)          admin/tupper#destroy
-         admin_kit_index GET    /admin/kit(.:format)                 admin/kit#index
-                         POST   /admin/kit(.:format)                 admin/kit#create
-           new_admin_kit GET    /admin/kit/new(.:format)             admin/kit#new
-          edit_admin_kit GET    /admin/kit/:id/edit(.:format)        admin/kit#edit
-               admin_kit GET    /admin/kit/:id(.:format)             admin/kit#show
-                         PATCH  /admin/kit/:id(.:format)             admin/kit#update
-                         PUT    /admin/kit/:id(.:format)             admin/kit#update
-                         DELETE /admin/kit/:id(.:format)             admin/kit#destroy
-       admin_order_index GET    /admin/order(.:format)               admin/order#index
-                         POST   /admin/order(.:format)               admin/order#create
-         new_admin_order GET    /admin/order/new(.:format)           admin/order#new
-        edit_admin_order GET    /admin/order/:id/edit(.:format)      admin/order#edit
-             admin_order GET    /admin/order/:id(.:format)           admin/order#show
-                         PATCH  /admin/order/:id(.:format)           admin/order#update
-                         PUT    /admin/order/:id(.:format)           admin/order#update
-                         DELETE /admin/order/:id(.:format)           admin/order#destroy
-admin_edit_user_password GET    /admin/users/password/edit(.:format) admin/user#password_edit
-     admin_user_password PATCH  /admin/users/password/:id(.:format)  admin/user#password_update
+                  Prefix Verb   URI Pattern                                   Controller#Action
+        new_user_session GET    /users/sign_in(.:format)                      devise/sessions#new
+            user_session POST   /users/sign_in(.:format)                      devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)                     devise/sessions#destroy
+           user_password POST   /users/password(.:format)                     devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)                 devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)                devise/passwords#edit
+                         PATCH  /users/password(.:format)                     devise/passwords#update
+                         PUT    /users/password(.:format)                     devise/passwords#update
+                    root GET    /                                             welcome#index
+                stl_file GET    /stl/:filename(.:format)                      stl#file
+         order_new_piece POST   /order/:order_id/new/piece(.:format)          order#new_piece
+             order_index POST   /order(.:format)                              order#create
+               new_order GET    /order/new(.:format)                          order#new
+          new_order_post POST   /order/new(.:format)                          order#new
+                new_post POST   /order/new/kit(.:format)                      order#new_kit
+             admin_index GET    /admin(.:format)                              admin#index
+      admin_tupper_index GET    /admin/tupper(.:format)                       admin/tupper#index
+                         POST   /admin/tupper(.:format)                       admin/tupper#create
+        new_admin_tupper GET    /admin/tupper/new(.:format)                   admin/tupper#new
+       edit_admin_tupper GET    /admin/tupper/:id/edit(.:format)              admin/tupper#edit
+            admin_tupper GET    /admin/tupper/:id(.:format)                   admin/tupper#show
+                         PATCH  /admin/tupper/:id(.:format)                   admin/tupper#update
+                         PUT    /admin/tupper/:id(.:format)                   admin/tupper#update
+                         DELETE /admin/tupper/:id(.:format)                   admin/tupper#destroy
+         admin_kit_index GET    /admin/kit(.:format)                          admin/kit#index
+                         POST   /admin/kit(.:format)                          admin/kit#create
+           new_admin_kit GET    /admin/kit/new(.:format)                      admin/kit#new
+          edit_admin_kit GET    /admin/kit/:id/edit(.:format)                 admin/kit#edit
+               admin_kit GET    /admin/kit/:id(.:format)                      admin/kit#show
+                         PATCH  /admin/kit/:id(.:format)                      admin/kit#update
+                         PUT    /admin/kit/:id(.:format)                      admin/kit#update
+                         DELETE /admin/kit/:id(.:format)                      admin/kit#destroy
+admin_order_download_zip POST   /admin/order/:order_id/download/zip(.:format) admin/order#download_zip
+       admin_order_index GET    /admin/order(.:format)                        admin/order#index
+                         POST   /admin/order(.:format)                        admin/order#create
+         new_admin_order GET    /admin/order/new(.:format)                    admin/order#new
+        edit_admin_order GET    /admin/order/:id/edit(.:format)               admin/order#edit
+             admin_order GET    /admin/order/:id(.:format)                    admin/order#show
+                         PATCH  /admin/order/:id(.:format)                    admin/order#update
+                         PUT    /admin/order/:id(.:format)                    admin/order#update
+                         DELETE /admin/order/:id(.:format)                    admin/order#destroy
+admin_edit_user_password GET    /admin/users/password/edit(.:format)          admin/user#password_edit
+     admin_user_password PATCH  /admin/users/password/:id(.:format)           admin/user#password_update
