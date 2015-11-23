@@ -82,13 +82,15 @@ javascript:
             //mesh.kit_piece src="/stl/bol_nb_blender.stl"
       .selectors.text-center
         .left.col-sm-6
-          .col-sm-offset-2 <
+          .col-sm-offset-2
+            = link_to '<', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: 'link'
         .right.col-sm-6
-          .col-sm-8 >
+          .col-sm-8
+            = link_to '>', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: 'link'
   .right-bar.col-md-2
-    = link_to "Siguiente tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: "btn sharp btn-pink"
-    .top-buffer
-      = link_to "Anterior tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: "btn sharp btn-pink"
+    /= link_to "Siguiente tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: "btn sharp btn-pink"
+    /.top-buffer
+    /  = link_to "Anterior tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: "btn sharp btn-pink"
     .top-buffer
       = link_to "Colección", new_order_path(@order, phase: @phase, k_index: @kit_index + 1, t_index: 0), class: "btn sharp btn-pink"
     .sheet.order

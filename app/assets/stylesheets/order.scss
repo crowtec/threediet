@@ -29,7 +29,16 @@
     //height: 700px;
   }
 }
-
+.link{
+  pointer-events: auto;
+  color: white;
+  text-decoration: none;
+  &:hover, &:active{
+    pointer-events: auto;
+    color: white;
+    text-decoration: none;
+  }
+}
 .new-order{
   font-family: "Arsenale";
   width: 100%;
@@ -84,7 +93,7 @@
   }
 }
 
-.btn-pink { background-color: $three_pink; } //button
+.btn-pink { background-color: $three_pink; }
 
 .btn-pink:hover { background-color: $three_pink_hover; }
 
