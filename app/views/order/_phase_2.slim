@@ -79,7 +79,8 @@ javascript:
           view transform="#cameraTransform"
 
           group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
-            mesh.kit_piece src="/stl/#{ @tupper.name }"
+            mesh.kit_piece src="#{ @tupper.stl.url }"
+            //mesh.kit_piece src="/stl/bol_nb_blender.stl"
       .selectors.text-center
         .left.col-sm-6
           .col-sm-offset-2 <
