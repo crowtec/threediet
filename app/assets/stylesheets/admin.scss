@@ -14,12 +14,21 @@
 @import 'admin/timeline';
 @import 'chosen';
 
+html, body{
+  width: 100%;
+  height: 100%;
+}
 .logo{
   padding: 7px;
   margin: 0;
   filter: invert(100%);
 }
 
+.login{
+  width: 100%;
+  height: 100%;
+  background-color: $three_blue ;
+}
 .action{
   margin: 5px 5px;
   padding: 5px 10px;
