@@ -123,6 +123,9 @@ GEM
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
+    jquery-minicolors-rails (2.1.4.0)
+      jquery-rails
+      rails (>= 3.2.8)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -283,6 +286,7 @@ DEPENDENCIES
   factory_girl
   font-awesome-rails
   jbuilder
+  jquery-minicolors-rails
   jquery-rails
   mongoid
   mongoid-paperclip
@@ -297,3 +301,6 @@ DEPENDENCIES
   spring
   turbolinks
   uglifier
+
+BUNDLED WITH
+   1.10.6

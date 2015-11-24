@@ -33,3 +33,5 @@ end
 
 
 gem 'rails_12factor', group: :production
+
+gem 'jquery-minicolors-rails'

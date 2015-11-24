@@ -1,17 +1,21 @@
 javascript:
-  window.addEventListener("load", function () {
+  $(document).on('ready', function (event) {
     var init = function () {
       var view = document.querySelector("view");
-      if (view && XML3D.StandardCamera.Instance !== false)
-        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, { rotateSpeed: 10 });
+      if (view && XML3D.StandardCamera.Instance !== false) {
+        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, {rotateSpeed: 10});
+      }
     };
 
     var xml3d = document.querySelector("xml3d");
     if (xml3d) {
-      if (xml3d.complete)
+      if (xml3d.complete) {
         init();
-      else
+        console.log("complete");
+      }
+      else {
         xml3d.addEventListener("load", init);
+      }
     }
 
     loadListeners();
@@ -19,7 +23,7 @@ javascript:
 
   var colors_number = 4;
   var color_element = 0;
-  var colors = ["#orange", "#green", "#blue", "#red"]
+  var colors = ["#orange", "#green", "#blue", "#red"];
 
 
   function changeColor() {
@@ -78,21 +82,21 @@ javascript:
           view transform="#cameraTransform"
 
           group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
-            mesh.kit_piece src="#{ @tupper.stl.url }"
+            mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
             //mesh.kit_piece src="/stl/bol_nb_blender.stl"
       .selectors.text-center
         .left.col-sm-6
           .col-sm-offset-2
-            = link_to '<', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: 'link'
+            = link_to '<', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: 'link', :"data-no-turbolink" => true
         .right.col-sm-6
           .col-sm-8
-            = link_to '>', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: 'link'
+            = link_to '>', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: 'link', :"data-no-turbolink" => true
   .right-bar.col-md-2
     /= link_to "Siguiente tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: "btn sharp btn-pink"
     /.top-buffer
     /  = link_to "Anterior tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: "btn sharp btn-pink"
     .top-buffer
-      = link_to "Colección", new_order_path(@order, phase: @phase, k_index: @kit_index + 1, t_index: 0), class: "btn sharp btn-pink"
+      = link_to "Colección", new_order_path(@order, phase: @phase, k_index: @kit_index + 1, t_index: 0), class: "btn sharp btn-pink", :"data-no-turbolink" => true
     .sheet.order
       h1.title lista de la compra
       .bullet

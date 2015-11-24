@@ -16,6 +16,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require jquery.minicolors
 //= require turbolinks
 //= require admin/metisMenu.min
 //= require admin/sb-admin-2
