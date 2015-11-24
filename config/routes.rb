@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  scope :stl, as: :stl do
-    get ':filename' => 'stl#file', as: :file
-  end
+  #scope :stl, as: :stl do
+  #  get ':filename' => 'stl#file', as: :file
+  #end
 
   resources :order, only: [:new, :create]
   scope :order do
@@ -14,11 +14,14 @@ Rails.application.routes.draw do
 
   scope :admin, as: :admin do
     get '' => 'admin#index', as: :index
+    #get ':id/edit' => 'admin#edit', as: :edit
+    #delete ':id' => 'admin#destroy', as: :destroy
   end
 
   namespace :admin do
     resources :tupper
     resources :kit
+    resources :color
     resources :order do
       post 'download/zip' => 'order#download_zip', :as => 'download_zip'
     end

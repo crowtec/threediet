@@ -1,0 +1,31 @@
+.row
+  .col-md-12
+    h1.page-header
+      | Colors
+      = link_to new_admin_color_path, class:'btn btn-primary pull-right'
+        i.fa.fa-plus
+.row.container-fluid
+  .col-md-12
+    table.table.table-bordered.table-hover
+      thead
+        th Name
+        th RGB
+        th Intensity
+        th Created at
+        th Updated at
+        th Actions
+      tbody
+        - @colors.each do |color|
+          tr
+            td = color.name
+            td = color.rgb_profile
+            td = color.intensity
+            td = color.created_at.strftime("%d/%m/%Y %H:%M")
+            td = color.updated_at.strftime("%d/%m/%Y %H:%M")
+            td.text-center
+              = link_to edit_admin_color_path(color), class: 'action edit'
+                i.fa.fa-pencil
+              = link_to admin_color_path(color), method: :delete, class: 'action destroy'
+                i.fa.fa-trash-o
+
+

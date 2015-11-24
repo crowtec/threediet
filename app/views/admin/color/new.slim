@@ -1,0 +1,32 @@
+javascript:
+  $(document).ready(function () {
+    var rgb = function (value, opacity) {
+      var color = $('#color-picker');
+      color.val(color.minicolors('rgbObject').r);
+      //rgbObject = color.minicolors('rgbObject');
+      //color.val(color.minicolors('rgbString'));
+      //color.val([rgbObject.r, rgbObject.g, rgbObject.b]);
+    };
+
+    $.minicolors.defaults = $.extend($.minicolors.defaults, {
+      change: rgb,
+      hide: rgb,
+      defaultValue: '#ff0000',
+      //show: rgb,
+      theme: 'bootstrap'
+    });
+
+    $('#color-picker').minicolors();
+  });
+.row
+  .col-lg-12
+    h1.page-header
+      | New Color
+.row.container-fluid
+  = bootstrap_form_for(@color, url: admin_color_index_path, html: {method: 'post'})  do |f|
+    .row.new-color
+      .col-md-12
+        = f.text_field :name
+        = f.text_field :rgb_profile, id: "color-picker", data: { format: 'rgb' }, type: "hidden"
+        = f.text_field :intensity
+        = f.submit
