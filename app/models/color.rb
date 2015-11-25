@@ -3,10 +3,12 @@ class Color
   include Mongoid::Timestamps
 
   field :name, type: String
-  field :rgb_profile, type: String
+  field :r, type: Float
+  field :g, type: Float
+  field :b, type: Float
   field :intensity, type: Float
 
   def self.permitted_params
-    [:name, :rgb_profile, :intensity]
+    [:name, :r, :g, :b, :intensity]
   end
 end

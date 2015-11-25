@@ -7,16 +7,12 @@ class Admin::ColorController < AdminController
   end
 
   def create
-    logger.debug "    "
-    logger.debug "    "
-    logger.debug "    "
-    logger.debug "    "
-    logger.debug color_params
-    logger.debug "    "
-    logger.debug "    "
-    logger.debug "    "
-
-    @color = Color.new(color_params)
+    @color = Color.new()
+    @color.name = color_params[:name]
+    @color.r = color_params[:r].to_f / 255
+    @color.g = color_params[:g].to_f / 255
+    @color.b = color_params[:b].to_f / 255
+    @color.intensity = color_params[:intensity]
     @color.save!
     redirect_to admin_color_index_path, :notice => 'Color was successfully created.'
   rescue

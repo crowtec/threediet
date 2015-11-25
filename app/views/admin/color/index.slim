@@ -18,7 +18,7 @@
         - @colors.each do |color|
           tr
             td = color.name
-            td = color.rgb_profile
+            td = "#{ '[' + color.r.to_s + ', ' + color.g.to_s + ', ' + color.b.to_s + ']' }"
             td = color.intensity
             td = color.created_at.strftime("%d/%m/%Y %H:%M")
             td = color.updated_at.strftime("%d/%m/%Y %H:%M")
