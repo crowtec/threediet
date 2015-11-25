@@ -1,22 +1,15 @@
 javascript:
   $(document).ready(function () {
-    var rgb = function (value, opacity) {
+    var rgb_change = function (value, opacity) {
       var color = $('#color-picker').minicolors('rgbObject');
       $('[name="color[r]"]').val(color.r);
       $('[name="color[g]"]').val(color.g);
       $('[name="color[b]"]').val(color.b);
-
-      //color.val(color.minicolors('rgbObject').r);
-      //rgbObject = color.minicolors('rgbObject');
-      //color.val(color.minicolors('rgbString'));
-      //color.val([rgbObject.r, rgbObject.g, rgbObject.b]);
     };
 
     $.minicolors.defaults = $.extend($.minicolors.defaults, {
-      change: rgb,
-      hide: rgb,
+      change: rgb_change,
       defaultValue: '#ff0000',
-      //show: rgb,
       theme: 'bootstrap'
     });
 
@@ -31,8 +24,11 @@ javascript:
     .row.new-color
       .col-md-12
         = f.text_field :name
-        = f.text_field :r, id: "color-picker", type: "hidden", label: "Color"
-        = f.hidden_field :g, hide_label: true
-        = f.hidden_field :b, hide_label: true
+        .form-group
+          label.control-label Color
+          input#color-picker.form-control type="hidden"
+        = f.hidden_field :r, hide_label: true, value: "255"
+        = f.hidden_field :g, hide_label: true, value: "0"
+        = f.hidden_field :b, hide_label: true, value: "0"
         = f.text_field :intensity
         = f.submit

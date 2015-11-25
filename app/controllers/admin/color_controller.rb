@@ -7,7 +7,7 @@ class Admin::ColorController < AdminController
   end
 
   def create
-    @color = Color.new()
+    @color = Color.new
     @color.name = color_params[:name]
     @color.r = color_params[:r].to_f / 255
     @color.g = color_params[:g].to_f / 255
@@ -27,7 +27,12 @@ class Admin::ColorController < AdminController
   end
 
   def update
-    @color.update(color_params)
+    @color.name = color_params[:name]
+    @color.r = color_params[:r].to_f / 255
+    @color.g = color_params[:g].to_f / 255
+    @color.b = color_params[:b].to_f / 255
+    @color.intensity = color_params[:intensity]
+    @color.update
     redirect_to admin_color_index_path, :notice => 'Color was successfully updated.'
   rescue
     render :edit

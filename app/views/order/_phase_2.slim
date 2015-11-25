@@ -68,7 +68,7 @@ javascript:
             float name="ambientIntensity" 0.9
 
           material#blue model="urn:xml3d:material:phong"
-            float3 name="diffuseColor" 0.1 0 1
+            float3 name="diffuseColor" 0.06666666666666667 1.0 0.0
             float name="ambientIntensity" 0.2
 
           material#red model="urn:xml3d:material:phong"
@@ -81,7 +81,7 @@ javascript:
           transform#cameraTransform translation="0 0 200"
           view transform="#cameraTransform"
 
-          group material="#orange" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+          group material="#blue" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
             mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
             //mesh.kit_piece src="/stl/bol_nb_blender.stl"
       .selectors.text-center
