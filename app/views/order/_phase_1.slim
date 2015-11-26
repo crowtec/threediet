@@ -2,6 +2,7 @@
   .col-md-offset-2.col-md-8.sheet.form-kit
     = f.text_field :name, label: "nombre:"
     = f.number_field :age, label: "edad:", min: 18, max: 65, value: 18
+    = f.select :gender, ['Hombre', 'Mujer'], label: 'sexo'
     = f.text_field :target, label: "objetivo:"
     = f.number_field :daily_cals, label: "calorías diarias:", append: "kcal"
     = f.text_field :daily_activity, label: "actividad diaria:"

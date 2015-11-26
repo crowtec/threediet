@@ -8,7 +8,7 @@
       .col-md-12
         = f.text_field :name
         = f.number_field :age
-        = f.text_field :gender
+        = f.select :gender, ['Hombre', 'Mujer']
         = f.text_field :target
         = f.number_field :daily_cals
         = f.text_field :daily_activity

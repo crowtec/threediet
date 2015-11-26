@@ -9,8 +9,9 @@
         th User
         th Order Number
         th Kit
-        th Status
         th STL File
+        th Status
+        th Color
         th Date
         th Actions
       tbody
@@ -22,6 +23,7 @@
             td = order.status
             td.text-center
               = link_to '', admin_order_download_zip_path(order), class: 'fa fa-download', method: :post
+            td style='background-color: rgb(#{ (order.color.red * 255).to_i }, #{ (order.color.green * 255).to_i }, #{ (order.color.blue * 255).to_i })'
             td = order.created_at.strftime("%d/%m/%Y %H:%M")
             td.text-center
               = link_to edit_admin_order_path(order), class: 'action edit'

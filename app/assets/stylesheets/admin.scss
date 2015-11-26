@@ -9,6 +9,7 @@
 @import 'bootstrap';
 @import 'jquery.minicolors';
 @import 'font-awesome';
+@import "compass";
 @import 'rails_bootstrap_forms';
 @import 'admin/metisMenu.min';
 @import 'admin/sb-admin-2';
@@ -22,7 +23,7 @@ html, body{
 .logo{
   padding: 7px;
   margin: 0;
-  filter: invert(100%);
+  @include filter(invert(100%));
 }
 
 .login{
