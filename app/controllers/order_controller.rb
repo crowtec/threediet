@@ -11,7 +11,7 @@ class OrderController < ApplicationController
     @kit = @phase < 3 ? Kit.offset(@kit_index).first : Kit.find(order_params[:kit])
     @tupper_index = (params[:t_index] || 0).to_i % @kit.tuppers.count
     @tupper = @kit.tuppers.at(@tupper_index)
-
+    @colors = Color.all if @phase.to_i == 2
   end
 
   def create
