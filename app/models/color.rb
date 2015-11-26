@@ -8,6 +8,8 @@ class Color
   field :blue, type: Float
   field :intensity, type: Float
 
+  has_one :order
+
   validates :name, presence: true
   validates :red, :green, :blue, :intensity, presence: true, inclusion: {in: 0..1, message: "value must be between 0 and 1"}
 

@@ -90,6 +90,9 @@
   .bullet{
     padding: 20px;
     text-transform: uppercase;
+    .item.selected{
+      color: $three_pink;
+    }
   }
 }
 

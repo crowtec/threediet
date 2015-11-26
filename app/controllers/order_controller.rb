@@ -4,6 +4,8 @@ class OrderController < ApplicationController
 
     @phase = params[:phase] || 1
     @order = params.has_key?(:order) ? Order.new(order_params) : Order.new
+    @color_index = (params[:c_index] || 0).to_i % Color.count
+    @color = Color.offset(@color_index).first
 
     @kit_index = (params[:k_index] || 0).to_i % Kit.count
     @kit = Kit.offset(@kit_index).first

@@ -3,7 +3,7 @@ class Admin::ColorController < AdminController
   before_action :load_resource, only: [:edit, :update, :show, :destroy]
 
   def new
-    @color = Color.new(red: 1, green: 0, blue: 0)
+    @color = Color.new(red: 1, green: 0, blue: 0, intensity: 0.5)
   end
 
   def create

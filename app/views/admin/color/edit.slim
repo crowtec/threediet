@@ -11,8 +11,8 @@
         .form-group
           label.control-label Color
           input#color-picker.form-control type="hidden"
-        = f.hidden_field :red, hide_label: true, value: "#{ @color.red }", step: 0.01, min: 0, max: 1
-        = f.hidden_field :green, hide_label: true, value: "#{ @color.green }", step: 0.01, min: 0, max: 1
-        = f.hidden_field :blue, hide_label: true, value: "#{ @color.blue }", step: 0.01, min: 0, max: 1
-        = f.text_field :intensity, step: 0.01, min: 0, max: 1, value: 0.5
+        = f.hidden_field :red, hide_label: true, step: 0.01, min: 0, max: 1
+        = f.hidden_field :green, hide_label: true, step: 0.01, min: 0, max: 1
+        = f.hidden_field :blue, hide_label: true, step: 0.01, min: 0, max: 1
+        = f.text_field :intensity, step: 0.01, min: 0, max: 1
         = f.submit

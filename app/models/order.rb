@@ -15,6 +15,7 @@ class Order
   field :status, type: String, default: 'Pending'
 
   belongs_to :kit
+  belongs_to :color
 
   def self.permitted_params
     [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status]

@@ -1,3 +1,84 @@
+//Phase 1 params
+= f.hidden_field :name
+= f.hidden_field :age
+= f.hidden_field :target
+= f.hidden_field :daily_cals
+= f.hidden_field :daily_activity
+= f.hidden_field :diet
+= f.hidden_field :chef
+= f.hidden_field :supervised
+= f.hidden_field :kit, value: @kit
+= f.hidden_field :color, value: @color
+
+.body-overlay
+.container-fluid
+  .left-bar.col-md-10
+    .tv.col-md-12
+      .collection.text-center collection eat mix
+      .col-md-offset-4.col-md-4
+        xml3d.screen
+          material#color model="urn:xml3d:material:phong"
+            float3 name="diffuseColor" #{@color.red} #{@color.green} #{@color.blue}
+            float name="ambientIntensity" #{@color.intensity}
+
+          light#light1 model="urn:xml3d:light:directional"
+            float3 name="intensity" 1 1 1
+
+          transform#cameraTransform translation="0 0 200"
+          view transform="#cameraTransform"
+
+          group material="#color" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+            mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
+            //mesh.kit_piece src="/stl/bol_nb_blender.stl"
+      .selectors.text-center
+        .left.col-sm-6
+          .col-sm-offset-2
+            = link_to '<', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1, c_index: @color_index), class: 'link', :"data-no-turbolink" => true
+        .right.col-sm-6
+          .col-sm-8
+            = link_to '>', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', :"data-no-turbolink" => true
+  .right-bar.col-md-2
+    .top-buffer
+      = link_to "Colección", new_order_path(@order, phase: @phase, k_index: @kit_index + 1, t_index: 0, c_index: @color_index), class: "btn sharp btn-pink", :"data-no-turbolink" => true
+      = link_to "Color", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: 0, c_index: @color_index + 1), class: "btn sharp btn-pink", :"data-no-turbolink" => true
+    .sheet.order
+      h1.title lista de la compra
+      .bullet
+        | producto:
+        .description 1 kit 3diet
+      .bullet
+        |modelo:
+        .description = @kit.name
+      .bullet
+        | color:
+        .description style='color: rgb(#{(@color.red * 255).to_i}, #{(@color.green * 255).to_i}, #{(@color.blue * 255).to_i});' = @color.name
+      .bullet
+        | resumen kit:
+        .description
+          |desayuno:
+          - index = 0
+          - @kit.breakfasts.each do |tupper|
+            .item class='#{index == @tupper_index ? "selected" : ""}'
+              | - 1
+              =< tupper.name
+            - index += 1
+        .description
+          |comida:
+          - @kit.lunches.each do |tupper|
+            .item class='#{index == @tupper_index ? "selected" : ""}'
+              | - 1
+              =< tupper.name
+            - index += 1
+        .description
+          |cena:
+          - @kit.dinners.each do |tupper|
+            .item class='#{index == @tupper_index ? "selected" : ""}'
+              | - 1
+              =< tupper.name
+            - index += 1
+
+    == yield(:next_button)
+    == yield(:back_button)
 javascript:
   $(document).on('ready', function (event) {
     var init = function () {
@@ -21,114 +102,6 @@ javascript:
     loadListeners();
   });
 
-  var colors_number = 4;
-  var color_element = 0;
-  var colors = ["#orange", "#green", "#blue", "#red"];
-
-
-  function changeColor() {
-    color_element++;
-    if (color_element < colors_number) {
-      $(".kit_piece")[0].material = colors[color_element];
-    }
-    else {
-      color_element = 0;
-      $(".kit_piece")[0].material = colors[color_element];
-    }
-    //event.target.setAttribute("material", "#greenPhong");
-  }
-
   function loadListeners() {
     document.getElementById("change-color").addEventListener("click", changeColor);
   }
-
-//Phase 1 params
-= f.hidden_field :name
-= f.hidden_field :age
-= f.hidden_field :target
-= f.hidden_field :daily_cals
-= f.hidden_field :daily_activity
-= f.hidden_field :diet
-= f.hidden_field :chef
-= f.hidden_field :supervised
-
-.body-overlay
-.container-fluid
-  .left-bar.col-md-10
-    .tv.col-md-12
-      .collection.text-center collection eat mix
-      .col-md-offset-4.col-md-4
-        xml3d.screen
-          material#green model="urn:xml3d:material:phong"
-            float3 name="diffuseColor" 0.1 0.8 0.1
-            float name="ambientIntensity" 0.5
-
-          material#orange model="urn:xml3d:material:phong"
-            float3 name="diffuseColor" 1 0.5 0
-            float name="ambientIntensity" 0.9
-
-          material#blue model="urn:xml3d:material:phong"
-            float3 name="diffuseColor" 0.06666666666666667 1.0 0.0
-            float name="ambientIntensity" 0.2
-
-          material#red model="urn:xml3d:material:phong"
-            float3 name="diffuseColor" 0.1 0.1 0.3
-            float name="ambientIntensity" 0.5
-
-          light#light1 model="urn:xml3d:light:directional"
-            float3 name="intensity" 1 1 1
-
-          transform#cameraTransform translation="0 0 200"
-          view transform="#cameraTransform"
-
-          group material="#blue" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
-            mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
-            //mesh.kit_piece src="/stl/bol_nb_blender.stl"
-      .selectors.text-center
-        .left.col-sm-6
-          .col-sm-offset-2
-            = link_to '<', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: 'link', :"data-no-turbolink" => true
-        .right.col-sm-6
-          .col-sm-8
-            = link_to '>', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: 'link', :"data-no-turbolink" => true
-  .right-bar.col-md-2
-    /= link_to "Siguiente tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1), class: "btn sharp btn-pink"
-    /.top-buffer
-    /  = link_to "Anterior tupper", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1), class: "btn sharp btn-pink"
-    .top-buffer
-      = link_to "Colección", new_order_path(@order, phase: @phase, k_index: @kit_index + 1, t_index: 0), class: "btn sharp btn-pink", :"data-no-turbolink" => true
-    .sheet.order
-      h1.title lista de la compra
-      .bullet
-        | producto:
-        .description 1 kit 3diet
-      .bullet
-        |modelo:
-        .description fit eat
-      .bullet
-        | color:
-        .description rojo
-      .bullet
-        | resumen kit:
-        .description
-          |desayuno:
-          .item - 1 bol
-          .item - 2 tazas
-          .item - 1 cuchara
-        .description
-          |comida:
-          .item - 1 bol
-          .item - 2 tazas
-          .item - 1 cuchara
-        .description
-          |cena:
-          .item - 1 bol
-          .item - 2 tazas
-          .item - 1 cuchara
-
-    == yield(:next_button)
-    == yield(:back_button)
-    .top-buffer
-      button#change-color.btn.sharp.btn-pink.form-control type="button" Cambiar color
-    .top-buffer
-      button#change-colection.btn.sharp.btn-pink.form-control type="button" Colección
