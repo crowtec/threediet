@@ -1,40 +1,4 @@
-javascript:
-  function hexRGB(rgb) {
-    var hex = [
-      rgb.r.toString(16),
-      rgb.g.toString(16),
-      rgb.b.toString(16)
-    ];
-    $.each(hex, function (nr, val) {
-      if (val.length === 1) hex[nr] = '0' + val;
-    });
-    return '#' + hex.join('');
-  }
-
-  $(document).ready(function () {
-    var rgb_change = function (value, opacity) {
-      var color = $('#color-picker').minicolors('rgbObject');
-      $('[name="color[r]"]').val(color.r);
-      $('[name="color[g]"]').val(color.g);
-      $('[name="color[b]"]').val(color.b);
-    };
-
-    rgb = {
-      "r": #{ (@color.r * 255).to_i },
-      "g": #{ (@color.g * 255).to_i },
-      "b": #{ (@color.b * 255).to_i }
-    };
-
-    //c = $('#color-picker').minicolors('rgb2hex');
-
-    $.minicolors.defaults = $.extend($.minicolors.defaults, {
-      change: rgb_change,
-      defaultValue: hexRGB(rgb),
-      theme: 'bootstrap'
-    });
-
-    $('#color-picker').minicolors();
-  });
+= render 'partials/admin/color'
 .row
   .col-lg-12
     h1.page-header
@@ -47,8 +11,8 @@ javascript:
         .form-group
           label.control-label Color
           input#color-picker.form-control type="hidden"
-        = f.hidden_field :r, hide_label: true, value: "#{ @color.r }"
-        = f.hidden_field :g, hide_label: true, value: "#{ @color.g }"
-        = f.hidden_field :b, hide_label: true, value: "#{ @color.b }"
-        = f.text_field :intensity
+        = f.hidden_field :red, hide_label: true, value: "#{ @color.red }", step: 0.01, min: 0, max: 1
+        = f.hidden_field :green, hide_label: true, value: "#{ @color.green }", step: 0.01, min: 0, max: 1
+        = f.hidden_field :blue, hide_label: true, value: "#{ @color.blue }", step: 0.01, min: 0, max: 1
+        = f.text_field :intensity, step: 0.01, min: 0, max: 1, value: 0.5
         = f.submit

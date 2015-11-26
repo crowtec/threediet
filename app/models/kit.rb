@@ -19,6 +19,8 @@ class Kit
 
   has_many :orders
 
+  validates :name, presence: true
+
   def self.permitted_params
     [:name, :description, :model]
   end

@@ -1,0 +1,35 @@
+javascript:
+  function hexRGB(rgb) {
+    var hex = [
+      rgb.red.toString(16),
+      rgb.green.toString(16),
+      rgb.blue.toString(16)
+    ];
+    $.each(hex, function (nr, val) {
+      if (val.length === 1) hex[nr] = '0' + val;
+    });
+    return '#' + hex.join('');
+  }
+
+  var rgb_change = function (value, opacity) {
+    var color = $('#color-picker').minicolors('rgbObject');
+    $('#color_red').val(color.r / 255);
+    $('#color_green').val(color.g / 255);
+    $('#color_blue').val(color.b / 255);
+  };
+
+  var rgb = {
+    "red": #{ (@color.red * 255).to_i },
+    "green": #{ (@color.green * 255).to_i },
+    "blue": #{ (@color.blue * 255).to_i }
+  };
+
+  $.minicolors.defaults = $.extend($.minicolors.defaults, {
+    change: rgb_change,
+    defaultValue: hexRGB(rgb),
+    theme: 'bootstrap'
+  });
+
+  $(document).ready(function () {
+    $('#color-picker').minicolors();
+  });

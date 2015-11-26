@@ -3,19 +3,17 @@ class Admin::ColorController < AdminController
   before_action :load_resource, only: [:edit, :update, :show, :destroy]
 
   def new
-    @color = Color.new
+    @color = Color.new(red: 1, green: 0, blue: 0)
   end
 
   def create
-    @color = Color.new
-    @color.name = color_params[:name]
-    @color.r = color_params[:r].to_f / 255
-    @color.g = color_params[:g].to_f / 255
-    @color.b = color_params[:b].to_f / 255
-    @color.intensity = color_params[:intensity]
+    @color = Color.new(color_params)
     @color.save!
     redirect_to admin_color_index_path, :notice => 'Color was successfully created.'
-  rescue
+  rescue => e
+    p 'www' * 10
+    p e
+    p 'www' * 10
     render :new
   end
 
@@ -27,12 +25,7 @@ class Admin::ColorController < AdminController
   end
 
   def update
-    @color.name = color_params[:name]
-    @color.r = color_params[:r].to_f / 255
-    @color.g = color_params[:g].to_f / 255
-    @color.b = color_params[:b].to_f / 255
-    @color.intensity = color_params[:intensity]
-    @color.update
+    @color.update(color_params)
     redirect_to admin_color_index_path, :notice => 'Color was successfully updated.'
   rescue
     render :edit

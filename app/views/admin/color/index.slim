@@ -18,8 +18,7 @@
         - @colors.each do |color|
           tr
             td = color.name
-            //td = "#{ '[' + color.r.to_s + ', ' + color.g.to_s + ', ' + color.b.to_s + ']' }"
-            td style='background-color: rgb(#{ (color.r * 255).to_i }, #{ (color.g * 255).to_i }, #{ (color.b * 255).to_i })'
+            td style='background-color: rgb(#{ (color.red * 255).to_i }, #{ (color.green * 255).to_i }, #{ (color.blue * 255).to_i })'
             td = color.intensity
             td = color.created_at.strftime("%d/%m/%Y %H:%M")
             td = color.updated_at.strftime("%d/%m/%Y %H:%M")

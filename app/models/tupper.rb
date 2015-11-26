@@ -1,7 +1,6 @@
 class Tupper
   include Mongoid::Document
   include Mongoid::Timestamps
-
   include Mongoid::Paperclip
 
   field :name, type: String
@@ -13,12 +12,11 @@ class Tupper
   do_not_validate_attachment_file_type :stl
   before_post_process :set_content_type
 
-
-
-
   has_and_belongs_to_many :breakfast_kits, class_name: 'Kit', inverse_of: :breakfasts
   has_and_belongs_to_many :lunch_kits, class_name: 'Kit', inverse_of: :lunchs
   has_and_belongs_to_many :dinner_kits, class_name: 'Kit', inverse_of: :dinners
+
+  validates :name, presence: true
 
   def self.permitted_params
     [:name, :stl, :type]
