@@ -13,6 +13,7 @@ javascript:
 
   $(document).ready(function () {
     var rgb_change = function (value, opacity) {
+      console.log("hollaaaaa");
       var color = $('#color-picker').minicolors('rgbObject');
       $('[name="color[r]"]').val(color.r);
       $('[name="color[g]"]').val(color.g);
@@ -47,8 +48,8 @@ javascript:
         .form-group
           label.control-label Color
           input#color-picker.form-control type="hidden"
-        = f.hidden_field :r, hide_label: true, value: "#{ @color.r }"
-        = f.hidden_field :g, hide_label: true, value: "#{ @color.g }"
-        = f.hidden_field :b, hide_label: true, value: "#{ @color.b }"
+        = f.hidden_field :r, hide_label: true, value: "#{ (@color.r * 255).to_i }"
+        = f.hidden_field :g, hide_label: true, value: "#{ (@color.g * 255).to_i }"
+        = f.hidden_field :b, hide_label: true, value: "#{ (@color.b * 255).to_i }"
         = f.text_field :intensity
         = f.submit
