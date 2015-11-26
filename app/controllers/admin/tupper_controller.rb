@@ -5,8 +5,6 @@ class Admin::TupperController < AdminController
 
   def new
     @tupper = Tupper.new
-
-
   end
 
   def create
