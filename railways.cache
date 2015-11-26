@@ -8,12 +8,9 @@
                          PATCH  /users/password(.:format)                     devise/passwords#update
                          PUT    /users/password(.:format)                     devise/passwords#update
                     root GET    /                                             welcome#index
-                stl_file GET    /stl/:filename(.:format)                      stl#file
-         order_new_piece POST   /order/:order_id/new/piece(.:format)          order#new_piece
              order_index POST   /order(.:format)                              order#create
                new_order GET    /order/new(.:format)                          order#new
           new_order_post POST   /order/new(.:format)                          order#new
-                new_post POST   /order/new/kit(.:format)                      order#new_kit
              admin_index GET    /admin(.:format)                              admin#index
       admin_tupper_index GET    /admin/tupper(.:format)                       admin/tupper#index
                          POST   /admin/tupper(.:format)                       admin/tupper#create
@@ -31,6 +28,14 @@
                          PATCH  /admin/kit/:id(.:format)                      admin/kit#update
                          PUT    /admin/kit/:id(.:format)                      admin/kit#update
                          DELETE /admin/kit/:id(.:format)                      admin/kit#destroy
+       admin_color_index GET    /admin/color(.:format)                        admin/color#index
+                         POST   /admin/color(.:format)                        admin/color#create
+         new_admin_color GET    /admin/color/new(.:format)                    admin/color#new
+        edit_admin_color GET    /admin/color/:id/edit(.:format)               admin/color#edit
+             admin_color GET    /admin/color/:id(.:format)                    admin/color#show
+                         PATCH  /admin/color/:id(.:format)                    admin/color#update
+                         PUT    /admin/color/:id(.:format)                    admin/color#update
+                         DELETE /admin/color/:id(.:format)                    admin/color#destroy
 admin_order_download_zip POST   /admin/order/:order_id/download/zip(.:format) admin/order#download_zip
        admin_order_index GET    /admin/order(.:format)                        admin/order#index
                          POST   /admin/order(.:format)                        admin/order#create

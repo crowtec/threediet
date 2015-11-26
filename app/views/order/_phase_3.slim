@@ -7,6 +7,8 @@
 = f.hidden_field :diet
 = f.hidden_field :chef
 = f.hidden_field :supervised
+= f.hidden_field :kit, value: @kit.id.to_s
+= f.hidden_field :color, value: @color.id.to_s
 
 .body-overlay
 .row.new-order.review
@@ -17,32 +19,33 @@
       .bullet
         | producto:
         .description 1 kit 3diet
-
       .bullet
-        |modelo:
-        .description fit eat
-
+        | modelo:
+        .description = @kit.name
       .bullet
         | color:
-        .description rojo
+        .description style='color: rgb(#{(@color.red * 255).to_i}, #{(@color.green * 255).to_i}, #{(@color.blue * 255).to_i});' = @color.name
     .col-md-6
       .bullet
         | resumen kit:
         .description
           |desayuno:
-          .item - 1 bol
-          .item - 2 tazas
-          .item - 1 cuchara
+          - @kit.breakfasts.each do |tupper|
+            .item
+              | - 1
+              =< tupper.name
         .description
           |comida:
-          .item - 1 bol
-          .item - 2 tazas
-          .item - 1 cuchara
+          - @kit.lunches.each do |tupper|
+            .item
+              | - 1
+              =< tupper.name
         .description
           |cena:
-          .item - 1 bol
-          .item - 2 tazas
-          .item - 1 cuchara
+          - @kit.dinners.each do |tupper|
+            .item
+              | - 1
+              =< tupper.name
 .col-md-1
   == yield(:back_button)
 .col-md-1.col-md-offset-10

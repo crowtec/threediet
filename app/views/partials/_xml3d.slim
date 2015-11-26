@@ -1,0 +1,34 @@
+xml3d.screen
+  material#color model="urn:xml3d:material:phong"
+    float3 name="diffuseColor" #{@color.red} #{@color.green} #{@color.blue}
+    float name="ambientIntensity" #{@color.intensity}
+
+  light#light1 model="urn:xml3d:light:directional"
+    float3 name="intensity" 1 1 1
+
+  transform#cameraTransform translation="0 0 200"
+  view transform="#cameraTransform"
+
+  group material="#color" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+    mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
+
+javascript:
+  $(document).on('ready', function (event) {
+    var init = function () {
+      var view = document.querySelector("view");
+      if (view && XML3D.StandardCamera.Instance !== false) {
+        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, {rotateSpeed: 10});
+      }
+    };
+
+    var xml3d = document.querySelector("xml3d");
+    if (xml3d) {
+      if (xml3d.complete) {
+        init();
+        console.log("complete");
+      }
+      else {
+        xml3d.addEventListener("load", init);
+      }
+    }
+  });

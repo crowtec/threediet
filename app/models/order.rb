@@ -17,8 +17,10 @@ class Order
   belongs_to :kit
   belongs_to :color
 
+  attr_accessor :t_index, :k_index, :c_index
+
   def self.permitted_params
-    [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status]
+    [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status, :kit, :color]
   end
 
   def self.statuses

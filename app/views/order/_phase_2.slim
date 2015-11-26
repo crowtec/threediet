@@ -7,8 +7,8 @@
 = f.hidden_field :diet
 = f.hidden_field :chef
 = f.hidden_field :supervised
-= f.hidden_field :kit, value: @kit
-= f.hidden_field :color, value: @color
+= f.hidden_field :kit, value: @kit.id.to_s
+= f.hidden_field :color, value: @color.id.to_s
 
 .body-overlay
 .container-fluid
@@ -16,38 +16,25 @@
     .tv.col-md-12
       .collection.text-center collection eat mix
       .col-md-offset-4.col-md-4
-        xml3d.screen
-          material#color model="urn:xml3d:material:phong"
-            float3 name="diffuseColor" #{@color.red} #{@color.green} #{@color.blue}
-            float name="ambientIntensity" #{@color.intensity}
-
-          light#light1 model="urn:xml3d:light:directional"
-            float3 name="intensity" 1 1 1
-
-          transform#cameraTransform translation="0 0 200"
-          view transform="#cameraTransform"
-
-          group material="#color" style="transform: translate3d(0px,0px, 0px) rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
-            mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
-            //mesh.kit_piece src="/stl/bol_nb_blender.stl"
+        = render 'partials/xml3d'
       .selectors.text-center
         .left.col-sm-6
           .col-sm-offset-2
-            = link_to '<', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1, c_index: @color_index), class: 'link', :"data-no-turbolink" => true
+            = link_to '<', new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1, c_index: @color_index), class: 'link', method: :post
         .right.col-sm-6
           .col-sm-8
-            = link_to '>', new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', :"data-no-turbolink" => true
+            = link_to '>', new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', method: :post
   .right-bar.col-md-2
     .top-buffer
-      = link_to "Colección", new_order_path(@order, phase: @phase, k_index: @kit_index + 1, t_index: 0, c_index: @color_index), class: "btn sharp btn-pink", :"data-no-turbolink" => true
-      = link_to "Color", new_order_path(@order, phase: @phase, k_index: @kit_index, t_index: 0, c_index: @color_index + 1), class: "btn sharp btn-pink", :"data-no-turbolink" => true
+      = link_to "Colección", new_order_path(order: params[:order], phase: @phase, k_index: @kit_index + 1, t_index: 0, c_index: @color_index), class: "btn sharp btn-pink", method: :post
+      = link_to "Color", new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: 0, c_index: @color_index + 1), class: "btn sharp btn-pink", method: :post
     .sheet.order
       h1.title lista de la compra
       .bullet
         | producto:
         .description 1 kit 3diet
       .bullet
-        |modelo:
+        | modelo:
         .description = @kit.name
       .bullet
         | color:
@@ -79,29 +66,3 @@
 
     == yield(:next_button)
     == yield(:back_button)
-javascript:
-  $(document).on('ready', function (event) {
-    var init = function () {
-      var view = document.querySelector("view");
-      if (view && XML3D.StandardCamera.Instance !== false) {
-        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, {rotateSpeed: 10});
-      }
-    };
-
-    var xml3d = document.querySelector("xml3d");
-    if (xml3d) {
-      if (xml3d.complete) {
-        init();
-        console.log("complete");
-      }
-      else {
-        xml3d.addEventListener("load", init);
-      }
-    }
-
-    loadListeners();
-  });
-
-  function loadListeners() {
-    document.getElementById("change-color").addEventListener("click", changeColor);
-  }
