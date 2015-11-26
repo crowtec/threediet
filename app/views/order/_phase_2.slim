@@ -47,21 +47,21 @@
           - index = 0
           - @kit.breakfasts.each do |tupper|
             .item class='#{index == @tupper_index ? "selected" : ""}'
-              | - 1
+              | -
               =< tupper.name
             - index += 1
         .description
           |comida:
           - @kit.lunches.each do |tupper|
             .item class='#{index == @tupper_index ? "selected" : ""}'
-              | - 1
+              | -
               =< tupper.name
             - index += 1
         .description
           |cena:
           - @kit.dinners.each do |tupper|
             .item class='#{index == @tupper_index ? "selected" : ""}'
-              | - 1
+              | -
               =< tupper.name
             - index += 1
 

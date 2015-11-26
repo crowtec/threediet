@@ -33,19 +33,19 @@
           |desayuno:
           - @kit.breakfasts.each do |tupper|
             .item
-              | - 1
+              | -
               =< tupper.name
         .description
           |comida:
           - @kit.lunches.each do |tupper|
             .item
-              | - 1
+              | -
               =< tupper.name
         .description
           |cena:
           - @kit.dinners.each do |tupper|
             .item
-              | - 1
+              | - 
               =< tupper.name
 .col-md-1
   == yield(:back_button)
