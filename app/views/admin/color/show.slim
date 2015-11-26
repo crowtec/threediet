@@ -1,0 +1,30 @@
+.row
+  .col-md-12
+    h1.page-header
+      | Color
+.row.container-fluid
+  .col-md-12
+    .row
+      |Name:
+      =< @color.name
+    .row
+      |Red:
+      =< @color.red * 255
+    .row
+      |Green:
+      =< @color.green * 255
+    .row
+      |Blue:
+      =< @color.blue * 255
+    .row
+      |Intensity:
+      =< @color.intensity
+    .row
+      | Color:
+      .color style='width: 300px; height: 40px; background-color: rgb(#{ (@color.red * 255).to_i }, #{ (@color.green * 255).to_i }, #{ (@color.blue * 255).to_i })'
+    .row
+      |Created At:
+      =< @color.created_at.strftime("%d/%m/%Y %H:%M")
+    .row
+      |Updated At:
+      =< @color.updated_at.strftime("%d/%m/%Y %H:%M")

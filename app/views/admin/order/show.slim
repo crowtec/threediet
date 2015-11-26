@@ -43,3 +43,6 @@
     .row
       |Kit:
       =< @order.kit ? link_to(@order.kit.name, admin_kit_path(@order.kit)) : 'None'
+    .row
+      |Color:
+      =< @order.color ? link_to(@order.color.name, admin_color_path(@order.color)) : 'None'
