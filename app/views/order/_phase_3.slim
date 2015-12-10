@@ -14,40 +14,40 @@
 .body-overlay
 .row.new-order.review
   .col-md-1
-  .col-md-offset-1.col-md-8.sheet.form-kit
-    .title pedido
+  .col-md-offset-1.col-md-8.notebook.form-kit
+    .title Pedido
     .col-md-6
       .bullet
-        | producto:
+        | Producto:
         .description 1 kit 3diet
       .bullet
-        | modelo:
+        | Modelo:
         .description = @kit.name
       .bullet
-        | color:
+        | Color:
         .description style='color: rgb(#{(@color.red * 255).to_i}, #{(@color.green * 255).to_i}, #{(@color.blue * 255).to_i});' = @color.name
     .col-md-6
       .bullet
-        | resumen kit:
-        .description
-          |desayuno:
+        | Resumen kit:
+        .description.kit-type
+          | Desayuno:
           - @kit.breakfasts.each do |tupper|
             .item
               | -
               =< tupper.name
-        .description
-          |comida:
+        .description.kit-type
+          | Comida:
           - @kit.lunches.each do |tupper|
             .item
               | -
               =< tupper.name
-        .description
-          |cena:
+        .description.kit-type
+          | Cena:
           - @kit.dinners.each do |tupper|
             .item
               | -
               =< tupper.name
-.col-md-1
+.col-md-2
   == yield(:back_button)
-.col-md-1.col-md-offset-10
+.col-md-2.col-md-offset-8
   == yield(:next_button)

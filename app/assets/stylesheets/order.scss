@@ -21,6 +21,13 @@
     font-size: 4em;
     pointer-events: none;
   }
+  .tv-buttons{
+    position: absolute;
+    width: 100%;
+    top: 74%;
+    font-size: 4em;
+    pointer-events: none;
+  }
   .screen{
     margin-top: -10%;
     width: 100%;
@@ -38,42 +45,43 @@
   }
 }
 .new-order{
-  font-family: "Arsenale";
+  font-family: "OpenSans";
   width: 100%;
   .form-kit {
     box-sizing: border-box;
-    padding: 5%;
+    padding: 5% 0 5% 4%;
 
-    label{
-      font-size: 2em;
-      padding: 6px 12px;
+    .input-group-addon{
+      height: 50%;
     }
-    input, select{
-      font-size: 2em;
-      border: none;
-      background: none;
-      box-shadow: none;
-      height: 100%;
-      &[type='checkbox']{
-        height: auto;
+    .input-group, .form-group {
+      input, select {
+        border: none;
+        box-shadow: none;
       }
+      margin-bottom: 10%;
     }
-    span{
-      font-size: 2em;
-    }
-
   }
 
   &.review{
-    font-size: 3em;
+    font-size: 2em;
     .title{
       font-size: 1.2em;
     }
 
     .bullet{
       margin: 20px;
-      .item{
-        font-size: 0.8em;
+      .description{
+        font-size: 1em;
+        color: $three_pink;
+        &.kit-type{
+          font-size: 0.8em;
+          color: black;
+        }
+        .item{
+          color: $three_pink;
+          font-size: 0.8em;
+        }
       }
     }
   }

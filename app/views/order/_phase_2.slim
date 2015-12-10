@@ -16,21 +16,28 @@
   .left-bar.col-md-10
     .tv.col-md-12
       .collection.text-center collection eat mix
-      .col-md-offset-4.col-md-4
+      .col-md-offset-2.col-md-8
         = render 'partials/xml3d'
       .selectors.text-center
         .left.col-sm-6
-          .col-sm-offset-2
+          .col-sm-offset-1
             = link_to '<', new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index - 1, c_index: @color_index), class: 'link', method: :post
         .right.col-sm-6
-          .col-sm-8
+          .col-sm-9
             = link_to '>', new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', method: :post
+      .tv-buttons.text-center
+        .left.col-xs-6
+          .col-xs-offset-3
+            - kit_rotation = 33
+            = link_to image_tag('l_wheel.png', style: "transform: rotate(#{@kit_index * kit_rotation}deg); -webkit-transform: rotate(#{@kit_index * kit_rotation}deg); -moz-transform: rotate(#{@kit_index * kit_rotation}deg); -o-transform: rotate(#{@kit_index * kit_rotation}deg); -ms-transform: rotate(#{@kit_index * kit_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, k_index: @kit_index + 1, t_index: 0, c_index: @color_index), class: 'link', method: :post
+        .right.col-xs-6
+          .col-xs-7
+            - color_rotation = 33
+            = link_to image_tag('r_wheel.png', style: "transform: rotate(#{@color_index * color_rotation}deg); -webkit-transform: rotate(#{@color_index * color_rotation}deg); -moz-transform: rotate(#{@color_index * color_rotation}deg); -o-transform: rotate(#{@color_index * color_rotation}deg); -ms-transform: rotate(#{@color_index * color_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: 0, c_index: @color_index + 1), class: 'link', method: :post
+
   .right-bar.col-md-2
-    .top-buffer
-      = link_to "Colección", new_order_path(order: params[:order], phase: @phase, k_index: @kit_index + 1, t_index: 0, c_index: @color_index), class: "btn sharp btn-pink", method: :post
-      = link_to "Color", new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: 0, c_index: @color_index + 1), class: "btn sharp btn-pink", method: :post
     .sheet.order
-      h1.title lista de la compra
+      h2.title lista de la compra
       .bullet
         | producto:
         .description 1 kit 3diet
@@ -65,5 +72,7 @@
               =< tupper.name
             - index += 1
 
-    == yield(:next_button)
-    == yield(:back_button)
+.col-md-2
+  == yield(:back_button)
+.col-md-2.col-md-offset-8
+  == yield(:next_button)

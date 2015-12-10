@@ -1,6 +1,6 @@
 .container-fluid
   - url = @phase.to_i == 3 ? order_index_path : new_order_post_path(phase: @phase + 1)
-  = bootstrap_form_for(@order, url: url, html: {method: 'post'}, layout: :horizontal, label_col: "col-md-3", control_col: "col-md-9")  do |f|
+  = bootstrap_form_for(@order, url: url, html: {method: 'post'}, label_col: "col-md-3", control_col: "col-md-9")  do |f|
     - content_for(:back_button) do
       .top-buffer
         button.btn.sharp.btn-pink.form-control type="button" Atrás
