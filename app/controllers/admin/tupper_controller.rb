@@ -8,9 +8,6 @@ class Admin::TupperController < AdminController
   end
 
   def create
-    p "wwww" * 5
-    p tupper_params
-    p "wwww" * 5
     @tupper = Tupper.new(tupper_params)
     @tupper.save!
     redirect_to admin_tupper_index_path, :notice => 'Tupper was successfully created.'

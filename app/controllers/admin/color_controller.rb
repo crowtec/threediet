@@ -11,9 +11,6 @@ class Admin::ColorController < AdminController
     @color.save!
     redirect_to admin_color_index_path, :notice => 'Color was successfully created.'
   rescue => e
-    p 'www' * 10
-    p e
-    p 'www' * 10
     render :new
   end
 
