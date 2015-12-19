@@ -50,23 +50,23 @@
       .bullet
         | resumen kit:
         .description
-          |desayuno:
+          |vajilla medidora:
           - index = 0
-          - @kit.breakfasts.each do |tupper|
+          - @kit.crockeries.each do |tupper|
             .item class='#{index == @tupper_index ? "selected" : ""}'
               | -
               =< tupper.name
             - index += 1
         .description
-          |comida:
-          - @kit.lunches.each do |tupper|
+          |utensilios medidores:
+          - @kit.utensils.each do |tupper|
             .item class='#{index == @tupper_index ? "selected" : ""}'
               | -
               =< tupper.name
             - index += 1
         .description
-          |cena:
-          - @kit.dinners.each do |tupper|
+          |mis happy:
+          - @kit.happys.each do |tupper|
             .item class='#{index == @tupper_index ? "selected" : ""}'
               | -
               =< tupper.name

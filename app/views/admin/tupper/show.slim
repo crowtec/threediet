@@ -20,20 +20,20 @@
       |Updated At:
       =< @tupper.updated_at.strftime("%d/%m/%Y %H:%M")
     .row
-      |Breakfast Kits:
-      - @tupper.breakfast_kits.each_with_index do |kit, index|
+      |Crockery Kits:
+      - @tupper.crockery_kits.each_with_index do |kit, index|
         =< link_to kit.name, admin_kit_path(kit)
-        - if index < @tupper.breakfast_kits.length - 1
+        - if index < @tupper.crockery_kits.length - 1
           |,
     .row
-      |Lunch Kits:
-      - @tupper.lunch_kits.each_with_index do |kit, index|
+      |Utensil Kits:
+      - @tupper.utensil_kits.each_with_index do |kit, index|
         =< link_to kit.name, admin_kit_path(kit)
-        - if index < @tupper.lunch_kits.length - 1
+        - if index < @tupper.utensil_kits.length - 1
           |,
     .row
-      |Dinner Kits:
-      - @tupper.dinner_kits.each_with_index do |kit, index|
+      |Happy Kits:
+      - @tupper.happy_kits.each_with_index do |kit, index|
         =< link_to kit.name, admin_kit_path(kit)
-        - if index < @tupper.dinner_kits.length - 1
+        - if index < @tupper.happy_kits.length - 1
           |,
