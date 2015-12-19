@@ -1,9 +1,10 @@
 .container-fluid
   - url = @phase.to_i == 3 ? order_index_path : new_order_post_path(phase: @phase + 1)
+  - back_url = @phase.to_i == 1 ? root_path : new_order_path(order: params[:order], phase: @phase - 1, k_index: @kit_index, t_index: @tupper_index, c_index: @color_index)
   = bootstrap_form_for(@order, url: url, html: {method: 'post'}, label_col: "col-md-3", control_col: "col-md-9")  do |f|
     - content_for(:back_button) do
       .top-buffer
-        button.btn.sharp.btn-pink.form-control type="button" Atrás
+        = link_to 'Atrás', back_url, class: "btn sharp btn-pink form-control" , method: @phase > 1 ? :post : :get
     - content_for(:next_button) do
       .top-buffer
         = f.submit 'Siguiente', class: "btn sharp btn-pink form-control"

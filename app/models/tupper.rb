@@ -12,9 +12,9 @@ class Tupper
   do_not_validate_attachment_file_type :stl
   before_post_process :set_content_type
 
-  has_and_belongs_to_many :breakfast_kits, class_name: 'Kit', inverse_of: :breakfasts
-  has_and_belongs_to_many :lunch_kits, class_name: 'Kit', inverse_of: :lunchs
-  has_and_belongs_to_many :dinner_kits, class_name: 'Kit', inverse_of: :dinners
+  has_and_belongs_to_many :crockery_kits, class_name: 'Kit', inverse_of: :crockeries
+  has_and_belongs_to_many :utensil_kits, class_name: 'Kit', inverse_of: :utensils
+  has_and_belongs_to_many :happy_kits, class_name: 'Kit', inverse_of: :happys
 
   validates :name, presence: true
 

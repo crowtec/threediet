@@ -31,20 +31,20 @@
       .bullet
         | Resumen kit:
         .description.kit-type
-          | Desayuno:
-          - @kit.breakfasts.each do |tupper|
+          | Vajilla medidora:
+          - @kit.crockeries.each do |tupper|
             .item
               | -
               =< tupper.name
         .description.kit-type
-          | Comida:
-          - @kit.lunches.each do |tupper|
+          | Utensilios medidores:
+          - @kit.utensils.each do |tupper|
             .item
               | -
               =< tupper.name
         .description.kit-type
-          | Cena:
-          - @kit.dinners.each do |tupper|
+          | Mis happy:
+          - @kit.happys.each do |tupper|
             .item
               | -
               =< tupper.name

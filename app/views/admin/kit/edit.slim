@@ -9,10 +9,10 @@
         = f.text_field :name
         = f.text_field :description
         = f.text_field :model
-        = f.collection_select :breakfasts_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.breakfasts.map{|t| t.id}}, {multiple: true}
-        = f.collection_select :lunches_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.lunches.map{|t| t.id}}, {multiple: true}
-        = f.collection_select :dinners_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.dinners.map{|t| t.id}}, {multiple: true}
+        = f.collection_select :crockeries_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.crockeries.map{|t| t.id}}, {multiple: true}
+        = f.collection_select :utensils_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.utensils.map{|t| t.id}}, {multiple: true}
+        = f.collection_select :happys_ids, Tupper.all, :id, :name, {include_hidden: false, selected: @kit.happys.map{|t| t.id}}, {multiple: true}
         = f.submit
 
 javascript:
-  initMultipleFields(['#kit_breakfasts_ids', '#kit_lunches_ids', '#kit_dinners_ids']);
+  initMultipleFields(['#kit_crockeries_ids', '#kit_utensils_ids', '#kit_happys_ids']);
