@@ -15,7 +15,8 @@
 .container-fluid
   .left-bar.col-md-10
     .tv.col-md-12
-      .collection.text-center collection eat mix
+      .collection.text-center
+        = @kit.name
       .col-md-offset-2.col-md-8
         = render 'partials/xml3d'
       .selectors.text-center
