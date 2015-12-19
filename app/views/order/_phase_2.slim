@@ -35,7 +35,7 @@
         .right.col-xs-6
           .col-xs-7
             - color_rotation = 33
-            = link_to image_tag('r_wheel.png', style: "transform: rotate(#{@color_index * color_rotation}deg); -webkit-transform: rotate(#{@color_index * color_rotation}deg); -moz-transform: rotate(#{@color_index * color_rotation}deg); -o-transform: rotate(#{@color_index * color_rotation}deg); -ms-transform: rotate(#{@color_index * color_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: 0, c_index: @color_index + 1), class: 'link', method: :post
+            = link_to image_tag('r_wheel.png', style: "transform: rotate(#{@color_index * color_rotation}deg); -webkit-transform: rotate(#{@color_index * color_rotation}deg); -moz-transform: rotate(#{@color_index * color_rotation}deg); -o-transform: rotate(#{@color_index * color_rotation}deg); -ms-transform: rotate(#{@color_index * color_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index, c_index: @color_index + 1), class: 'link', method: :post
 
   .right-bar.col-md-2
     .sheet.order
