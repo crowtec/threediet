@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   #scope :stl, as: :stl do
   #  get ':filename' => 'stl#file', as: :file
   #end
+  get 'us' => 'welcome#us'
+  get 'how_it_works' => 'welcome#how_it_works'
 
   resources :order, only: [:new, :create]
   scope :order do

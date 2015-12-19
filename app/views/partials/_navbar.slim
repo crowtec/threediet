@@ -11,13 +11,20 @@ nav.navbar.navbar-default.navbar-fixed-top.text-uppercase
     #navbar.navbar-collapse.collapse
       ul.nav.navbar-nav
         li
-          = link_to "Quiero mi kit!", new_order_path, :"data-no-turbolink" => true
+          = link_to "3Diet y nosotros", us_path
         li
-          a href="#about"  ¿Cómo funciona?
+          = link_to "¿Cómo funciona?", how_it_works_path
         li
           = link_to "Comunidad", "https://www.instagram.com/mix_eat_veg_fit"
         li
-          = link_to "El Blog de Bea", "http://mixeat.blogspot.com.es"
+          = link_to "Quiero mi kit!", new_order_path, :"data-no-turbolink" => true, class: 'text-underline'
+        li
+          = link_to "El Blog Mix Eat", "http://mixeat.blogspot.com.es"
+        li
+          a.fa.fa-facebook
+        li
+          = link_to "https://www.instagram.com/mix_eat_veg_fit"
+            .fa.fa-instagram
       ul.nav.navbar-nav.navbar-right
         li
           a.fa.fa-shopping-cart.fa-2x data-toggle="modal" data-target="#shopping-cart"
