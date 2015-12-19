@@ -3,13 +3,16 @@ class Order
   include Mongoid::Timestamps
 
   field :name, type: String
-  field :age, type: Integer
+  field :birth_date, type: Date
   field :gender, type: String
   field :target, type: String
+
   field :daily_cals, type: Integer
+  field :macro_nutrients, type: Integer
+
+  field :weight, type: Integer
+  field :height, type: Integer
   field :daily_activity, type: String
-  field :diet, type: String
-  field :chef, type: Boolean
   field :supervised, type: Boolean
 
   field :status, type: String, default: 'Pending'
@@ -20,7 +23,7 @@ class Order
   attr_accessor :t_index, :k_index, :c_index
 
   def self.permitted_params
-    [:name, :age, :target, :gender, :daily_cals, :daily_activity, :diet, :chef, :supervised, :status, :kit, :color]
+    [:name, :birth_date, :target, :gender, :daily_cals, :daily_activity, :weight, :height, :supervised, :status, :macro_nutrients, :kit, :color]
   end
 
   def self.statuses

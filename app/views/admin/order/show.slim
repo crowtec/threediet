@@ -11,29 +11,33 @@
       |Name:
       =< @order.name
     .row
-      |Age:
-      =< @order.age
+      |Birth date:
+      =< @order.birth_date.strftime("%d/%m/%Y")
     .row
       |Gender:
       =< @order.gender
-    .row
-      |Target:
-      =< @order.target
-    .row
-      |Daily Calories:
-      =< @order.daily_cals
-    .row
-      |Daily Activity:
-      =< @order.daily_activity
-    .row
-      |Diet:
-      =< @order.diet
-    .row
-      |Chef:
-      =< @order.chef
-    .row
-      |Supervised:
-      =< @order.supervised
+
+    - if @order.supervised
+      h3 SUPERVISED
+      .row
+        |Daily Calories:
+        =< @order.daily_cals
+      .row
+        |Macronutrients percentage:
+        =< @order.macro_nutrients
+    - else
+      .row
+        |Target:
+        =< @order.target
+      .row
+        |Activity:
+        =< @order.daily_activity
+      .row
+        |Weight:
+        =< @order.weight
+      .row
+        |Height:
+        =< @order.height
     .row
       |Created At:
       =< @order.created_at.strftime("%d/%m/%Y %H:%M")
