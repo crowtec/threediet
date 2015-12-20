@@ -17,7 +17,9 @@ body{
 .container-fluid{
   margin-top: 50px;
   padding: 0 !important;
+  margin-bottom: 50px;
   .left-bar {
+    padding: 0 10% 0 10%;
     .video-container {
       position: relative;
       .caption{
@@ -35,9 +37,7 @@ body{
             display: table-cell;
             vertical-align: middle;
             img{
-              //height: 100%;
-              width: 80%;
-              margin-left: 10%;
+              width: 100%;
             }
           }
         }
@@ -45,8 +45,7 @@ body{
 
       .video {
         margin-top: -20%;
-        margin-left: 10%;
-        width: 80%;
+        width: 100%;
       }
     }
 
@@ -94,6 +93,6 @@ body{
 
 .full-width{
   width: 100%;
-  margin: 50px;
+  margin-top: 50px;
 }
 

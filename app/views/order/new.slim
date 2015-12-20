@@ -7,5 +7,5 @@
         = link_to 'Atrás', back_url, class: "btn sharp btn-pink form-control" , method: @phase > 1 ? :post : :get
     - content_for(:next_button) do
       .top-buffer
-        = f.submit 'Siguiente', class: "btn sharp btn-pink form-control"
+        = f.submit (@phase.to_i == 3 ? 'Finalizar pedido' : 'Siguiente' ) , class: "btn sharp btn-pink form-control"
     = render 'order/phase_' + @phase.to_s, f: f
