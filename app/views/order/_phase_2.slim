@@ -27,6 +27,8 @@
         .right.col-sm-6
           .col-sm-9
             = link_to '>', new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', method: :post
+      .tupper.text-center
+        = @tupper.name
       .tv-buttons.text-center
         .left.col-xs-6
           .col-xs-offset-4
