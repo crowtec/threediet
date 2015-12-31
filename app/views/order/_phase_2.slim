@@ -34,12 +34,12 @@
           .col-xs-offset-4
             - kit_rotation = 33
             = link_to image_tag('l_wheel.png', style: "transform: rotate(#{@kit_index * kit_rotation}deg); -webkit-transform: rotate(#{@kit_index * kit_rotation}deg); -moz-transform: rotate(#{@kit_index * kit_rotation}deg); -o-transform: rotate(#{@kit_index * kit_rotation}deg); -ms-transform: rotate(#{@kit_index * kit_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, k_index: @kit_index + 1, t_index: 0, c_index: @color_index), class: 'link', method: :post
-          = image_tag 'select_color.png', class: 'col-xs-offset-5 col-xs-6'
+          = image_tag 'select_kit.png', class: 'col-xs-offset-4 col-xs-8'
         .right.col-xs-6
           .col-xs-7
             - color_rotation = 33
             = link_to image_tag('r_wheel.png', style: "transform: rotate(#{@color_index * color_rotation}deg); -webkit-transform: rotate(#{@color_index * color_rotation}deg); -moz-transform: rotate(#{@color_index * color_rotation}deg); -o-transform: rotate(#{@color_index * color_rotation}deg); -ms-transform: rotate(#{@color_index * color_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, k_index: @kit_index, t_index: @tupper_index, c_index: @color_index + 1), class: 'link', method: :post
-          = image_tag 'select_kit.png', class: 'col-xs-7'
+          = image_tag 'select_color.png', class: 'col-xs-7'
 
   .right-bar.col-md-2
     .sheet.order
