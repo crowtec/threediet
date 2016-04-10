@@ -1,0 +1,61 @@
+.body-overlay
+.container-fluid
+  .left-bar.col-md-10
+    .row
+      .video-container
+        .caption
+          .caption-inner
+            .caption-content
+              = image_tag '3diet_title.png'
+        = video_tag 'cooking.mp4', class: 'video', autoplay: true, loop: true, muted: true
+    .row
+      = link_to new_order_path, :"data-no-turbolink" => true
+        #slider.carousel.slide data-ride="carousel"
+          /! Indicators
+          ol.carousel-indicators
+            li.active data-slide-to="0" data-target="#slider"
+            li data-slide-to="1" data-target="#slider"
+            li data-slide-to="2" data-target="#slider"
+          /! Wrapper for slides
+          .carousel-inner role="listbox"
+            .item.active
+              = image_tag 'slide_1.jpg'
+            .item
+              = image_tag 'slide_2.jpg'
+            .item
+              = image_tag 'slide_3.jpg'
+          /! Left and right controls
+          a.left.carousel-control data-slide="prev" href="#slider" role="button"
+            span.glyphicon.glyphicon-chevron-left aria-hidden="true"
+            span.sr-only Previous
+          a.right.carousel-control data-slide="next" href="#slider" role="button"
+            span.glyphicon.glyphicon-chevron-right aria-hidden="true"
+            span.sr-only Next
+    .row
+      .community
+        = image_tag 'community.jpg'
+    .row
+      .last-instagram
+        = image_tag 'last_instagram.jpg'
+  .right-bar.col-md-2
+    .row.sheet
+      .profile
+        h4
+          | Bienvenida Eva
+        h4 ¿List@ para empezar con tu nueva vida?
+        h4 ¡No esperes más para pedir tu kit!
+    .row.sheet
+      .recipe
+        h1.title receta del día
+        = image_tag 'day_recipe.jpg'
+        h4 Pastel de calabaza
+    .row.sheet
+      .day-picture
+        h1.title foto del día
+        = image_tag 'day_picture.png'
+    .row.sheet
+      .day-tweet
+        h1.title tweet del día
+        = image_tag 'day_tweet.jpg'
+
+= render 'partials/footer'

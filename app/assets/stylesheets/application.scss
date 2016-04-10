@@ -5,75 +5,15 @@
 @import 'color';
 @import 'compass';
 @import 'font';
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
 @import 'jquery.minicolors';
 @import 'font-awesome';
 @import 'welcome';
 @import 'kit';
 @import 'order';
-@import 'rails_bootstrap_forms';
 
-body{
-  font-family: 'Gotham';
-  font-weight: bold;
-}
-
-.navbar{
-  background-color: $three_pink;
-  border: none;
-
-  a{
-    color: black !important;
-  }
-
-  .fa-shopping-cart{
-    color: white !important;
-  }
-
-  .navbar-brand {
-    padding: 0;
-    .logo {
-      height: 130%;
-    }
-  }
-}
-
-.sheet {
-  background: image-url('sheet.png') no-repeat;
-  background-size: 100% 100%;
-  background-position: left top;
-}
-
-.notebook {
-  background: image-url('notebook.png') no-repeat;
-  background-size: 100% 100%;
-  background-position: left top;
-}
-
-#shopping-cart{
-  position: fixed;
-  width: 25%;
-  height: 100%;
-  right: 0;
-  left: 75%;
-  background-color: white;
-
-}
-
-.footer{
+html, body{
+  font-family: 'Ubuntu';
+  padding: 0;
+  margin: 0;
   width: 100%;
-  height: 50px;
-  background-color: $three_pink;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  .separator{
-    width: 30px;
-    height: 100%;
-  }
-  img{
-    margin-left: 20px;
-    height: 100%;
-  }
 }

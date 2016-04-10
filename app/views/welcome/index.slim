@@ -1,61 +1,69 @@
-.body-overlay
-.container-fluid
-  .left-bar.col-md-10
-    .row
-      .video-container
-        .caption
-          .caption-inner
-            .caption-content
-              = image_tag '3diet_title.png'
-        = video_tag 'cooking.mp4', class: 'video', autoplay: true, loop: true, muted: true
-    .row
-      = link_to new_order_path, :"data-no-turbolink" => true
-        #slider.carousel.slide data-ride="carousel"
-          /! Indicators
-          ol.carousel-indicators
-            li.active data-slide-to="0" data-target="#slider"
-            li data-slide-to="1" data-target="#slider"
-            li data-slide-to="2" data-target="#slider"
-          /! Wrapper for slides
-          .carousel-inner role="listbox"
-            .item.active
-              = image_tag 'slide_1.jpg'
-            .item
-              = image_tag 'slide_2.jpg'
-            .item
-              = image_tag 'slide_3.jpg'
-          /! Left and right controls
-          a.left.carousel-control data-slide="prev" href="#slider" role="button"
-            span.glyphicon.glyphicon-chevron-left aria-hidden="true"
-            span.sr-only Previous
-          a.right.carousel-control data-slide="next" href="#slider" role="button"
-            span.glyphicon.glyphicon-chevron-right aria-hidden="true"
-            span.sr-only Next
-    .row
-      .community
-        = image_tag 'community.jpg'
-    .row
-      .last-instagram
-        = image_tag 'last_instagram.jpg'
-  .right-bar.col-md-2
-    .row.sheet
-      .profile
-        h4
-          | Bienvenida Eva
-        h4 ¿List@ para empezar con tu nueva vida?
-        h4 ¡No esperes más para pedir tu kit!
-    .row.sheet
-      .recipe
-        h1.title receta del día
-        = image_tag 'day_recipe.jpg'
-        h4 Pastel de calabaza
-    .row.sheet
-      .day-picture
-        h1.title foto del día
-        = image_tag 'day_picture.png'
-    .row.sheet
-      .day-tweet
-        h1.title tweet del día
-        = image_tag 'day_tweet.jpg'
-
-= render 'partials/footer'
+.container
+  .cover
+    .left-image
+      = image_tag "cover_left.png"
+      .logo-wrapper
+        .logo
+          = image_tag "logo.png"
+          .subtitle Sé Dinam'eat
+    .right-image
+      = image_tag "cover_right.png"
+    .bottom-info
+      .background
+      .col-wrapper
+        .col
+          .title 
+            .line Come
+            .line saludable
+          .subtitle Productos
+          .text 
+            .line Sin prohibiciones.
+            .line 
+              | El kit es tu 
+              b<> herramienta nutricional
+              | totalmente personalizada para ti.
+        .col
+          .title 
+            .line Vive en
+            .line equilibrio
+          .subtitle Comunidad
+          .text
+            .line No estás solo.
+            .line
+              | En
+              b<> Dinam'eat
+              | encontrarás
+            .line con quién compartir tus experiencias.
+        .col
+          .title 
+            .line Una guía 
+            .line sólo para ti
+          .subtitle Nutrición
+          .text
+            .line Sin pesar la comida.
+            .line
+              | Tienes
+              b< consejos de nutricionistas
+              | , cómo moverte y recetas originales.
+              
+  .kit-call
+    .background
+      = image_tag "kit_texture.png"
+    .kit-call-wrapper
+      .kit-image
+        = image_tag "kit_home.png"
+      .kit-info
+        .pre-title Productos: herramienta nutricional
+        .title 
+          .line Tus propios
+          .line recipientes
+        .text
+          .line Tu kit mide de forma directa y sencilla
+          .line las raciones de comida que necesitas
+          .line según tu objetivo. Están hechos para ti.
+          .line
+            b Elegidos por ti.
+  .secondary-cover
+  .access-wrapper
+  .banner-call
+  .share-wrapper

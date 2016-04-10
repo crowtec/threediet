@@ -1,98 +1,148 @@
-body{
-  background: image-url('background.jpg') repeat;
-  background-size: 100% auto;
-  background-position: left top;
-  .body-overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: $three_gray;
-  }
-}
+.container{
+  position: relative;
+  width: 100%;
 
-.text-underline{
-  text-decoration: underline;
-}
-.container-fluid{
-  margin-top: 50px;
-  padding: 0 !important;
-  margin-bottom: 50px;
-  .left-bar {
-    padding: 0 10% 0 10%;
-    .video-container {
+  .cover{
+    position: relative;
+    width: 100%;
+    margin-bottom: 8%;
+    .left-image{
       position: relative;
-      .caption{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        overflow: hidden;
-        .caption-inner{
-          display: table;
-          width: 100%;
-          height: 100%;
-          .caption-content{
-            display: table-cell;
-            vertical-align: middle;
+      width: 100%;
+      img{
+        width: 80%;
+      }
+      .logo-wrapper{
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 80%;
+          text-align: center;
+          .logo{
+            margin-left: 32.5%;
+            width: 35%;
             img{
               width: 100%;
             }
+            > .subtitle{
+              text-align: center;
+              font-family: 'PermanentMarker';
+              font-size: 20px;
+              @include translate(40%, 0);
+            }
+          }
+      }
+    }
+
+    .right-image{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      img{
+        position: absolute;
+        right: 0;
+        width: 50%;
+      }
+    }
+
+    .bottom-info{
+      position: absolute;
+      bottom: -15%;
+      width: 100%;
+
+      .background{
+        position: absolute;
+        overflow:hidden;
+        width: 100%;
+        bottom: 0;
+        height: 50vh;
+        &:after{
+          top: 20%;
+          left: -5%;
+          height:100%;
+          width:105%;
+          @include rotate(3deg);
+          position:absolute;
+          background-color: white;
+          content:'';
+        }
+      }
+
+      .col-wrapper{
+        position: absolute;
+        bottom: 6vh;
+        padding: 15% 0 0 10%;
+        overflow: auto;
+        width: 80%;
+        .col{
+          text-align: center;
+          float: left;
+          width: 23.33%;
+          padding: 0 5%;
+          .title{
+            font-family: 'PermanentMarker';
+            font-size: 24px;
+            color: $textBrown;
+          }
+          .subtitle{
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 10px 0 15px 0;
+            color: $textOrange;
+          }
+          .text{
+            font-size: 12px;
+            line-height: 22px;
           }
         }
       }
-
-      .video {
-        margin-top: -20%;
-        width: 100%;
-      }
-    }
-
-    #slider {
-      margin-top: -1%;
-      width: 100%;
-      img {
-        width: 100%;
-      }
-    }
-
-    .community {
-      img {
-        width: 100%;
-      }
-    }
-
-    .last-instagram {
-      img {
-        width: 100%;
-      }
     }
   }
 
-  .right-bar{
-    .title {
-      font-family: 'Arsenale';
-      margin: 0;
+  .kit-call{
+    position: relative;
+    width: 100%;
+    .background{
+      position: absolute;
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden;
+      background-color: $backgroundBlue;
+      img{
+        width: 100%;
+        opacity: .4;
+      }
     }
-    .row{
-      .recipe, .day-picture, .day-tweet, .profile {
-        padding: 10%;
-        img{
-          width: 100%;
+    .kit-call-wrapper{
+      position: relative;
+      width: 90%;
+      padding: 4% 0 2% 10%;
+      .kit-image{
+        float: left;
+        text-align: center;
+        width: 60%;
+      }
+      .kit-info{
+        float: left;
+        width: 30%;
+        .pre-title{
+          text-transform: uppercase;
+          font-size: 12px;
+          color: $textBrown;
+        }
+        .title{
+          font-family: 'PermanentMarker';
+          font-size: 28px;
+          line-height: 30px;
+          color: $textBrown;
+          padding: 15px 0 20px 0;
+        }
+        .text{
+          font-size: 12px;
+          line-height: 22px;
         }
       }
-      .profile{
-        font-family: 'Open Sans';
-      }
     }
-
   }
 }
-
-
-.full-width{
-  width: 100%;
-  margin-top: 50px;
-}
-
