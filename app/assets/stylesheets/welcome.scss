@@ -2,21 +2,20 @@
   position: relative;
   width: 100%;
 
-  .cover{
+  .cover, .secondary-cover{
     position: relative;
     width: 100%;
-    margin-bottom: 8%;
     .left-image{
       position: relative;
       width: 100%;
       img{
-        width: 80%;
+        width: 100%;
       }
       .logo-wrapper{
           position: absolute;
           top: 50%;
           left: 0;
-          width: 80%;
+          width: 90%;
           text-align: center;
           .logo{
             margin-left: 32.5%;
@@ -26,7 +25,7 @@
             }
             > .subtitle{
               text-align: center;
-              font-family: 'PermanentMarker';
+              font-family: $fontPermanentMarker;
               font-size: 20px;
               @include translate(40%, 0);
             }
@@ -38,11 +37,15 @@
       position: absolute;
       right: 0;
       top: 0;
+      bottom: 0;
       width: 100%;
       img{
         position: absolute;
         right: 0;
-        width: 50%;
+        width: 30%;
+      }
+      &.sec img{
+        width: 35%;
       }
     }
 
@@ -81,7 +84,7 @@
           width: 23.33%;
           padding: 0 5%;
           .title{
-            font-family: 'PermanentMarker';
+            font-family: $fontPermanentMarker;
             font-size: 24px;
             color: $textBrown;
           }
@@ -102,37 +105,86 @@
 
   .kit-call{
     position: relative;
-    width: 100%;
-    .background{
-      position: absolute;
-      width: 100%;
-      max-height: 300px;
-      overflow: hidden;
-      background-color: $backgroundBlue;
-      img{
-        width: 100%;
-        opacity: .4;
+    background-image: image-url("kit_texture.png");
+    overflow: auto;
+    margin-top: 8%;
+    padding: 4% 0 2% 10%;
+    .kit-image{
+      float: left;
+      text-align: center;
+      width: 50%;
+    }
+    .kit-info{
+      float: left;
+      margin-left: 15%;
+      width: 30%;
+      .pre-title{
+        text-transform: uppercase;
+        font-size: 12px;
+        color: $textBrown;
+      }
+      .title{
+        font-family: $fontPermanentMarker;
+        font-size: 28px;
+        line-height: 30px;
+        color: $textBrown;
+        padding: 15px 0 20px 0;
+      }
+      .text{
+        font-size: 12px;
+        line-height: 22px;
       }
     }
-    .kit-call-wrapper{
+  }
+  .guide-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .guide-info{
+     position: absolute;
+     left: 66.4%;
+     max-width: 250px;
+     top: 18%;
+     width: 20%;
+     padding: 2% 2% 2% 5%;
+     background-image: image-url("guide_background.png");
+     background-repeat: no-repeat;
+     background-size: 100% auto;
+     .pre-title{
+       text-transform: uppercase;
+       font-size: 12px;
+       color: white;
+     }
+     .title{
+       font-family: $fontPermanentMarker;
+       font-size: 28px;
+       line-height: 30px;
+       color: white;
+       padding: 15px 0 20px 0;
+     }
+     .text{
+       font-size: 12px;
+       color: white;
+       line-height: 22px;
+     }
+   }
+  }
+  .access-wrapper{
+    position: relative;
+    width: 100%;
+    > .left-column{
+      float: left;
       position: relative;
-      width: 90%;
-      padding: 4% 0 2% 10%;
-      .kit-image{
-        float: left;
-        text-align: center;
-        width: 60%;
-      }
-      .kit-info{
-        float: left;
-        width: 30%;
+      width: 30%;
+      .experience-info{
+        padding: 10%;
         .pre-title{
           text-transform: uppercase;
           font-size: 12px;
-          color: $textBrown;
+          color: $textOrange;
         }
         .title{
-          font-family: 'PermanentMarker';
+          font-family: $fontPermanentMarker;
           font-size: 28px;
           line-height: 30px;
           color: $textBrown;
@@ -143,6 +195,145 @@
           line-height: 22px;
         }
       }
+      .access-form{
+        padding: 10%;
+        .title{
+          font-family: $fontPermanentMarker;
+          font-size: 16px;
+          padding: 15px 0 20px 0;
+          color: $textOrange;
+        }
+        .input-wrapper{
+          margin: 10px 0;
+
+          #access-submit{
+            margin-top: 10px;
+          }
+
+        }
+
+      }
+    }
+    > .right-column{
+      float: left;
+      position: relative;
+      width: 70%;
+      height: 460px;
+      .box{
+        background-color: $backgroundBox;
+        color: $textBrown;
+        text-transform: uppercase;
+        padding: 10% 0 0 10%;
+        line-height: 160%;
+      }
+      .top-row{
+        position: relative;
+        width: 100%;
+        height: 40%;
+        > .left-column {
+          float: left;
+          position: relative;
+          width: 42.5%;
+          height: 60%;
+          margin: 5% 2.5% 2.5% 5%;
+        }
+        > .right-column {
+          float: left;
+          position: relative;
+          width: 22.5%;
+          height: 60%;
+          margin: 5% 0 2.5% 2.5%;
+        }
+      }
+      .bottom-row{
+        height: 60%;
+        width: 100%;
+        > .left-column {
+          float: left;
+          position: relative;
+          width: 52.5%;
+          height: 60%;
+          margin: 2.5% 2.5% 5% 5%;
+          > .text{
+            position: absolute;
+            right: 5%;
+          }
+
+          > .background{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 75%;
+            background: image-url("blog_background.jpg") center center no-repeat;
+          }
+        }
+        > .right-column {
+          float: left;
+          position: relative;
+          width: 17.5%;
+          height: 60%;
+          margin: 2.5% 0 5% 2.5%;
+          padding: 10% 0 0 5%;
+        }
+      }
     }
   }
+  .banner-call{
+    clear: both;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    > img{
+      width: 100%;
+    }
+    .title{
+      width: 100%;
+      font-family: $fontPermanentMarker;
+      font-size: 64px;
+      color: black;
+      position: absolute;
+      top: 50%;
+      left:0;
+      @include translate(0, -50%);
+    }
+
+  }
+  .share-wrapper{
+    width: 100%;
+    .instagram{
+      padding-bottom: 5%;
+      text-align: center;
+      background-image: image-url("instagram_texture.png");
+      .text{
+        padding: 2.5% 0;
+        text-transform: uppercase;
+
+      }
+    }
+    .contact{
+      padding: 5% 20% 0 5%;;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: image-url("share_background.png") center center no-repeat;
+      .title{
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 5% 0 15% 0;
+      }
+      .text{
+        font-size: 12px;
+      }
+      .social{
+        padding: 10% 0 0 0;
+        .fa{
+          margin: 10px;
+        }
+      }
+    }
+
+  }
+
 }

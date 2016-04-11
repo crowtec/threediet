@@ -1,10 +1,10 @@
 .container
   .cover
     .left-image
-      = image_tag "cover_left.png"
+      = image_tag "cover_left.jpg"
       .logo-wrapper
         .logo
-          = image_tag "logo.png"
+          = image_tag "logo.svg"
           .subtitle Sé Dinam'eat
     .right-image
       = image_tag "cover_right.png"
@@ -47,23 +47,89 @@
               | , cómo moverte y recetas originales.
               
   .kit-call
-    .background
-      = image_tag "kit_texture.png"
-    .kit-call-wrapper
-      .kit-image
-        = image_tag "kit_home.png"
-      .kit-info
-        .pre-title Productos: herramienta nutricional
-        .title 
-          .line Tus propios
-          .line recipientes
-        .text
-          .line Tu kit mide de forma directa y sencilla
-          .line las raciones de comida que necesitas
-          .line según tu objetivo. Están hechos para ti.
-          .line
-            b Elegidos por ti.
+    .kit-image
+      = image_tag "kit_home.png"
+    .kit-info
+      .pre-title Productos: herramienta nutricional
+      .title 
+        .line Tus propios
+        .line recipientes
+      .text
+        .line Tu kit mide de forma directa y sencilla
+        .line las raciones de comida que necesitas
+        .line según tu objetivo. Están hechos para ti.
+        .line
+          b Elegidos por ti.
   .secondary-cover
+    .left-image
+      = image_tag "sec_cover_left.jpg"
+    .right-image.sec
+      = image_tag "sec_cover_right.png"
+      .guide-wrapper
+        .guide-info
+          .pre-title Nutrición
+          .title 
+            .line Una guía
+            .line a tu medida
+          .text
+            .line Diseñada por nutricionistas para llevar
+            .line una vida saludable. Sin tener
+            .line prohibiciones. Aprende a comer mejor.
   .access-wrapper
+    .left-column
+      .experience-info
+        .pre-title Comunidad Dinam'eat
+        .title 
+          .line Comparte tus
+          .line experiencias
+        .text
+          .line Date permiso para disfrutar. Haz deporte
+          .line porque te sienta bien. Queda para ir a
+          .line correr o para tomar algo.
+          .line
+            b Comparte e intercambia.
+      .access-form
+        .title ¿Quiéres ser Dinam'eat?
+        form
+          .input-wrapper
+            input.custom-input#user-input placeholder="Tu nombre"
+          .input-wrapper
+            input.custom-input#email-input placeholder="Tu e-mail"
+          .input-wrapper
+            button.custom-button.black#access-submit Date de alta
+    .right-column
+      .top-row
+        .left-column.box
+          .line Talleres
+          .line de nutrición
+        .right-column.box
+          .line Training
+          .line meet up
+      .bottom-row
+        .left-column.box
+          .background
+          .text
+            .line Tips muy
+            .line originales
+            .line en el blog
+        .right-column.box
+          .line Consulta
+          .line en el
+          .line foro
   .banner-call
+    = image_tag "banner.jpg" 
+    .title ¡Prueba algo nuevo!
   .share-wrapper
+    .instagram
+      .text 
+        | Vívelo en instagram 
+        b< #soydinameat
+    .contact
+      .title Contacto
+      .text
+        .line hola@mixeat.com
+        .line Tel +34 91 234 5678
+      .social
+        .fa.fa-facebook-square
+        .fa.fa-twitter-square
+        .fa.fa-youtube-square

@@ -7,13 +7,33 @@
 @import 'font';
 @import 'jquery.minicolors';
 @import 'font-awesome';
+@import "partial/general";
 @import 'welcome';
 @import 'kit';
 @import 'order';
 
 html, body{
-  font-family: 'Ubuntu';
+  font-family: $fontUbuntuLight;
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+.footer{
+  font-size: 12px;
+  color: white;
+  background-color: $textOrange;
+  height: 50px;
+  display: table;
+  text-align: center;
+  width: 100%;
+  ul{
+    display: table-cell;
+    vertical-align: middle;
+    list-style-type: none;
+    li{
+      text-transform: uppercase;
+      display: inline-block;
+    }
+  }
 }

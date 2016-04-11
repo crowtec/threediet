@@ -1,0 +1,24 @@
+.custom-button{
+  font-family: $fontUbuntuLight;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  &.black{
+    background-color: black;
+    color: white;
+    border: none;
+  }
+}
+
+.custom-input{
+  font-family: $fontUbuntuLight;
+  min-width: 220px;
+  border: 0 solid $borderGray;
+  border-bottom-width: 1px;
+  padding: 10px;
+  @include transition(padding .3s ease-in-out);
+  &:focus{
+    outline: none;
+    padding-bottom: 30px;
+    @include transition(padding .3s ease-in-out);
+  }
+}
