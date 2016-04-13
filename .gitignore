@@ -15,3 +15,6 @@
 *.iml
 vendor/assets/bower_components
 public/system
+
+/data
+mongod
