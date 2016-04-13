@@ -1,4 +1,4 @@
-nav.navbar.navbar-default.navbar-fixed-top.text-uppercase
+/nav.navbar.navbar-default.navbar-fixed-top.text-uppercase
   .container
     .navbar-header
       button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
@@ -30,3 +30,31 @@ nav.navbar.navbar-default.navbar-fixed-top.text-uppercase
           a.fa.fa-shopping-cart.fa-2x data-toggle="modal" data-target="#shopping-cart"
             span.sr-only (current)
               /! /.nav-collapse
+
+nav
+  .navbar-collapse
+    #nav-icon
+      span
+      span
+      span
+      span
+    = image_tag 'logo_black.svg', class: 'logo'
+  .navbar-dropdown
+    ul
+      li
+        = link_to "el proyecto", "#"
+      li
+        = link_to "cómo funciona!", "#"
+      li
+        = link_to "nuestra historia", "#"
+      li
+        = link_to "¡quiero mi kit!", new_order_path
+      li
+        = link_to "blog", "#"
+
+
+javascript:
+  $("#nav-icon").click(function() {
+    $(this).toggleClass('open');
+    $('.navbar-dropdown').slideToggle();
+  });
