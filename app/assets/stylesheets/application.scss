@@ -37,3 +37,61 @@ html, body{
     }
   }
 }
+
+.remove-after {
+
+  .container {
+    //padding-bottom: 50px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .container + .footer {
+    position: static;
+  }
+
+  .new-order .form-kit .input-group input, .new-order .form-kit .input-group select, .new-order .form-kit .form-group input, .new-order .form-kit .form-group select {
+    border: 1px solid #ccc;;
+  }
+
+  .btn-pink {
+    background-color: #e93676 !important;
+    color: white !important;
+
+    &:hover {
+      background-color: #ffb4ef !important;
+    }
+  }
+
+
+
+  .remove-after-phase {
+    font-family: 'Ubuntu', sans-serif !important;
+
+    h2 {
+      font-family: 'Ubuntu', sans-serif !important;
+    }
+
+    .tv, .tv .tupper {
+      font-family: 'Ubuntu', sans-serif !important;
+    }
+
+    margin-bottom: 100px;
+    padding-top: 40px;
+    .top-buffer {
+      margin-top: 100px;
+    }
+
+    .right-bar {
+      background-color: rgba(#fc8b50, 0.2);
+
+    }
+
+    .kit-type {
+      margin-top: 10px;
+    }
+
+  }
+}

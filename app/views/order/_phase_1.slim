@@ -1,3 +1,4 @@
+= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 .body-overlay
 .row.new-order
   .col-md-offset-2.col-md-8.notebook.form-kit
@@ -17,9 +18,9 @@
       = f.text_field :weight, label: "Peso", append: "Kg"
       = f.number_field :height, label: "Altura", append: "cm"
 
-.col-md-2
+.col-md-2.col-md-offset-2
   == yield(:back_button)
-.col-md-2.col-md-offset-8
+.col-md-2.col-md-offset-4
   == yield(:next_button)
 
 javascript:
