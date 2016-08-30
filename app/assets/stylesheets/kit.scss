@@ -1,0 +1,41 @@
+section.list {
+  margin-top: 72px;
+
+  .item-container {
+    overflow: auto;
+    position: relative;
+
+    > * {
+      min-height: 300px;
+      margin: 20px;
+      width: calc(50% - 40px);
+    }
+
+    > .left {
+      background-color: #4bd4c6;
+      font-weight: bold;
+    }
+
+    &:nth-child(2n) {
+      background-color: gray;
+      
+      > .right {
+        p {
+          color: white;
+        }
+      }
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      line-height: 30px;
+      padding: 0 20px;
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+    }
+  }
+
+
+}

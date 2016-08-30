@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'us' => 'welcome#us'
   get 'how_it_works' => 'welcome#how_it_works'
 
+  resources :kit, only: [:index]
+
   resources :order, only: [:new, :create]
   scope :order do
     post 'new' => 'order#new', as: :new_order_post

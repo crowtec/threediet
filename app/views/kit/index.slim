@@ -1,0 +1,14 @@
+= render 'partials/navbar'
+
+section.list
+  - @kits.each do |k|
+    .item-container
+      .left.text-center
+        h1
+          | Mi Mixeat
+          .price X€
+        p Rellena el cuestionario y obtén en seguida tu kit de vajillas medidoras y tu guía
+
+      .right
+        p Rellena el cuestionario y obtén en seguida tu kit de vajillas medidoras y tu guía
+        = link_to "Lo QUIERO", new_order_path(k), class: 'btn'
