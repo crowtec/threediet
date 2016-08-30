@@ -14,9 +14,10 @@
 = f.hidden_field :color, value: @color.id.to_s
 
 .body-overlay
-.container-fluid.no-margin-bottom.remove-after-phase
-  .left-bar.col-md-10
-    .tv.col-md-12
+.container-fluid.no-margin-bottom.remove-after-phase.xml3d-wrapper
+  /.left-bar.col-md-10
+  .row
+    .col-md-10.xmld3d-viewer
       .collection.text-center
         = @kit.name
       .col-md-offset-2.col-md-8
@@ -30,7 +31,13 @@
             = link_to '>', new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', method: :post
       .tupper.text-center
         = @tupper.name
-      .tv-buttons.text-center
+    .col-md-2
+      .colors-wrapper
+        - @colors.each_with_index do |c, i|
+          = link_to new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index, c_index: i), class: 'link', method: :post
+            .color.left style='background-color: rgb(#{(c.red * 255).to_i}, #{(c.green * 255).to_i}, #{(c.blue * 255).to_i});'
+
+      /.tv-buttons.text-center
         .left.col-xs-6
           .col-xs-offset-4
             /- kit_rotation = 33
@@ -40,9 +47,9 @@
           .col-xs-7
             - color_rotation = 33
             = link_to image_tag('r_wheel.png', style: "transform: rotate(#{@color_index * color_rotation}deg); -webkit-transform: rotate(#{@color_index * color_rotation}deg); -moz-transform: rotate(#{@color_index * color_rotation}deg); -o-transform: rotate(#{@color_index * color_rotation}deg); -ms-transform: rotate(#{@color_index * color_rotation}deg)"), new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index, c_index: @color_index + 1), class: 'link', method: :post
-          = image_tag 'select_color.png', class: 'col-xs-7'
+            = image_tag 'select_color.png', class: 'col-xs-7'
 
-  .right-bar.col-md-2
+  /.right-bar.col-md-2
     .sheet.order
       h2.title lista de la compra
       .bullet

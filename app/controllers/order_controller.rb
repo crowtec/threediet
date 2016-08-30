@@ -10,10 +10,10 @@ class OrderController < ApplicationController
     #@kit_index = (params[:k_index] || 0).to_i % Kit.count
     #@kit = @phase < 3 ? Kit.offset(@kit_index).first : Kit.find(order_params[:kit])
     @kit = params.has_key?(:order) ? Kit.find(order_params[:kit]) : Kit.find(params[:kit])
-    p @kit
     @tupper_index = (params[:t_index] || 0).to_i % @kit.tuppers.count
     @tupper = @kit.tuppers.at(@tupper_index)
-    @colors = Color.all if @phase.to_i == 2
+    #@colors = Color.all if @phase.to_i == 2
+    @colors = Color.all
   end
 
   def create
