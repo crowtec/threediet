@@ -4,6 +4,7 @@
 .row.new-order
   .col-md-offset-2.col-md-8.notebook.form-kit
     .col-md-5
+      = f.hidden_field :kit, value: @kit.id.to_s
       = f.text_field :name, label: "Nombre y Apellidos"
       = f.date_field :birth_date, label: "Fecha de nacimiento"
       = f.select :gender, ['Hombre', 'Mujer'], label: "Género"

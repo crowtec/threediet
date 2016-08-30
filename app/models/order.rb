@@ -20,7 +20,7 @@ class Order
   belongs_to :kit
   belongs_to :color
 
-  attr_accessor :t_index, :k_index, :c_index
+  attr_accessor :t_index, :c_index
 
   def self.permitted_params
     [:name, :birth_date, :target, :gender, :daily_cals, :daily_activity, :weight, :height, :supervised, :status, :macro_nutrients, :kit, :color]
