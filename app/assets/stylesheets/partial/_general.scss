@@ -12,7 +12,7 @@
 .custom-input{
   font-family: $fontUbuntuLight;
   min-width: 220px;
-  border: 0 solid $borderGray;
+  border: 0 solid $border_gray;
   border-bottom-width: 1px;
   padding: 10px;
   @include transition(padding .3s ease-in-out);
@@ -21,4 +21,28 @@
     padding-bottom: 30px;
     @include transition(padding .3s ease-in-out);
   }
+}
+
+.button {
+  text-align: center;
+  padding: 10px 35px;
+
+  &.orange {
+    color: $text_white;
+    background-color: $background_orange;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+a, a:active, a:hover, a:visited, a:focus {
+  outline: none;
+  text-decoration: none;
+  text-underline: none;
 }

@@ -2,34 +2,42 @@
   position: relative;
   width: 100%;
 
-  .cover, .secondary-cover{
+  .cover, .secondary-cover {
     position: relative;
     width: 100%;
+
     .left-image{
       position: relative;
-      width: 100%;
-      img{
+      width: 82%;
+
+      > img {
+        vertical-align: bottom;
+      }
+
+      img {
         width: 100%;
       }
+
       .logo-wrapper{
-          position: absolute;
-          top: 50%;
-          left: 0;
-          width: 90%;
-          text-align: center;
-          .logo{
-            margin-left: 32.5%;
-            width: 35%;
-            img{
-              width: 100%;
-            }
-            > .subtitle{
-              text-align: center;
-              font-family: $fontPermanentMarker;
-              font-size: 20px;
-              @include translate(40%, 0);
-            }
+        @include translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 90%;
+        text-align: center;
+        .logo{
+          margin-left: 32.5%;
+          width: 35%;
+          img{
+            width: 100%;
           }
+          > .subtitle{
+            text-align: center;
+            font-family: $fontPermanentMarker;
+            font-size: 20px;
+            @include translate(40%, 0);
+          }
+        }
       }
     }
 
@@ -38,14 +46,25 @@
       right: 0;
       top: 0;
       bottom: 0;
-      width: 100%;
-      img{
+      width: 26%;
+
+      img {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        clip-path:  polygon(0 0, 100% 0, 100% 100%, 20% 100%);
         position: absolute;
         right: 0;
-        width: 30%;
+        width: 100%;
       }
       &.sec img{
         width: 35%;
+      }
+
+      .button {
+        @include translateX(-50%);
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        max-width: 80px;
       }
     }
 
@@ -86,13 +105,13 @@
           .title{
             font-family: $fontPermanentMarker;
             font-size: 24px;
-            color: $textBrown;
+            color: $text_brown;
           }
           .subtitle{
             text-transform: uppercase;
             font-size: 12px;
             padding: 10px 0 15px 0;
-            color: $textOrange;
+            color: $text_orange;
           }
           .text{
             font-size: 12px;
@@ -103,31 +122,55 @@
     }
   }
 
+  .secondary-cover {
+    .left-image {
+      width: 56.1%;
+    }
+
+    .right-image {
+      width: 57%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+
+      img {
+        position: absolute;
+        right: 0;
+      }
+
+      .button {
+        @include translateX(-50%);
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        max-width: 80px;
+      }
+    }
+  }
+
   .kit-call{
     position: relative;
     background-image: image-url("kit_texture.png");
     overflow: auto;
-    margin-top: 8%;
-    padding: 4% 0 2% 10%;
+    //margin-top: 8%;
+    padding: 4% 10%;
     .kit-image{
       float: left;
       text-align: center;
-      width: 50%;
+      width: 60%;
     }
     .kit-info{
       float: left;
-      margin-left: 15%;
-      width: 30%;
+      width: 40%;
       .pre-title{
         text-transform: uppercase;
         font-size: 12px;
-        color: $textBrown;
+        color: $text_orange;
       }
       .title{
         font-family: $fontPermanentMarker;
         font-size: 28px;
         line-height: 30px;
-        color: $textBrown;
+        color: $text_brown;
         padding: 15px 0 20px 0;
       }
       .text{
@@ -136,39 +179,83 @@
       }
     }
   }
+
   .guide-wrapper{
     position: relative;
     width: 100%;
     height: 100%;
     .guide-info{
-     position: absolute;
-     left: 66.4%;
-     max-width: 250px;
-     top: 18%;
-     width: 20%;
-     padding: 2% 2% 2% 5%;
-     background-image: image-url("guide_background.png");
-     background-repeat: no-repeat;
-     background-size: 100% auto;
-     .pre-title{
-       text-transform: uppercase;
-       font-size: 12px;
-       color: white;
+      @include translateY(-50%);
+      @include box-sizing(border-box);
+      position: absolute;
+      left: 4%;
+      //max-width: 250px;
+      top: 50%;
+      width: 84%;
+      padding: 2% 2% 2% 12%;
+      background-image: image-url("guide_background.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      .pre-title{
+        text-transform: uppercase;
+        font-size: 12px;
+        color: white;
+      }
+      .title{
+        font-family: $fontPermanentMarker;
+        font-size: 28px;
+        line-height: 30px;
+        color: white;
+        padding: 15px 0 20px 0;
+      }
+      .text{
+        font-size: 12px;
+        color: white;
+        line-height: 22px;
+      }
      }
-     .title{
-       font-family: $fontPermanentMarker;
-       font-size: 28px;
-       line-height: 30px;
-       color: white;
-       padding: 15px 0 20px 0;
-     }
-     .text{
-       font-size: 12px;
-       color: white;
-       line-height: 22px;
-     }
-   }
   }
+
+  .community-wrapper {
+    background: image_url("home/01-Home-5.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: auto;
+
+    .content {
+      position: relative;
+      margin: 4% 10%;
+
+      section {
+        max-width: 400px;
+      }
+
+      h2 {
+        color: $text_white;
+        font-family: $fontPermanentMarker;
+        font-size: 40px;
+        line-height: 60px;
+      }
+
+      .pre-title {
+        color: $text_orange;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: $text-white;
+        line-height: 24px;
+        max-width: 320px;
+      }
+
+      .button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+
   .access-wrapper{
     position: relative;
     width: 100%;
@@ -181,13 +268,13 @@
         .pre-title{
           text-transform: uppercase;
           font-size: 12px;
-          color: $textOrange;
+          color: $text_orange;
         }
         .title{
           font-family: $fontPermanentMarker;
           font-size: 28px;
           line-height: 30px;
-          color: $textBrown;
+          color: $text_brown;
           padding: 15px 0 20px 0;
         }
         .text{
@@ -201,7 +288,7 @@
           font-family: $fontPermanentMarker;
           font-size: 16px;
           padding: 15px 0 20px 0;
-          color: $textOrange;
+          color: $text_orange;
         }
         .input-wrapper{
           margin: 10px 0;
@@ -220,8 +307,8 @@
       width: 70%;
       height: 460px;
       .box{
-        background-color: $backgroundBox;
-        color: $textBrown;
+        background-color: $background_box;
+        color: $text_brown;
         text-transform: uppercase;
         padding: 10% 0 0 10%;
         line-height: 160%;
@@ -287,6 +374,7 @@
 
     > img{
       width: 100%;
+      vertical-align: bottom;
     }
     .title{
       width: 100%;

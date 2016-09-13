@@ -19,10 +19,14 @@ html, body{
   width: 100%;
 }
 
+body {
+  margin-top: 72px;
+}
+
 .footer{
   font-size: 12px;
   color: white;
-  background-color: $textOrange;
+  background-color: $text_orange;
   height: 50px;
   display: table;
   text-align: center;
@@ -219,7 +223,7 @@ nav {
     width: 0;
     left: 50%;
   }
-
 }
+
 
 

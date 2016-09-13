@@ -8,8 +8,9 @@
           = image_tag "logo.svg"
           .subtitle Sé Dinam'eat
     .right-image
-      = image_tag "cover_right.png"
-    .bottom-info
+      = image_tag "home/01-Home-2-b.jpg"
+      = link_to "Descubre el kit", "#", class: "button orange text-uppercase"
+    /.bottom-info
       .background
       .col-wrapper
         .col
@@ -46,38 +47,53 @@
               | Tienes
               b< consejos de nutricionistas
               | , cómo moverte y recetas originales.
-              
   .kit-call
-    .kit-image
-      = link_to new_order_path
-        = image_tag "kit_home.png"
     .kit-info
-      .pre-title Productos: herramienta nutricional
-      .title 
-        .line Tus propios
-        .line recipientes
+      .pre-title El kit
+      .title
+        .line Come y vive
+        .line saludablemenete
+        .line feliz
       .text
         .line Tu kit mide de forma directa y sencilla
         .line las raciones de comida que necesitas
         .line según tu objetivo. Están hechos para ti.
         .line
           b Elegidos por ti.
+    .kit-image
+      h2.text-bold.text-uppercase Qué es el kit
+      = link_to new_order_path
+        = image_tag "kit_home.png"
   .secondary-cover
     .left-image
-      = image_tag "sec_cover_left.jpg"
-    .right-image.sec
-      = image_tag "sec_cover_right.png"
+      = image_tag "home/01-Home-3.jpg"
+    .right-image
+      = image_tag "home/01-Home-4.jpg"
       .guide-wrapper
         .guide-info
           .pre-title Nutrición
           .title 
-            .line Una guía
-            .line a tu medida
+            .line MIXEAT + NUESTRAS
+            .line DIETISTAS
           .text
             .line Diseñada por nutricionistas para llevar
             .line una vida saludable. Sin tener
             .line prohibiciones. Aprende a comer mejor.
-  .access-wrapper
+
+  .community-wrapper
+    //= image_tag "home/01-Home-5.jpg"
+    .content
+      = link_to "Me apunto", "#", class: "button orange text-uppercase"
+      section
+        .pre-title Comunidad DINAM'EAT
+        h2.text-uppercase
+          .line Club DINAM'EAT
+          .line y comparte
+          .line con tu gente
+        p
+          | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+
+  /.access-wrapper
     .left-column
       .experience-info
         .pre-title Comunidad Dinam'eat
@@ -119,9 +135,9 @@
           .line en el
           .line foro
   .banner-call
-    = image_tag "banner.jpg" 
-    .title ¡Prueba algo nuevo!
-  .share-wrapper
+    = image_tag "banner.jpg"
+    .title Oferta del día
+  /.share-wrapper
     .instagram
       .text 
         | Vívelo en instagram 
