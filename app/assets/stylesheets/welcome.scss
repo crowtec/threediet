@@ -256,6 +256,46 @@
     }
   }
 
+  .info-wrapper {
+    overflow: auto;
+
+    .left, .right {
+      @include box-sizing(border-box);
+      padding: 4% 5%;
+      width: 50%;
+    }
+
+    .left {
+      background-color: $background_orange;
+    }
+
+    .right {
+      background-color: $background_brown;
+    }
+
+    section {
+    }
+
+    h2 {
+      color: $text_white;
+      font-family: $fontPermanentMarker;
+      font-size: 40px;
+      line-height: 60px;
+    }
+
+    .pre-title {
+      color: $text-white;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $text-white;
+      line-height: 24px;
+    }
+
+  }
+
   .access-wrapper{
     position: relative;
     width: 100%;
