@@ -26,8 +26,14 @@
         width: 90%;
         text-align: center;
         .logo{
-          margin-left: 32.5%;
-          width: 35%;
+          margin-left: 23.5%;
+          width: 50%;
+          .pre-title {
+            color: $text_brown;
+            text-align: center;
+            font-size: 25px;
+          }
+
           img{
             width: 100%;
           }
