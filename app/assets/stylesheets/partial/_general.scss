@@ -1,3 +1,7 @@
+@function calculatePercent($size, $base-size) {
+  @return #{(($size / $base-size) * 100) + "%"};
+}
+
 .custom-button{
   font-family: $fontUbuntuLight;
   padding: 10px 15px;
@@ -31,6 +35,10 @@
     color: $text_white;
     background-color: $background_orange;
   }
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-uppercase {

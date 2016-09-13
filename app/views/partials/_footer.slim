@@ -1,12 +1,45 @@
-.footer
-    / span = image_tag 'fiware.png', class: 'logo'
-    / span = image_tag 'fabulous.png', class: 'logo'
-    ul
-      li Copyright 2016 Todos los derechos reservados Mixeat
-      li |
-      li Política de privacidad
-      li |
-      li Condiciones de uso
-      li |
-      li FAQ
+footer
+  / span = image_tag 'fiware.png', class: 'logo'
+  / span = image_tag 'fabulous.png', class: 'logo'
+  .wrapper.text-left
+    .col
+      .content
+        p.text-bold
+          | No te pierdas las últimas noticias de Dynam'eat
+        .social-link
+          = image_tag "icons/Facebook.svg"
+          = image_tag "icons/Twitter.svg"
+          = image_tag "icons/Instagram.svg"
+    .col
+      .content
+        .left
+          = image_tag "home/01-Home-7.jpg"
+        .right
+          section
+            h2 Blog
+            h3.text-uppercase Combate final: Vino VS Cerveza
+            p
+              | El ser humano suele tender a juntarse en grupos enfrentados: o se es de izquierdas o de derechas, del Barsa o del...
+            = link_to "Leer más", "#", class: "button orange text-uppercase"
+    .col
+      .content
+        ul
+          li = link_to "Tienda", "#", class: "text-uppercase"
+          li = link_to "Qué es", "#", class: "text-uppercase"
+          li = link_to "Nosotros", "#", class: "text-uppercase"
+          li = link_to "Blog", "#", class: "text-uppercase"
+          li = link_to "Solidario", "#", class: "text-uppercase"
+          li = link_to "Reciclaje", "#", class: "text-uppercase"
+          li = link_to "Contacto", "#", class: "text-uppercase"
+          li = link_to "Condiciones Legales", "#", class: "text-uppercase"
+
+  .bottom-links.text-center
+    span.text-uppercase Copyright 2016 Todos los derechos reservados Mixeat
+    span.line-separator |
+    = link_to "Política de privacidad", "#", class: "text-uppercase"
+    span.line-separator |
+    = link_to "Condiciones de uso", "#", class: "text-uppercase"
+    span.line-separator |
+    = link_to "FAQ", "#", class: "text-uppercase"
+
     
