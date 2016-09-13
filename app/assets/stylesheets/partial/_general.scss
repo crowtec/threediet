@@ -2,6 +2,25 @@
   @return #{(($size / $base-size) * 100) + "%"};
 }
 
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: ($height / $width) * 100%;
+    width: 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 .custom-button{
   font-family: $fontUbuntuLight;
   padding: 10px 15px;
