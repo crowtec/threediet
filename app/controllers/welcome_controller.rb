@@ -7,6 +7,10 @@ class WelcomeController < ApplicationController
 
   end
 
+  def kits_shop
+
+  end
+
   def us
 
   end
