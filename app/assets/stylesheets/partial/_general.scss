@@ -79,7 +79,19 @@
 }
 
 a, a:active, a:hover, a:visited, a:focus {
+  color: inherit;
   outline: none;
   text-decoration: none;
-  text-underline: none;
+}
+
+.table {
+  display: table;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
 }

@@ -32,14 +32,37 @@
               /! /.nav-collapse
 
 nav
-  .navbar-collapse
-    #nav-icon
+  .navbar-collapse.table
+    //#nav-icon
       span
       span
       span
       span
-    = image_tag 'logo_black.svg', class: 'logo'
-  .navbar-dropdown
+    .table-row
+      .table-cell.logo-wrapper
+        = image_tag 'logo.svg', class: 'logo'
+      .table-cell.links-wrapper
+        ul.primary
+          li
+            = link_to "Tienda", "#"
+          li
+            = link_to "Qué es", "#"
+          li
+            = link_to "El método", "#"
+          li
+            = link_to "Nosotros", "#"
+          li
+            = link_to "Blog", "#"
+          li
+            = link_to "Solidario", "#"
+      .table-cell.social-link-wrapper
+        = image_tag "icons/Facebook.svg"
+        = image_tag "icons/Twitter.svg"
+        = image_tag "icons/Instagram.svg"
+      .table-cell.login-wrapper
+        = link_to "Log In", "#", class: 'text-uppercase'
+
+  /.navbar-dropdown
     ul
       li
         = link_to "el proyecto", "#"
