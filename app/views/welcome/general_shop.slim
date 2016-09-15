@@ -1,31 +1,47 @@
-#general-shop-wrapper.grid-wrapper
-  .grid-item
-    .left
-      .content style="background-image: url( #{ asset_path('general_shop/02-HOMETIENDA-1-b.jpg') } ) "
-        .text-wrapper
-          h2 Kit
-          = link_to 'Lo quiero', '#', class: 'button blue text-uppercase'
-    .right
-      .content style="background-color: #abe4cd"
-        .text-wrapper
-          h2 Come y vive saludablemente feliz
-  .grid-item
-    .left
-      .content style="background-color: #f07445"
-        .text-wrapper
-          h2 Aprende a comer mejor
-    .right
-      .content style="background-image: url( #{ asset_path('general_shop/02-HOMETIENDA-2.jpg') } ) "
-        .text-wrapper
-          h2 Mi MixEat+
-          = link_to 'Lo quiero', '#', class: 'button orange text-uppercase'
-  .grid-item
-    .left
-      .content style="background-image: url( #{ asset_path('general_shop/02-HOMETIENDA-3.jpg') } ) "
-        .text-wrapper
-          h2 Ebooks
-          = link_to 'Lo quiero', '#', class: 'button brown text-uppercase'
-    .right
-      .content style="background-color: #620623"
-        .text-wrapper
-          h2 La mejor guía los ebooks de MixEat
+#general-shop-wrapper
+  .grid-wrapper
+    .grid-item
+      .left
+        .content style="background-image: url( #{ asset_path('general_shop/02-HOMETIENDA-1-b.jpg') } ) "
+          .text-wrapper
+            h2 Kit
+            = link_to 'Lo quiero', '#', class: 'button blue text-uppercase'
+      .right
+        .content style="background-color: #abe4cd"
+          .text-wrapper
+            h2 Come y vive saludablemente feliz
+    .grid-item
+      .left
+        .content style="background-color: #f07445"
+          .text-wrapper
+            h2 Aprende a comer mejor
+      .right
+        .content style="background-image: url( #{ asset_path('general_shop/02-HOMETIENDA-2.jpg') } ) "
+          .text-wrapper
+            h2 Mi MixEat+
+            = link_to 'Lo quiero', '#', class: 'button orange text-uppercase'
+    .grid-item
+      .left
+        .content style="background-image: url( #{ asset_path('general_shop/02-HOMETIENDA-3.jpg') } ) "
+          .text-wrapper
+            h2 Ebooks
+            = link_to 'Lo quiero', '#', class: 'button brown text-uppercase'
+      .right
+        .content style="background-color: #620623"
+          .text-wrapper
+            h2 La mejor guía los ebooks de MixEat
+
+  .container
+    .community-wrapper
+      //= image_tag "home/01-Home-5.jpg"
+      .content
+        = link_to "Me apunto", "#", class: "button orange text-uppercase"
+        section
+          .pre-title Comunidad DINAM'EAT
+          h2.text-uppercase
+            .line Club DINAM'EAT
+            .line y comparte
+            .line con tu gente
+          p
+            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+
