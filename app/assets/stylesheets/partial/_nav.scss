@@ -1,6 +1,7 @@
 nav {
-  background-color: rgb(249, 248, 243);
-  background-color: rgba(249, 248, 243, 0.9);
+  //background-color: rgb(249, 248, 243);
+  //background-color: rgba(249, 248, 243, 0.9);
+  background-color: $background_white;
   height: 72px;
   position: fixed;
   top: 0;
@@ -22,8 +23,10 @@ nav {
   }
 
   .navbar-dropdown {
-    display: none;
-    margin: 50px 0;
+    text-align: center;
+    background-color: $background_white;
+    //display: none;
+    //margin: 50px 0;
     overflow: auto;
   }
 
@@ -52,17 +55,25 @@ nav {
       font-size: 14px;
       font-weight: bold;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &.primary {
       li {
         display: inline;
         padding: 20px;
-
-        a:hover {
-          text-decoration: underline;
-        }
       }
+    }
+
+    &.secondary {
+      display: inline-block;
+      text-align: left;
+      margin: 0;
+      margin-right: 64px;
+      vertical-align: middle;
     }
   }
 
@@ -97,6 +108,19 @@ nav {
 
     a {
       font-weight: bold;
+    }
+  }
+
+  .circle {
+    @include border-radius(50%);
+    background-color: $background_light_blue;
+    display: inline-block;
+    height: 107px;
+    vertical-align: middle;
+    width: 107px;
+
+    + .circle {
+      margin-left: 25px;
     }
   }
 }

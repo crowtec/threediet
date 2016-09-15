@@ -62,20 +62,19 @@ nav
       .table-cell.login-wrapper
         = link_to "Log In", "#", class: 'text-uppercase'
 
-  /.navbar-dropdown
-    ul
+  .navbar-dropdown style="display: block !important"
+    ul.secondary
       li
-        = link_to "el proyecto", "#"
+        = link_to "El kit", "#"
       li
-        = link_to "cómo funciona!", "#"
+        = link_to "Mixeat +", "#"
       li
-        = link_to "nuestra historia", "#"
+        = link_to "Club Dynam'eat", "#"
       li
-        /= link_to "¡quiero mi kit!", new_order_path
-        = link_to "¡quiero mi kit!", kit_index_path
-      li
-        = link_to "blog", "#"
-
+        = link_to "E-books", "#"
+    .circle
+    .circle
+    .circle
 
 javascript:
   $("#nav-icon").click(function() {
