@@ -7,6 +7,6 @@ html
     = csrf_meta_tags
   body.remove-after
     / = render 'partials/shopping_cart'
-    /= render 'partials/navbar'
+    = render 'partials/navbar'
     = yield
     = render 'partials/footer'

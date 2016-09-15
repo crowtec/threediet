@@ -54,6 +54,16 @@
     color: $text_white;
     background-color: $background_orange;
   }
+
+  &.blue {
+    color: $text_white;
+    background-color: $background_blue;
+  }
+
+  &.brown {
+    color: $text_white;
+    background-color: $background_brown;
+  }
 }
 
 .text-left {

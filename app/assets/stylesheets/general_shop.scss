@@ -1,0 +1,55 @@
+.grid-wrapper {
+  .grid-item {
+    overflow: auto;
+
+    .left, .right {
+      @include aspect-ratio(620, 388);
+      width: 50%;
+
+      .content {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+#general-shop-wrapper {
+  .text-wrapper {
+    @include translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    width: 90%;
+  }
+
+  .grid-item {
+    &:nth-child(2n) .left h2 {
+      font-size: 45px;
+    }
+
+    &:nth-child(2n + 1) .right h2 {
+      font-size: 45px;
+    }
+  }
+
+
+
+
+
+
+  h2 {
+    color: $text_white;
+    font-family: $fontPermanentMarker;
+    font-size: 75px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 40px;
+  }
+}

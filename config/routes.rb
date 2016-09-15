@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   #end
   get 'us' => 'welcome#us'
   get 'how_it_works' => 'welcome#how_it_works'
+  get 'shop' => 'welcome#general_shop'
 
   resources :kit, only: [:index]
 
