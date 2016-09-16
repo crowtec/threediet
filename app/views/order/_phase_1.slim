@@ -17,8 +17,13 @@
             span> Nota:
             | El color que elijas se aplicará a todas las piezas del kit
           ul.colors-list
-            li
-              = link_to "#"
+            - @colors.each_with_index do |c, i|
+              li
+                = link_to new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index, c_index: i), class: 'link', method: :post
+                  .color style='background-color: rgb(#{(c.red * 255).to_i}, #{(c.green * 255).to_i}, #{(c.blue * 255).to_i});'
+                  .color-text
+                    = "#{ c.name + "color" }"
+              /= link_to "#"
                 .color
                 .color-text
                   | Color verde

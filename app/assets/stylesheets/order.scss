@@ -239,9 +239,13 @@ ul.order-progress-bar {
       margin: 0;
     }
 
+    .button {
+      display: inline-block;
+    }
+
     .description-wrapper {
       margin-bottom: 30px;
-      
+
       h2 {
         color: $text_brown;
       }
@@ -262,6 +266,28 @@ ul.order-progress-bar {
 
         span {
           font-weight: bolder;
+        }
+      }
+
+      .colors-list {
+        list-style-type: none;
+        margin: 40px 0 50px;
+        padding: 0;
+
+        .color {
+          background-color: red;
+          display: inline-block;
+          height: 26px;
+          margin: 8px 10px 8px 0;
+          vertical-align: middle;
+          width: 26px;
+        }
+
+        .color-text {
+          display: inline-block;
+          color: $text_white;
+          text-transform: uppercase;
+          vertical-align: middle;
         }
       }
     }
