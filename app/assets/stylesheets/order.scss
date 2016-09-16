@@ -142,3 +142,73 @@
 }
 
 .top-buffer { margin-top:20px; }
+
+
+
+
+// --------------------------- Nav bar ---------------------------
+
+ul.order-progress-bar {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 14px;
+    vertical-align: top;
+
+    &.active {
+      .step-number {
+        background-color: $background_black;
+      }
+    }
+  }
+
+  .step-number-wrapper {
+    margin: 28px;
+    height: 42px;
+    width: 42px;
+  }
+
+  .step-number {
+    @include border-radius(50%);
+    background-color: $background_gray;
+    border-radius: 50%;
+    color: $text_white;
+    line-height: 42px;
+  }
+
+  .step-text {
+    span {
+      display: block;
+    }
+  }
+}
+
+// -------------- Nav bar -------------
+
+.order-header {
+  text-align: center;
+  padding-bottom: 38px;
+
+  .header {
+    margin-bottom: 45px;
+  }
+  .title {
+    color: $text_brown;
+    font-family: $fontPermanentMarker;
+    font-size: 90px;
+    margin: 0;
+  }
+
+  .subtitle {
+    color: $text_orange;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+}
+
