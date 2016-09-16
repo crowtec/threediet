@@ -188,7 +188,7 @@ ul.order-progress-bar {
   }
 }
 
-// -------------- Nav bar -------------
+// -------------- Header -------------
 
 .order-header {
   text-align: center;
@@ -212,3 +212,60 @@ ul.order-progress-bar {
   }
 }
 
+
+// ----------------------- Customizer kit wrapper -----------------------
+.customizer-kit-wrapper {
+  > .wrapper {
+    overflow: auto;
+
+    > .right {
+      width: 50%;
+    }
+  }
+
+  .colors-description-wrapper {
+    @include box-sizing(border-box);
+    background-color: $background_blue;
+    padding: 45px;
+
+    .container {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
+    h2 {
+      font-family: $fontPermanentMarker;
+      font-size: 40px;
+      margin: 0;
+    }
+
+    .description-wrapper {
+      margin-bottom: 30px;
+      
+      h2 {
+        color: $text_brown;
+      }
+      
+      p {
+        color: $text_brown;
+      }
+    }
+    
+    .colors-wrapper {
+      h2 {
+        color: $text_white;
+        margin-bottom: 10px;
+      }
+
+      small {
+        color: $text_white;
+
+        span {
+          font-weight: bolder;
+        }
+      }
+    }
+    
+    
+  }
+}

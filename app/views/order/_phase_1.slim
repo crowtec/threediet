@@ -2,6 +2,52 @@
 
 = render 'order/partials/order_navbar', step: 2
 = render 'order/partials/order_header'
+
+.customizer-kit-wrapper
+  .wrapper
+    /.left
+    .right.colors-description-wrapper
+      .container
+        section.description-wrapper
+          h2 Bowl Desayuno
+          p Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test
+        .colors-wrapper
+          h2 Personaliza tu kit
+          small
+            span> Nota:
+            | El color que elijas se aplicará a todas las piezas del kit
+          ul.colors-list
+            li
+              = link_to "#"
+                .color
+                .color-text
+                  | Color verde
+          .selected-color
+        = link_to "Lo quiero", "#", class: "button orange text-uppercase"
+        //TODO Review - Add details
+
+
+
+
+/.xmld3d-viewer
+  .collection.text-center
+    = @kit.name
+  .col-md-offset-2.col-md-8
+    = render 'partials/xml3d'
+  .selectors.text-center
+    .left.col-sm-6
+      .col-sm-offset-1
+        = link_to '<', new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index - 1, c_index: @color_index), class: 'link', method: :post
+    .right.col-sm-6
+      .col-sm-9
+        = link_to '>', new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', method: :post
+  .tupper.text-center
+    = @tupper.name
+  .col-md-2
+    .colors-wrapper
+      - @colors.each_with_index do |c, i|
+        = link_to new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index, c_index: i), class: 'link', method: :post
+          .color.left style='background-color: rgb(#{(c.red * 255).to_i}, #{(c.green * 255).to_i}, #{(c.blue * 255).to_i});'
 /.body-overlay
 /.row.new-order
   .col-md-offset-2.col-md-8.notebook.form-kit
