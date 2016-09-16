@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
   end
 
   def kits_shop
-
+    @kit = Kit.all.first
   end
 
   def us
