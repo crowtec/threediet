@@ -44,17 +44,23 @@ nav
       .table-cell.links-wrapper
         ul.primary
           li
-            = link_to "Tienda", "#"
+            span data-link-to='shop' Tienda
+            /= link_to "Tienda", "#"
           li
-            = link_to "Qué es", "#"
+            span data-link-to='whats-it' Qué es
+            /= link_to "Qué es", "#"
           li
-            = link_to "El método", "#"
+            span data-link-to='the-method' El método
+            /= link_to "El método", "#"
           li
-            = link_to "Nosotros", "#"
+            span data-link-to='we' Nosotros
+            /= link_to "Nosotros", "#"
           li
-            = link_to "Blog", "#"
+            span data-link-to='blog' Blog
+            /= link_to "Blog", "#"
           li
-            = link_to "Solidario", "#"
+            span data-link-to='solidary' Solidario
+            /= link_to "Solidario", "#"
       .table-cell.social-link-wrapper
         = image_tag "icons/Facebook.svg"
         = image_tag "icons/Twitter.svg"
@@ -63,7 +69,7 @@ nav
         = link_to "Log In", "#", class: 'text-uppercase'
 
   .navbar-dropdown style="display: block !important"
-    ul.secondary
+    ul.secondary.shop
       li
         = link_to "El kit", "#"
       li
@@ -72,11 +78,61 @@ nav
         = link_to "Club Dynam'eat", "#"
       li
         = link_to "E-books", "#"
-    .circle
-    .circle
-    .circle
+    ul.secondary.whats-it
+      li
+        = link_to "El kit", "#"
+      li
+        = link_to "Mixeat +", "#"
+      li
+        = link_to "Club Dynam'eat", "#"
+    ul.secondary.the-method
+      li
+        = link_to "¡Descúbrelo!", "#"
+    ul.secondary.we
+      li
+        = link_to "Nuestra aventura", "#"
+    ul.secondary.blog
+      li
+        = link_to "Nutrición", "#"
+      li
+        = link_to "Deporte", "#"
+      li
+        = link_to "Recetas", "#"
+      li
+        = link_to "Actualidad", "#"
+      li
+        = link_to "Comer fuera", "#"
+    ul.secondary.solidary
+      li
+        = link_to "Plástico reciclado", "#"
+      li
+        = link_to "Proyecto solidario", "#"
+    //.circle
+    //.circle
+    //.circle
 
 javascript:
+  $(document).click(function() {
+    $("ul.secondary").removeClass("active");
+  });
+
+  $('.navbar-dropdown').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $(".links-wrapper span").click(function(e) {
+    e.stopPropagation();
+
+    var left = $(this).offset().left;
+    var sublinks = $(this).attr('data-link-to');
+
+    var $sublinks = $("ul.secondary." + sublinks);
+    $("ul.secondary").not($sublinks).removeClass("active");
+
+    $sublinks.css("left", left);
+    $sublinks.addClass("active");
+  });
+
   $("#nav-icon").click(function() {
     $(this).toggleClass('open');
     $('.navbar-dropdown').slideToggle();
