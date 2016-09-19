@@ -23,7 +23,7 @@
     background-color: $background_blue;
 
     &:nth-child(2n) {
-      background-color: $background_light_blue;
+      background-image: image_url('kit_texture.png');
     }
 
     .right section {
