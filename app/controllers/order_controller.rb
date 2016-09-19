@@ -1,7 +1,6 @@
 class OrderController < ApplicationController
   def new
     redirect_to new_order_path(phase: params[:phase].to_i, order: order_params, kit: params[:kit], t_index: params[:t_index], c_index: params[:c_index]) if params.has_key?(:order) && request.post?
-    redirect_to new_order_path(phase: params[:phase].to_i, kit: params[:kit], t_index: params[:t_index], c_index: params[:c_index]) if request.post?
 
     @phase = (params[:phase] || 1).to_i
     @order = params.has_key?(:order) ? Order.new(order_params) : Order.new

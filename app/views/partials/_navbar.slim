@@ -40,7 +40,8 @@ nav
       span
     .table-row
       .table-cell.logo-wrapper
-        = image_tag 'logo.svg', class: 'logo'
+        = link_to root_path
+          = image_tag 'logo.svg', class: 'logo'
       .table-cell.links-wrapper
         ul.primary
           li
@@ -71,13 +72,13 @@ nav
   .navbar-dropdown style="display: block !important"
     ul.secondary.shop
       li
-        = link_to "El kit", "#"
+        = link_to "El kit", kit_shop_path
       li
-        = link_to "Mixeat +", "#"
+        = link_to "Mixeat +", general_shop_path
       li
-        = link_to "Club Dynam'eat", "#"
+        = link_to "Club Dynam'eat", general_shop_path
       li
-        = link_to "E-books", "#"
+        = link_to "E-books", general_shop_path
     ul.secondary.whats-it
       li
         = link_to "El kit", "#"

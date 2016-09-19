@@ -41,7 +41,8 @@
                   .color-text
                     = "#{ "color " + c.name  }"
           .selected-color
-        = link_to "Lo quiero", "#", class: "button orange text-uppercase"
+        = f.submit 'Lo quiero', class: "button orange text-uppercase"
+        /= link_to "Lo quiero", new_order_post_path(phase: @phase + 1, kit: @kit, t_index: 0, c_index: @color_index), method: :post, class: "button orange text-uppercase"
         //TODO Review - Add details
   .tupper-preview-wrapper
     .preview-image

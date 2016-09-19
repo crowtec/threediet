@@ -1,3 +1,7 @@
+body {
+  margin-top: 72px !important;
+}
+
 .xmld3d-viewer{
   //background: image-url('tv.png') no-repeat;
   //background-size: auto 100%;
@@ -329,6 +333,151 @@ ul.order-progress-bar {
         vertical-align: middle;
         width: 100%;
       }
+    }
+  }
+}
+
+// ----------------------- Shipment info wrapper -----------------------
+
+.shipment-info-wrapper {
+  background-color: $background_orange;
+  overflow: auto;
+
+  > .left, > .right {
+    position: relative;
+    width: 50%;
+
+    .content {
+      padding: 60px 80px;
+    }
+
+    &:before {
+      @include translateX(-50%);
+      content: '';
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid white;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      width: 0;
+    }
+  }
+
+  > .right {
+    background-color: $background_brown;
+  }
+
+  h2 {
+    color: $text_white;
+    font-family: $fontPermanentMarker;
+    font-size: 28px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 45px;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: $text_white;
+    display: block;
+    font-size: 14px;
+    font-weight: 100;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 28px;
+    outline: none;
+    width: 100%;
+  }
+
+  label {
+    color: $text_white;
+    display: block;
+    font-size: 13px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .button {
+    float: right;
+  }
+
+}
+
+#pay-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .content {
+    @include box-sizing(border-box);
+    @include translate(-50%, -50%);
+    padding: 50px 80px;
+    background-color: $background_white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    .close {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+
+    .wrapper {
+      overflow: auto;
+      margin-top: 60px;
+      margin-bottom: 130px;
+    }
+
+    h2 {
+      color: $text_brown;
+      font-family: $fontPermanentMarker;
+      font-size: 28px;
+      line-height: 30px;
+    }
+    
+    .left {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .right {
+      @include box-sizing(border-box);
+      width: 50%;
+
+      .kit-name {
+        color: $text-brown;
+        font-size: 20px;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+      }
+
+      .price, .amount {
+        color: $text-brown;
+        font-size: 15px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+
+        span {
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .button {
+      float: right;
     }
   }
 }
