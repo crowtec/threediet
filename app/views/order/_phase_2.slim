@@ -1,43 +1,34 @@
 /= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-//Phase 1 params
-/= f.hidden_field :name
-/= f.hidden_field :birth_date
-/= f.hidden_field :gender
-/= f.hidden_field :target
-/= f.hidden_field :daily_cals
-/= f.hidden_field :daily_activity
-/= f.hidden_field :macro_nutrients
-/= f.hidden_field :weight
-/= f.hidden_field :height
-/= f.hidden_field :supervised
-/= f.hidden_field :kit, value: @kit.id.to_s
-/= f.hidden_field :color, value: @color.id.to_s
 
-= render 'order/partials/order_navbar', step: 4
+= render 'order/partials/order_navbar', step: 3
 = render 'order/partials/order_header'
 
+.maker-wrapper
+  h2
+    span 3
+    | Elige tu maker
 
+  p
+    | Si eliges un productor de tu comunidad favoreces la producción local,
+    b< ¡y es más barato!
+    br
+    | Una vez selecciones tu maker pasarás a las pantallas de pago
 
-#pay-modal
-  .content
-    .close
-    h2
-      | Agregado a tu cesta de la compra
-    .wrapper
-      .left
-        = image_tag 'kit_shop/03-TIENDA-3.jpg'
-      .right
-        .kit-name.text-uppercase
-          | Mi Kit +
-        .price.text-uppercase
-          | Precio:
-          span< 75€
-        .amount.text-uppercase
-          | Cantidad: 1
-    = f.submit 'Pagar', class: "button orange text-uppercase"
-.shipment-info-wrapper
+  ul.maker-list
+    li
+      .city Madrid
+      p Lorem ipsum
+      = f.submit 'Elegir', class: "button white text-uppercase"
+    li
+      .city Valencia
+      p Lorem ipsum
+      = f.submit 'Elegir', class: "button white text-uppercase"
+    li
+      .city Barcelona
+      p Lorem ipsum
+      = f.submit 'Elegir', class: "button white text-uppercase"
 
-  .left.login-wrapper
+  /.left.login-wrapper
     .content
       h2
         | Ya estás registrado
@@ -45,7 +36,7 @@
         = f.email_field :user, label: 'usuario'
         = f.password_field :pass, label: 'contraseña'
       = link_to "Entrar", "#", class: "button white text-uppercase open-modal"
-  .right.signin-wrapper
+  /.right.signin-wrapper
     .content
       h2
         | Sé parte de la comunidad
@@ -59,20 +50,20 @@
       = link_to "Registrarme", "#", class: "button white text-uppercase open-modal"
 
 
-javascript:
-  $('.open-modal').click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
 
-    $("#pay-modal").fadeIn();
-  });
-
-  $("#pay-modal").find(".close ").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    $("#pay-modal").fadeOut();
-  });
+//Phase 1 params
+/= f.hidden_field :name
+/= f.hidden_field :birth_date
+/= f.hidden_field :gender
+/= f.hidden_field :target
+/= f.hidden_field :daily_cals
+/= f.hidden_field :daily_activity
+/= f.hidden_field :macro_nutrients
+/= f.hidden_field :weight
+/= f.hidden_field :height
+/= f.hidden_field :supervised
+/= f.hidden_field :kit, value: @kit.id.to_s
+/= f.hidden_field :color, value: @color.id.to_s
 
 /.body-overlay
 /.container-fluid.no-margin-bottom.remove-after-phase.xml3d-wrapper

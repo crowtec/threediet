@@ -1,12 +1,14 @@
 .container-fluid
-  - url = @phase.to_i == 2 ? order_index_path : new_order_post_path(phase: @phase + 1)
+  - url = @phase.to_i == 3 ? order_index_path : new_order_post_path(phase: @phase + 1)
   - back_url = @phase.to_i == 1 ? kit_index_path : new_order_path(order: params[:order], phase: @phase - 1, kit: @kit, t_index: @tupper_index, c_index: @color_index)
   = bootstrap_form_for(@order, url: url, html: {method: 'post'}, label_col: "col-md-3", control_col: "col-md-9")  do |f|
     = f.hidden_field :kit, value: @kit.id.to_s
+    = f.hidden_field :color, value: @color.id.to_s
+
     - content_for(:back_button) do
       .top-buffer
         = link_to 'Atrás', back_url, class: "btn sharp btn-pink form-control" , method: @phase > 1 ? :post : :get
     - content_for(:next_button) do
       .top-buffer
-        = f.submit (@phase.to_i == 2 ? 'Finalizar pedido' : 'Siguiente' ) , class: "button orange text-uppercase"
+        = f.submit (@phase.to_i == 3 ? 'Finalizar pedido' : 'Siguiente' ) , class: "button orange text-uppercase"
     = render 'order/phase_' + @phase.to_s, f: f

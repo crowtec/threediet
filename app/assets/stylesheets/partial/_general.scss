@@ -48,6 +48,7 @@
 
 .button {
   border: none;
+  cursor: pointer;
   text-align: center;
   padding: 10px 35px;
 
@@ -129,4 +130,22 @@ a, a:active, a:hover, a:visited, a:focus {
   &::after {
     @include transform(rotate(-45deg));
   }
+}
+
+input[type="submit"] {
+  outline: none;
+}
+
+#jGrowl {
+  top: 85px !important;
+
+  .jGrowl-notification {
+    background-color: $background_white;
+    color: $text_black;
+    font-size: 14px;
+  }
+}
+
+p.notice {
+  display: none;
 }

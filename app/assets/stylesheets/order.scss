@@ -218,7 +218,7 @@ ul.order-progress-bar {
 
 .order-header {
   text-align: center;
-  padding-bottom: 38px;
+  //padding-bottom: 38px;
 
   .header {
     margin-bottom: 45px;
@@ -241,6 +241,11 @@ ul.order-progress-bar {
 
 // ----------------------- Customizer kit wrapper -----------------------
 .customizer-kit-wrapper {
+  .header-image {
+    margin-bottom: 38px;
+    text-align: center;
+  }
+
   > .wrapper {
     overflow: auto;
     position: relative;
@@ -264,6 +269,15 @@ ul.order-progress-bar {
       font-family: $fontPermanentMarker;
       font-size: 40px;
       margin: 0;
+      position: relative;
+
+      span {
+        display: block;
+        font-family: $fontUbuntuLight;
+        position: absolute;
+        top: 7px;
+        left: -50px;
+      }
     }
 
     .button {
@@ -337,11 +351,82 @@ ul.order-progress-bar {
   }
 }
 
+// ----------------------- Maker wrapper -----------------------
+
+.maker-wrapper {
+  background-color: $background_blue;
+  padding: 40px 90px;
+  text-align: center;
+
+  h2 {
+    color: $text_brown;
+    font-family: $fontPermanentMarker;
+    font-size: 28px;
+    line-height: 30px;
+    margin-top: 0;
+
+    span {
+      display: block;
+      font-family: $fontUbuntuLight;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    color: $text_brown;
+  }
+
+  ul {
+    font-size: 14px;
+    letter-spacing: 3px;
+    list-style-type: none;
+    margin: 60px 0;
+    overflow: auto;
+    padding: 0;
+
+    li {
+      float: left;
+      text-transform: uppercase;
+      width: 33.333%;
+    }
+  }
+}
+
+
 // ----------------------- Shipment info wrapper -----------------------
 
 .shipment-info-wrapper {
   background-color: $background_orange;
   overflow: auto;
+
+  .header-wrapper {
+    background-color: $text_white;
+    padding: 28px 0 43px;
+    text-align: center;
+
+    h2 {
+      color: $text_brown;
+      font-family: $fontPermanentMarker;
+      font-size: 28px;
+      line-height: 30px;
+      margin-top: 0;
+
+      span {
+        display: block;
+        font-family: $fontUbuntuLight;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      color: $text_brown;
+      font-size: 15px;
+
+      span {
+        display: block;
+      }
+    }
+  }
 
   > .left, > .right {
     position: relative;
@@ -362,19 +447,19 @@ ul.order-progress-bar {
       left: 50%;
       width: 0;
     }
+
+    h2 {
+      color: $text_white;
+      font-family: $fontPermanentMarker;
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0;
+      margin-bottom: 45px;
+    }
   }
 
   > .right {
     background-color: $background_brown;
-  }
-
-  h2 {
-    color: $text_white;
-    font-family: $fontPermanentMarker;
-    font-size: 28px;
-    line-height: 30px;
-    margin: 0;
-    margin-bottom: 45px;
   }
 
   input {

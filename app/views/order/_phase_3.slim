@@ -1,20 +1,92 @@
-= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-/Previous phases params
-= f.hidden_field :name
-= f.hidden_field :birth_date
-= f.hidden_field :gender
-= f.hidden_field :target
-= f.hidden_field :daily_cals
-= f.hidden_field :daily_activity
-= f.hidden_field :macro_nutrients
-= f.hidden_field :weight
-= f.hidden_field :height
-= f.hidden_field :supervised
-= f.hidden_field :kit, value: @kit.id.to_s
-= f.hidden_field :color, value: @color.id.to_s
+/= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 
-.body-overlay
-.row.new-order.review.remove-after-phase
+= render 'order/partials/order_navbar', step: 4
+= render 'order/partials/order_header'
+
+#pay-modal
+  .content
+    .close
+    h2
+      | Agregado a tu cesta de la compra
+    .wrapper
+      .left
+        = image_tag 'kit_shop/03-TIENDA-3.jpg'
+      .right
+        .kit-name.text-uppercase
+          | Mi Kit +
+        .price.text-uppercase
+          | Precio:
+          span< 75€
+        .amount.text-uppercase
+          | Cantidad: 1
+    = f.submit 'Pagar', class: "button orange text-uppercase"
+
+
+.shipment-info-wrapper
+  .header-wrapper
+    h2
+      span 4
+      | Datos de envío
+
+    p
+      span Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+      span< Nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu
+  .left.login-wrapper
+    .content
+      h2
+        | Ya estás registrado
+      = bootstrap_form_tag do |f|
+        = f.email_field :user, label: 'usuario'
+        = f.password_field :pass, label: 'contraseña'
+        = link_to "Entrar", "#", class: "button white text-uppercase open-modal"
+  .right.signin-wrapper
+    .content
+      h2
+        | Sé parte de la comunidad
+      = bootstrap_form_tag do |f|
+        = f.email_field :email, label: 'e-mail'
+        = f.text_field :name, label: 'nombre y apellidos'
+        = f.text_field :street, label: 'calle'
+        = f.text_field :cp, label: 'código postal'
+        = f.text_field :country, label: 'país'
+        = f.text_field :mobile_number, label: 'teléfono'
+        = link_to "Registrarme", "#", class: "button white text-uppercase open-modal"
+
+
+javascript:
+  $(function() {
+    $('.open-modal').click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $("#pay-modal").fadeIn();
+    });
+
+    $("#pay-modal").find(".close ").click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $("#pay-modal").fadeOut();
+    });
+  });
+
+
+/Previous phases params
+/= f.hidden_field :name
+/= f.hidden_field :birth_date
+/= f.hidden_field :gender
+/= f.hidden_field :target
+/= f.hidden_field :daily_cals
+/= f.hidden_field :daily_activity
+/= f.hidden_field :macro_nutrients
+/= f.hidden_field :weight
+/= f.hidden_field :height
+/= f.hidden_field :supervised
+/= f.hidden_field :kit, value: @kit.id.to_s
+/= f.hidden_field :color, value: @color.id.to_s
+/
+/.body-overlay
+/.row.new-order.review.remove-after-phase
   .col-md-1
   .col-md-offset-1.col-md-8.notebook.form-kit
     .title Pedido
@@ -49,7 +121,7 @@
             .item
               | -
               =< tupper.name
-.col-md-2.col-md-offset-2
+/.col-md-2.col-md-offset-2
   == yield(:back_button)
-.col-md-2.col-md-offset-4
+/.col-md-2.col-md-offset-4
   == yield(:next_button)

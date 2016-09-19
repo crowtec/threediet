@@ -3,10 +3,29 @@ html
   head
     title Threediet
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.css"
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.1/jquery.jgrowl.min.js"
+
     = csrf_meta_tags
   body.remove-after
     / = render 'partials/shopping_cart'
     = render 'partials/navbar'
     = yield
     = render 'partials/footer'
+
+    - if flash[:notice]
+      p.notice = flash[:notice]
+
+javascript:
+  var _showAlerts = function () {
+    var $notice = $(".notice");
+
+    if ($notice.length)
+      $.jGrowl($notice.text());
+  };
+
+  $(function () {
+    _showAlerts();
+    //$.jGrowl("Hola hola holaaaaa", { life: 1000000 });
+  });

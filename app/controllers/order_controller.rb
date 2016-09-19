@@ -19,7 +19,7 @@ class OrderController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.save!
-    redirect_to root_path
+    redirect_to root_path, notice: "Tu pedido se ha realizado con éxito"
   end
 
   private

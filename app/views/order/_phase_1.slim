@@ -4,6 +4,8 @@
 = render 'order/partials/order_header'
 
 .customizer-kit-wrapper
+  .header-image
+    = image_tag "kit_home.png"
   .wrapper
     /.left
     .xmld3d-viewer
@@ -29,7 +31,9 @@
           h2 = @tupper.name
           p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
         .colors-wrapper
-          h2 Personaliza tu kit
+          h2
+            span 2
+            | Personalizar tu kit
           small
             span> Nota:
             | El color que elijas se aplicará a todas las piezas del kit
