@@ -22,6 +22,10 @@
   .kit-item-wrapper {
     background-color: $background_blue;
 
+    &:nth-child(2n) {
+      background-color: $background_light_blue;
+    }
+
     .right section {
       max-width: 50%;
       margin: 0 auto;

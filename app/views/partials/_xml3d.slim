@@ -21,7 +21,7 @@ javascript:
       XML3D.StandardCamera.Instance.translate(new XML3D.Vec3(0, 0, zoom));
   };
 
-  $(document).on('ready', function (event) {
+  $(function (event) {
     var init = function () {
       var view = document.querySelector("view");
       if (view && XML3D.StandardCamera.Instance !== false) {

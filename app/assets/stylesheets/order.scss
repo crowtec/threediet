@@ -54,9 +54,13 @@ body {
 
   .zoom-buttons {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     z-index: 1;
+
+    img {
+      width: 44px;
+    }
 
     i {
       cursor: pointer;

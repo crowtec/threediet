@@ -10,8 +10,10 @@
     /.left
     .xmld3d-viewer
       .zoom-buttons
-        i#zoom_in.fa.fa-plus-square-o aria-hidden="true"
-        i#zoom_out.fa.fa-minus-square-o aria-hidden="true"
+        #zoom_in
+          = image_tag 'icons/Zoom_in.svg'
+        #zoom_out
+          = image_tag 'icons/Zoom_out.svg'
       = render 'partials/xml3d'
       /.collection.text-center
         = @kit.name
@@ -60,13 +62,13 @@
         = image_tag 'kit_shop/03-TIENDA-3.jpg'
     .preview-image
       = link_to new_order_path(phase: @phase, kit: @kit, t_index: 3, c_index: @color_index), method: :post
-        = image_tag 'kit_shop/03-TIENDA-1.jpg'
+        = image_tag 'kit_shop/Bowl-desayuno-02.jpg'
     .preview-image
       = link_to new_order_path(phase: @phase, kit: @kit, t_index: 4, c_index: @color_index), method: :post
-        = image_tag 'kit_shop/03-TIENDA-2.jpg'
+        = image_tag 'kit_shop/Set-comida-01.jpg'
     .preview-image
       = link_to new_order_path(phase: @phase, kit: @kit, t_index: 5, c_index: @color_index), method: :post
-        = image_tag 'kit_shop/03-TIENDA-3.jpg'
+        = image_tag 'kit_shop/Set-comida-03.jpg'
 
 
 

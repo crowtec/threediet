@@ -9,7 +9,7 @@
           .subtitle Sé Dinam'eat
     .right-image
       = image_tag "home/01-Home-2-b.jpg"
-      = link_to "Descubre el kit", kit_shop_path, class: "button orange text-uppercase"
+      = link_to "Descubre el kit", kit_shop_path, class: "button orange text-uppercase", 'data-no-turbolink' => true
     /.bottom-info
       .background
       .col-wrapper
@@ -62,7 +62,7 @@
           b Elegidos por ti.
     .kit-image
       h2.text-bold.text-uppercase Qué es el kit
-      = link_to new_order_path
+      = link_to kit_shop_path, 'data-no-turbolink' => true
         = image_tag "kit_home.png"
   .secondary-cover
     .left-image

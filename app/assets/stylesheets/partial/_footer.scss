@@ -1,7 +1,8 @@
 footer{
   //font-size: 12px;
   color: white;
-  background-color: $text_orange;
+  background-color: $background_light_orange;
+  //background-image: image-url('background/pie_pattern.svg');
   text-align: center;
   overflow: auto;
   width: 100%;
@@ -111,6 +112,7 @@ footer{
   }
 
   .bottom-links {
+    background-color: $text_orange;
     padding: 20px 30px;
 
     span, a {
