@@ -1,0 +1,6 @@
+.idea
+.tags*
+tags
+*.iml
+
+.env

@@ -1,0 +1,157 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+Admin	app/controllers/admin/color_controller.rb	/^class Admin::ColorController < AdminController$/;"	c
+Admin	app/controllers/admin/kit_controller.rb	/^class Admin::KitController < AdminController$/;"	c
+Admin	app/controllers/admin/order_controller.rb	/^class Admin::OrderController < AdminController$/;"	c
+Admin	app/controllers/admin/tupper_controller.rb	/^class Admin::TupperController < AdminController$/;"	c
+Admin	app/controllers/admin/user_controller.rb	/^class Admin::UserController < AdminController$/;"	c
+AdminController	app/controllers/admin_controller.rb	/^class AdminController < ApplicationController$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Threediet
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Color	app/models/color.rb	/^class Color$/;"	c
+Kit	app/models/kit.rb	/^class Kit$/;"	c
+KitController	app/controllers/kit_controller.rb	/^class KitController < ApplicationController$/;"	c
+KitTest	test/models/kit_test.rb	/^class KitTest < ActiveSupport::TestCase$/;"	c
+Order	app/models/order.rb	/^class Order$/;"	c
+OrderController	app/controllers/order_controller.rb	/^class OrderController < ApplicationController$/;"	c
+OrderControllerTest	test/controllers/order_controller_test.rb	/^class OrderControllerTest < ActionController::TestCase$/;"	c
+OrderHelper	app/helpers/order_helper.rb	/^module OrderHelper$/;"	m
+OrderTest	test/models/order_test.rb	/^class OrderTest < ActiveSupport::TestCase$/;"	c
+StlController	app/controllers/stl_controller.rb	/^class StlController < ApplicationController$/;"	c
+Threediet	config/application.rb	/^module Threediet$/;"	m
+TransformInterface	vendor/assets/javascripts/xml3d/camera.js	/^    var TransformInterface = function(element, xml3d) {$/;"	c
+TransformInterface.createTransformForView	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.createTransformForView = function(element) {$/;"	m
+TransformInterface.getTransformForElement	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.getTransformForElement = function(element) {$/;"	m
+TransformInterface.inverseTransformOf	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.inverseTransformOf = function(vec) {$/;"	m
+TransformInterface.lookAround	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.lookAround = function(rotSide, rotUp, upVector) {$/;"	m
+TransformInterface.lookAt	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.lookAt = function(point) {$/;"	m
+TransformInterface.rotate	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.rotate = function(q0) {$/;"	m
+TransformInterface.rotateAroundPoint	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.rotateAroundPoint = function(q0, p0) {$/;"	m
+TransformInterface.translate	vendor/assets/javascripts/xml3d/camera.js	/^    TransformInterface.prototype.translate = function(t0) {$/;"	m
+Tupper	app/models/tupper.rb	/^class Tupper$/;"	c
+TupperTest	test/models/tupper_test.rb	/^class TupperTest < ActiveSupport::TestCase$/;"	c
+User	app/models/user.rb	/^class User$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
+WelcomeControllerTest	test/controllers/welcome_controller_test.rb	/^class WelcomeControllerTest < ActionController::TestCase$/;"	c
+WelcomeHelper	app/helpers/welcome_helper.rb	/^module WelcomeHelper$/;"	m
+XML3D.StandardCamera	vendor/assets/javascripts/xml3d/camera.js	/^        throw("XML3D not found, please ensure the camera script is included after xml3d.js");$/;"	c
+XML3D.StandardCamera.DOLLY	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.DOLLY = "dolly";$/;"	m
+XML3D.StandardCamera.LOOKAROUND	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.LOOKAROUND = "lookaround";$/;"	m
+XML3D.StandardCamera.NO_MOUSE_ACTION	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.NO_MOUSE_ACTION = "no_action";$/;"	m
+XML3D.StandardCamera.ROTATE	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.ROTATE = "rotate";$/;"	m
+XML3D.StandardCamera.TRANSLATE	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.TRANSLATE = "translate";$/;"	m
+XML3D.StandardCamera.__defineGetter__	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.__defineGetter__("height", function() { return this.xml3d.height;});$/;"	m
+XML3D.StandardCamera.__defineGetter__	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.__defineGetter__("width", function() { return this.xml3d.width;});$/;"	m
+XML3D.StandardCamera.attach	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.attach = function() {$/;"	m
+XML3D.StandardCamera.detach	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.detach = function() {$/;"	m
+XML3D.StandardCamera.examine	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.examine = function(element) {$/;"	m
+XML3D.StandardCamera.getInverseTranslationOfParent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.getInverseTranslationOfParent = function(element) {$/;"	m
+XML3D.StandardCamera.getXML3DForElement	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.getXML3DForElement = function(element) {$/;"	m
+XML3D.StandardCamera.keyHandling	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.keyHandling = function(e, action) {$/;"	m
+XML3D.StandardCamera.lookAt	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.lookAt = function(point) {$/;"	m
+XML3D.StandardCamera.mouseMoveEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.mouseMoveEvent = function(event, camera) {$/;"	m
+XML3D.StandardCamera.mousePressEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.mousePressEvent = function(event) {$/;"	m
+XML3D.StandardCamera.mouseReleaseEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.mouseReleaseEvent = function(event) {$/;"	m
+XML3D.StandardCamera.moveTick	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.moveTick = function(keyID) {$/;"	m
+XML3D.StandardCamera.prevPos.x	vendor/assets/javascripts/xml3d/camera.js	/^        this.prevPos = {x: -1, y: -1};$/;"	p
+XML3D.StandardCamera.prevTouchPositions.x	vendor/assets/javascripts/xml3d/camera.js	/^        this.prevTouchPositions[0] = {$/;"	p
+XML3D.StandardCamera.rotate	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.rotate = function(rot) {$/;"	m
+XML3D.StandardCamera.setExaminePoint	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.setExaminePoint = function(p) {$/;"	m
+XML3D.StandardCamera.stopEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.stopEvent = function(ev) {$/;"	m
+XML3D.StandardCamera.this._evt_mousedown	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_mousedown = function(e) {self.mousePressEvent(e);};$/;"	m
+XML3D.StandardCamera.touchEndEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.touchEndEvent = function(event) {$/;"	m
+XML3D.StandardCamera.touchMoveEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.touchMoveEvent = function(event, camera) {$/;"	m
+XML3D.StandardCamera.touchStartEvent	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.touchStartEvent = function(event) {$/;"	m
+XML3D.StandardCamera.translate	vendor/assets/javascripts/xml3d/camera.js	/^    XML3D.StandardCamera.prototype.translate = function(vec) {$/;"	m
+add_kit	app/models/order.rb	/^  def add_kit order$/;"	f	class:Order
+add_tuppers	app/models/kit.rb	/^  def add_tuppers kit$/;"	f	class:Kit
+authenticate_admin	app/controllers/admin_controller.rb	/^  def authenticate_admin$/;"	f	class:AdminController
+color_params	app/controllers/admin/color_controller.rb	/^  def color_params$/;"	f	class:Admin
+create	app/controllers/admin/color_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/kit_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/tupper_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/order_controller.rb	/^  def create$/;"	f	class:OrderController
+create_admin	db/seeds.rb	/^def create_admin$/;"	f
+d	vendor/assets/javascripts/admin/metisMenu.min.js	/^!function(a,b,c){function d(b,c){this.element=a(b),this.settings=a.extend({},f,c),this._defaults=f,this._name=e,this.init()}var e="metisMenu",f={toggle:!0,doubleTapToGo:!1};d.prototype={init:function(){var b=this.element,d=this.settings.toggle,f=this;this.isIE()<=9?(b.find("li.active").has("ul").children("ul").collapse("show"),b.find("li").not(".active").has("ul").children("ul").collapse("hide")):(b.find("li.active").has("ul").children("ul").addClass("collapse in"),b.find("li").not(".active").has("ul").children("ul").addClass("collapse")),f.settings.doubleTapToGo&&b.find("li.active").has("ul").children("a").addClass("doubleTapToGo"),b.find("li").has("ul").children("a").on("click."+e,function(b){return b.preventDefault(),f.settings.doubleTapToGo&&f.doubleTapToGo(a(this))&&"#"!==a(this).attr("href")&&""!==a(this).attr("href")?(b.stopPropagation(),void(c.location=a(this).attr("href"))):(a(this).parent("li").toggleClass("active").children("ul").collapse("toggle"),void(d&&a(this).parent("li").siblings().removeClass("active").children("ul.in").collapse("hide")))})},isIE:function(){for(var a,b=3,d=c.createElement("div"),e=d.getElementsByTagName("i");d.innerHTML="<!--[if gt IE "+ ++b+"]><i><\/i><![endif]-->",e[0];)return b>4?b:a},doubleTapToGo:function(a){var b=this.element;return a.hasClass("doubleTapToGo")?(a.removeClass("doubleTapToGo"),!0):a.parent().children("ul").length?(b.find(".doubleTapToGo").removeClass("doubleTapToGo"),a.addClass("doubleTapToGo"),!1):void 0},remove:function(){this.element.off("."+e),this.element.removeData(e)}},a.fn[e]=function(b){return this.each(function(){var c=a(this);c.data(e)&&c.data(e).remove(),c.data(e,new d(this,b))}),this}}(jQuery,window,document);/;"	c
+d.doubleTapToGo	vendor/assets/javascripts/admin/metisMenu.min.js	/^!function(a,b,c){function d(b,c){this.element=a(b),this.settings=a.extend({},f,c),this._defaults=f,this._name=e,this.init()}var e="metisMenu",f={toggle:!0,doubleTapToGo:!1};d.prototype={init:function(){var b=this.element,d=this.settings.toggle,f=this;this.isIE()<=9?(b.find("li.active").has("ul").children("ul").collapse("show"),b.find("li").not(".active").has("ul").children("ul").collapse("hide")):(b.find("li.active").has("ul").children("ul").addClass("collapse in"),b.find("li").not(".active").has("ul").children("ul").addClass("collapse")),f.settings.doubleTapToGo&&b.find("li.active").has("ul").children("a").addClass("doubleTapToGo"),b.find("li").has("ul").children("a").on("click."+e,function(b){return b.preventDefault(),f.settings.doubleTapToGo&&f.doubleTapToGo(a(this))&&"#"!==a(this).attr("href")&&""!==a(this).attr("href")?(b.stopPropagation(),void(c.location=a(this).attr("href"))):(a(this).parent("li").toggleClass("active").children("ul").collapse("toggle"),void(d&&a(this).parent("li").siblings().removeClass("active").children("ul.in").collapse("hide")))})},isIE:function(){for(var a,b=3,d=c.createElement("div"),e=d.getElementsByTagName("i");d.innerHTML="<!--[if gt IE "+ ++b+"]><i><\/i><![endif]-->",e[0];)return b>4?b:a},doubleTapToGo:function(a){var b=this.element;return a.hasClass("doubleTapToGo")?(a.removeClass("doubleTapToGo"),!0):a.parent().children("ul").length?(b.find(".doubleTapToGo").removeClass("doubleTapToGo"),a.addClass("doubleTapToGo"),!1):void 0},remove:function(){this.element.off("."+e),this.element.removeData(e)}},a.fn[e]=function(b){return this.each(function(){var c=a(this);c.data(e)&&c.data(e).remove(),c.data(e,new d(this,b))}),this}}(jQuery,window,document);/;"	m
+d.init	vendor/assets/javascripts/admin/metisMenu.min.js	/^!function(a,b,c){function d(b,c){this.element=a(b),this.settings=a.extend({},f,c),this._defaults=f,this._name=e,this.init()}var e="metisMenu",f={toggle:!0,doubleTapToGo:!1};d.prototype={init:function(){var b=this.element,d=this.settings.toggle,f=this;this.isIE()<=9?(b.find("li.active").has("ul").children("ul").collapse("show"),b.find("li").not(".active").has("ul").children("ul").collapse("hide")):(b.find("li.active").has("ul").children("ul").addClass("collapse in"),b.find("li").not(".active").has("ul").children("ul").addClass("collapse")),f.settings.doubleTapToGo&&b.find("li.active").has("ul").children("a").addClass("doubleTapToGo"),b.find("li").has("ul").children("a").on("click."+e,function(b){return b.preventDefault(),f.settings.doubleTapToGo&&f.doubleTapToGo(a(this))&&"#"!==a(this).attr("href")&&""!==a(this).attr("href")?(b.stopPropagation(),void(c.location=a(this).attr("href"))):(a(this).parent("li").toggleClass("active").children("ul").collapse("toggle"),void(d&&a(this).parent("li").siblings().removeClass("active").children("ul.in").collapse("hide")))})},isIE:function(){for(var a,b=3,d=c.createElement("div"),e=d.getElementsByTagName("i");d.innerHTML="<!--[if gt IE "+ ++b+"]><i><\/i><![endif]-->",e[0];)return b>4?b:a},doubleTapToGo:function(a){var b=this.element;return a.hasClass("doubleTapToGo")?(a.removeClass("doubleTapToGo"),!0):a.parent().children("ul").length?(b.find(".doubleTapToGo").removeClass("doubleTapToGo"),a.addClass("doubleTapToGo"),!1):void 0},remove:function(){this.element.off("."+e),this.element.removeData(e)}},a.fn[e]=function(b){return this.each(function(){var c=a(this);c.data(e)&&c.data(e).remove(),c.data(e,new d(this,b))}),this}}(jQuery,window,document);/;"	m
+d.remove	vendor/assets/javascripts/admin/metisMenu.min.js	/^!function(a,b,c){function d(b,c){this.element=a(b),this.settings=a.extend({},f,c),this._defaults=f,this._name=e,this.init()}var e="metisMenu",f={toggle:!0,doubleTapToGo:!1};d.prototype={init:function(){var b=this.element,d=this.settings.toggle,f=this;this.isIE()<=9?(b.find("li.active").has("ul").children("ul").collapse("show"),b.find("li").not(".active").has("ul").children("ul").collapse("hide")):(b.find("li.active").has("ul").children("ul").addClass("collapse in"),b.find("li").not(".active").has("ul").children("ul").addClass("collapse")),f.settings.doubleTapToGo&&b.find("li.active").has("ul").children("a").addClass("doubleTapToGo"),b.find("li").has("ul").children("a").on("click."+e,function(b){return b.preventDefault(),f.settings.doubleTapToGo&&f.doubleTapToGo(a(this))&&"#"!==a(this).attr("href")&&""!==a(this).attr("href")?(b.stopPropagation(),void(c.location=a(this).attr("href"))):(a(this).parent("li").toggleClass("active").children("ul").collapse("toggle"),void(d&&a(this).parent("li").siblings().removeClass("active").children("ul.in").collapse("hide")))})},isIE:function(){for(var a,b=3,d=c.createElement("div"),e=d.getElementsByTagName("i");d.innerHTML="<!--[if gt IE "+ ++b+"]><i><\/i><![endif]-->",e[0];)return b>4?b:a},doubleTapToGo:function(a){var b=this.element;return a.hasClass("doubleTapToGo")?(a.removeClass("doubleTapToGo"),!0):a.parent().children("ul").length?(b.find(".doubleTapToGo").removeClass("doubleTapToGo"),a.addClass("doubleTapToGo"),!1):void 0},remove:function(){this.element.off("."+e),this.element.removeData(e)}},a.fn[e]=function(b){return this.each(function(){var c=a(this);c.data(e)&&c.data(e).remove(),c.data(e,new d(this,b))}),this}}(jQuery,window,document);/;"	m
+destroy	app/controllers/admin/color_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/kit_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/order_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/tupper_controller.rb	/^  def destroy$/;"	f	class:Admin
+download_zip	app/controllers/admin/order_controller.rb	/^  def download_zip$/;"	f	class:Admin
+dv.x	vendor/assets/javascripts/xml3d/camera.js	/^                    dv = {x: ev.touches[0].pageX - ev.touches[1].pageX, y: ev.touches[0].pageY - ev.touches[1].pageY};$/;"	p
+edit	app/controllers/admin/color_controller.rb	/^  def edit$/;"	f	class:Admin
+edit	app/controllers/admin/kit_controller.rb	/^  def edit$/;"	f	class:Admin
+edit	app/controllers/admin/order_controller.rb	/^  def edit$/;"	f	class:Admin
+edit	app/controllers/admin/tupper_controller.rb	/^  def edit$/;"	f	class:Admin
+elementCount	vendor/assets/javascripts/xml3d/camera.js	/^    var elementCount = 0;$/;"	v
+file	app/controllers/stl_controller.rb	/^  def file$/;"	f	class:StlController
+general_shop	app/controllers/welcome_controller.rb	/^  def general_shop$/;"	f	class:WelcomeController
+how_it_works	app/controllers/welcome_controller.rb	/^  def how_it_works$/;"	f	class:WelcomeController
+i	vendor/assets/javascripts/xml3d/xml3d-stl-plugin.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){$/;"	v
+i	vendor/assets/javascripts/xml3d/xml3d.js	/^(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){$/;"	v
+index	app/controllers/admin/color_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/kit_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/order_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/tupper_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin_controller.rb	/^  def index$/;"	f	class:AdminController
+index	app/controllers/kit_controller.rb	/^  def index$/;"	f	class:KitController
+index	app/controllers/welcome_controller.rb	/^  def index$/;"	f	class:WelcomeController
+initMultipleFields	app/assets/javascripts/kit.js	/^function initMultipleFields(selector_array) {$/;"	f
+is_admin?	app/models/user.rb	/^  def is_admin?$/;"	f	class:User
+kit_params	app/controllers/admin/kit_controller.rb	/^  def kit_params$/;"	f	class:Admin
+kits_shop	app/controllers/welcome_controller.rb	/^  def kits_shop$/;"	f	class:WelcomeController
+layout_by_resource	app/controllers/application_controller.rb	/^  def layout_by_resource$/;"	f	class:ApplicationController
+load_resource	app/controllers/admin/color_controller.rb	/^  def load_resource$/;"	f	class:Admin
+load_resource	app/controllers/admin/kit_controller.rb	/^  def load_resource$/;"	f	class:Admin
+load_resource	app/controllers/admin/order_controller.rb	/^  def load_resource$/;"	f	class:Admin
+load_resource	app/controllers/admin/tupper_controller.rb	/^  def load_resource$/;"	f	class:Admin
+new	app/controllers/admin/color_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/kit_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/tupper_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/order_controller.rb	/^  def new$/;"	f	class:OrderController
+order_params	app/controllers/admin/order_controller.rb	/^  def order_params$/;"	f	class:Admin
+order_params	app/controllers/order_controller.rb	/^    def order_params$/;"	f	class:OrderController
+pack_stl_files_to_zip	app/models/kit.rb	/^  def pack_stl_files_to_zip$/;"	f	class:Kit
+password_edit	app/controllers/admin/user_controller.rb	/^  def password_edit$/;"	f	class:Admin
+password_params	app/controllers/admin/user_controller.rb	/^  def password_params$/;"	f	class:Admin
+password_params	app/models/user.rb	/^  def self.password_params$/;"	F	class:User
+password_update	app/controllers/admin/user_controller.rb	/^  def password_update$/;"	f	class:Admin
+permitted_params	app/models/color.rb	/^  def self.permitted_params$/;"	F	class:Color
+permitted_params	app/models/kit.rb	/^  def self.permitted_params$/;"	F	class:Kit
+permitted_params	app/models/order.rb	/^  def self.permitted_params$/;"	F	class:Order
+permitted_params	app/models/tupper.rb	/^  def self.permitted_params$/;"	F	class:Tupper
+prevMidpoint.x	vendor/assets/javascripts/xml3d/camera.js	/^                        prevMidpoint = {x:(this.prevTouchPositions[0].x + this.prevTouchPositions[1].x) \/ 2 ,$/;"	p
+set_content_type	app/models/tupper.rb	/^  def set_content_type$/;"	f	class:Tupper
+show	app/controllers/admin/color_controller.rb	/^  def show$/;"	f	class:Admin
+show	app/controllers/admin/kit_controller.rb	/^  def show$/;"	f	class:Admin
+show	app/controllers/admin/order_controller.rb	/^  def show$/;"	f	class:Admin
+show	app/controllers/admin/tupper_controller.rb	/^  def show$/;"	f	class:Admin
+statuses	app/models/order.rb	/^  def self.statuses$/;"	F	class:Order
+this._evt_contextmenu	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_contextmenu = function(e) {self.stopEvent(e);};$/;"	m
+this._evt_keydown	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_keydown = function(e) {self.keyHandling.call(self, e, "down");};$/;"	m
+this._evt_keyup	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_keyup = function(e) {self.keyHandling.call(self, e, "up");};$/;"	m
+this._evt_mousemove	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_mousemove = function(e) {self.mouseMoveEvent(e);};$/;"	m
+this._evt_mouseup	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_mouseup = function(e) {self.mouseReleaseEvent(e);};$/;"	m
+this._evt_touchcancel	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_touchcancel = function(e) {self.touchEndEvent(e);};$/;"	m
+this._evt_touchend	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_touchend = function(e) {self.touchEndEvent(e);};$/;"	m
+this._evt_touchmove	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_touchmove = function(e) {self.touchMoveEvent(e);};$/;"	m
+this._evt_touchstart	vendor/assets/javascripts/xml3d/camera.js	/^        this._evt_touchstart = function(e) {self.touchStartEvent(e);};$/;"	m
+touchPositions.x	vendor/assets/javascripts/xml3d/camera.js	/^                touchPositions[i] = {x: ev.touches[i].pageX, y: ev.touches[i].pageY};$/;"	p
+tupper_params	app/controllers/admin/tupper_controller.rb	/^  def tupper_params$/;"	f	class:Admin
+tuppers	app/models/kit.rb	/^  def tuppers$/;"	f	class:Kit
+update	app/controllers/admin/color_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/kit_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/order_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/tupper_controller.rb	/^  def update$/;"	f	class:Admin
+us	app/controllers/welcome_controller.rb	/^  def us$/;"	f	class:WelcomeController
+var.curMidpoint.x	vendor/assets/javascripts/xml3d/camera.js	/^                        var curMidpoint = {x:(ev.touches[0].pageX + ev.touches[1].pageX) \/ 2 ,$/;"	p

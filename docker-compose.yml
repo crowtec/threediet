@@ -1,0 +1,22 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: mongodb
+    volumes:
+      - mongovolume:/data/db
+  mixeat:
+    image: crowtec/mixeat
+    container_name: mixeat
+    ports:
+      - "80:3000"
+    links:
+      - mongodb
+    environment:
+      RAILS_ENV: production
+      MONGODB_URL: mongodb://mongodb:27017
+      SECRET_KEY_BASE: 6ccbdacf8c89b7b0bf875ac44fb616dc688f7dc631625baed9ed2114ffd4a34d6d1adedda198ebfae49bd036f0908be03f7bfd073688f9d11a2f96b91b021f4c
+volumes:
+  mongovolume:
