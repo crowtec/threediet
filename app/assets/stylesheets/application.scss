@@ -45,6 +45,19 @@ a {
   text-decoration: none;
 }
 
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+.clear { clear:both; }
+
 .container-fluid {
   padding: 0 !important;
 }

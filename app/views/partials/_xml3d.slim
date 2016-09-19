@@ -6,18 +6,26 @@ xml3d.screen
   light#light1 model="urn:xml3d:light:directional"
     float3 name="intensity" 1 1 1
 
-  transform#cameraTransform translation="0 0 200"
+  transform#cameraTransform translation="0 0 500"
   view transform="#cameraTransform"
 
-  group material="#color" style="transform:rotate3d(1, 0, 0, -60deg) scale(7, 7, 7); "
+  group material="#color" style="transform:rotate3d(1, 0, 0, -60deg)"
     mesh#tupper.kit_piece src="#{ @tupper.stl.url }"
 
 javascript:
+  var zoom = function (zoom_in) {
+    var zoom = 30;
+    if (zoom_in)
+      XML3D.StandardCamera.Instance.translate(new XML3D.Vec3(0, 0, -1 * zoom));
+    else  // zoom_out
+      XML3D.StandardCamera.Instance.translate(new XML3D.Vec3(0, 0, zoom));
+  };
+
   $(document).on('ready', function (event) {
     var init = function () {
       var view = document.querySelector("view");
       if (view && XML3D.StandardCamera.Instance !== false) {
-        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, {rotateSpeed: 10});
+        XML3D.StandardCamera.Instance = new XML3D.StandardCamera(view, {rotateSpeed: 10, zoomSpeed: 100});
       }
     };
 
@@ -31,4 +39,19 @@ javascript:
         xml3d.addEventListener("load", init);
       }
     }
+
+    $("#zoom_in").click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      zoom(true);
+    });
+
+    $("#zoom_out").click(function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      zoom(false);
+    });
   });
+

@@ -6,11 +6,28 @@
 .customizer-kit-wrapper
   .wrapper
     /.left
+    .xmld3d-viewer
+      .zoom-buttons
+        i#zoom_in.fa.fa-plus-square-o aria-hidden="true"
+        i#zoom_out.fa.fa-minus-square-o aria-hidden="true"
+      = render 'partials/xml3d'
+      /.collection.text-center
+        = @kit.name
+      /.col-md-offset-2.col-md-8
+      /.selectors.text-center
+        .left.col-sm-6
+          .col-sm-offset-1
+            = link_to '<', new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index - 1, c_index: @color_index), class: 'link', method: :post
+        .right.col-sm-6
+          .col-sm-9
+            = link_to '>', new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index + 1, c_index: @color_index), class: 'link', method: :post
+      /.tupper.text-center
+        /= @tupper.name
     .right.colors-description-wrapper
       .container
         section.description-wrapper
-          h2 Bowl Desayuno
-          p Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test Test test
+          h2 = @tupper.name
+          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes
         .colors-wrapper
           h2 Personaliza tu kit
           small
@@ -19,17 +36,32 @@
           ul.colors-list
             - @colors.each_with_index do |c, i|
               li
-                = link_to new_order_path(order: params[:order], phase: @phase, kit: @kit, t_index: @tupper_index, c_index: i), class: 'link', method: :post
+                = link_to new_order_path(phase: @phase, kit: @kit, t_index: @tupper_index, c_index: i), class: 'link', method: :post
                   .color style='background-color: rgb(#{(c.red * 255).to_i}, #{(c.green * 255).to_i}, #{(c.blue * 255).to_i});'
                   .color-text
-                    = "#{ c.name + "color" }"
-              /= link_to "#"
-                .color
-                .color-text
-                  | Color verde
+                    = "#{ "color " + c.name  }"
           .selected-color
         = link_to "Lo quiero", "#", class: "button orange text-uppercase"
         //TODO Review - Add details
+  .tupper-preview-wrapper
+    .preview-image
+      = link_to new_order_path(phase: @phase, kit: @kit, t_index: 0, c_index: @color_index), method: :post
+        = image_tag 'kit_shop/03-TIENDA-1.jpg'
+    .preview-image
+      = link_to new_order_path(phase: @phase, kit: @kit, t_index: 1, c_index: @color_index), method: :post
+        = image_tag 'kit_shop/03-TIENDA-2.jpg'
+    .preview-image
+      = link_to new_order_path(phase: @phase, kit: @kit, t_index: 2, c_index: @color_index), method: :post
+        = image_tag 'kit_shop/03-TIENDA-3.jpg'
+    .preview-image
+      = link_to new_order_path(phase: @phase, kit: @kit, t_index: 3, c_index: @color_index), method: :post
+        = image_tag 'kit_shop/03-TIENDA-1.jpg'
+    .preview-image
+      = link_to new_order_path(phase: @phase, kit: @kit, t_index: 4, c_index: @color_index), method: :post
+        = image_tag 'kit_shop/03-TIENDA-2.jpg'
+    .preview-image
+      = link_to new_order_path(phase: @phase, kit: @kit, t_index: 5, c_index: @color_index), method: :post
+        = image_tag 'kit_shop/03-TIENDA-3.jpg'
 
 
 

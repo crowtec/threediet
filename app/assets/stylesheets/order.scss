@@ -2,11 +2,10 @@
   //background: image-url('tv.png') no-repeat;
   //background-size: auto 100%;
   //background-position: center center;
-  background-color: gray;
-  padding-bottom: 2%;
-  position: relative;
-  font-family: "Education";
   color: white;
+  height: 100%;
+  position: absolute;
+  width: 50%;
 
   .collection{
     position: absolute;
@@ -40,15 +39,38 @@
     pointer-events: none;
   }
   .screen{
-    margin-top: -10%;
-    width: 100%;
+    //margin-top: -10%;
+    @include transform(translate(-50%, -50%));
     height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+  }
+
+  .zoom-buttons {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1;
+
+    i {
+      cursor: pointer;
+      display: block;
+
+      + i {
+        margin-top: 12px;
+      }
+
+      &:before {
+        color: black;
+        font-size: 25px;
+      }
+    }
   }
 }
 
-.xml3d-wrapper {
-  background-color: gray;
-}
+
 
 .color {
   @include border-radius(50%);
@@ -217,6 +239,7 @@ ul.order-progress-bar {
 .customizer-kit-wrapper {
   > .wrapper {
     overflow: auto;
+    position: relative;
 
     > .right {
       width: 50%;
@@ -291,7 +314,21 @@ ul.order-progress-bar {
         }
       }
     }
-    
-    
+  }
+
+  .tupper-preview-wrapper {
+    margin: 40px 0 120px;
+    overflow: auto;
+
+    .preview-image {
+      $width: #{(100 / 6) + "%"};
+      float: left;
+      width: $width;
+
+      img {
+        vertical-align: middle;
+        width: 100%;
+      }
+    }
   }
 }
